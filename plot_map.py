@@ -1,14 +1,11 @@
 import geopandas as gpd
 import pandas as pd
 import matplotlib.pyplot as plt
-import os
 import math
 import matplotlib.colors as colors
-import time
 
 def close_event():
     plt.close() #timer calls this function after 3 seconds and closes the window
-
 
 geotagged_df = pd.read_csv("geotagged_new.csv")
 
