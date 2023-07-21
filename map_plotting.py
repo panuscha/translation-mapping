@@ -21,7 +21,7 @@ def get_closest_lower_year(my_list, year):
     return closest_lower
 
 
-folder_path = "C:/Users/Panuskova/Nextcloud/Maps/historical-basemaps/geojson"
+folder_path = "C:/Users/Panuskova/Nextcloud/translation-mapping/historical-basemaps/geojson"
 
 # List all files in the folder
 files = [f for f in os.listdir(folder_path) if os.path.isfile(os.path.join(folder_path, f))]
