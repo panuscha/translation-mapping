@@ -41,7 +41,7 @@ file_years = list(map(lambda x: str(int(x)),file_years))
 # years = list(filter(lambda x: not math.isnan(x) ,geotagged_df['year'].unique()))
 # years = list(map(lambda x: str(int(x)),years))
 
-years = list(map(lambda x: str(int(x)), list(range(2015,2016))))
+years = list(map(lambda x: str(int(x)), list(range(1980,2015))))
 
 
 # Normalize the data for the colormap
@@ -62,17 +62,17 @@ for idx,y in enumerate(years):
     # Load the GeoJSON map
     geojson_path = folder_path + '/world_' + str(map_year)+ '.geojson'
     gdf = gpd.read_file(geojson_path)
+    gdf.set_index('NAME', inplace=True)
 
     # Create a DataFrame from the dictionary
     data_df = pd.DataFrame(list(plot_dict_dicts[map_year].items()), columns=['country', 'weight'])
-    data_df = data_df.set_index('country', inplace=True)
+    data_df.set_index('country', inplace=True)
     
     gdf['weight'] = 0
 
     # Set the weights for countries with available data
-    #gdf.loc[data_df.index, 'weight'] = data_df['weight']
+    gdf.loc[data_df.index, 'weight'] = data_df['weight']
 
-    gdf = gdf.set_index('NAME')
 
     # Define the colormap for non-zero values
     cmap = plt.cm.OrRd
@@ -94,13 +94,13 @@ for idx,y in enumerate(years):
     timer.add_callback(close_event)
 
     ax.set_aspect('equal')  
-    gdf.plot(facecolor=gdf['color'], edgecolor='0.8', linewidth=0.8, ax=ax, legend=True)
-    #gdf.plot(column='weight', cmap='OrRd', linewidth=0.8, ax=ax, edgecolor='0.8', legend=True)
+    #gdf.plot(facecolor=gdf['color'], edgecolor='0.8', linewidth=0.8, ax=ax, legend=True)
+    gdf.plot(column='weight', cmap='OrRd', linewidth=0.8, ax=ax, edgecolor='0.8', legend=True)
     # Write years in title 
     ax.set_title('Choropleth Map {}'.format(str(y)))
     ax.set_axis_off()  # Turn off the axis to remove the axis frame
-    #plt.savefig('plots/individual years/'+ax.get_title() + '.png')
+    plt.savefig('plots/individual years label/'+ax.get_title() + '.png')
     #timer.start()
-    plt.show()
-    #close_event()
+    #plt.show()
+    close_event()
     
