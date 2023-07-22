@@ -65,7 +65,7 @@ for idx,y in enumerate(years):
     gdf.set_index('NAME', inplace=True)
 
     # Create a DataFrame from the dictionary
-    data_df = pd.DataFrame(list(plot_dict_dicts[map_year].items()), columns=['country', 'weight'])
+    data_df = pd.DataFrame(list(plot_dict_dicts[y].items()), columns=['country', 'weight'])
     data_df.set_index('country', inplace=True)
     
     gdf['weight'] = 0
