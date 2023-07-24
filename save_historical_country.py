@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from shapely.geometry import Point
 import os
 import re
+import csv
 
 
 def get_closest_lower_year(my_list, year):
@@ -21,7 +22,7 @@ def get_closest_lower_year(my_list, year):
     return closest_lower
 
 
-folder_path = "C:/Users/Panuskova/Nextcloud/Maps/historical-basemaps/geojson"
+folder_path = "C:/Users/Panuskova/Nextcloud/translation-mapping/historical-basemaps/geojson"
 
 # List all files in the folder
 files = [f for f in os.listdir(folder_path) if os.path.isfile(os.path.join(folder_path, f))]
@@ -46,6 +47,8 @@ geotagged_df = geotagged_df.sort_values(by=['year'])
 
 country_names = []
 map_years = []
+
+not_found_cities = {}
 try:
     for i, geo_row in geotagged_df.iterrows():
         # Get year from the geotagged dataframe
@@ -73,17 +76,32 @@ try:
                 # Create a Point geometry object from the coordinates
                 point = Point(longitude, latitude)
 
+                found = False
                 # Iterate over each country's geometry and check if the point is within it
                 for index, row in historical_basemap.iterrows():
                     if row['geometry'].contains(point):
                         country_name = row['NAME']
                         print(f"{geo_row['geonames_name']} was in {str(year)} in {country_name}.")
                         saved_country_dict[dict_key] = country_name
+                        found = True
                         break
             else:
                 country_name =  saved_country_dict[dict_key]
-            country_names.append(country_name)    
-            map_years.append(map_year)   
+                found = True
+
+            map_years.append(map_year) 
+
+            if found:    
+                country_names.append(country_name)     
+            else:
+                k = (geo_row['geonames_name'], map_year)
+                if geo_row['geonames_country'] in historical_basemap['NAME'].values:
+                    country_names.append(geo_row['geonames_country'])
+                    saved_country_dict[dict_key] = country_name
+                    not_found_cities[k] = geo_row['geonames_country']
+                else:
+                    country_names.append(None) 
+                    not_found_cities[k] = None                 
         except:
             country_names.append(None)    
             map_years.append(None)      
@@ -93,5 +111,14 @@ finally:
     geotagged_df['map_year'] = map_years
     geotagged_df['historical_coutry_name'] = country_names
     geotagged_df.to_csv("geotagged_new.csv")
+
+    flattened_data = [(key[0], key[1], value) for key, value in not_found_cities.items()]
+    
+    with open('cities_not_found.csv', 'w', newline='') as file:
+        writer = csv.writer(file)
+        # Write the header row
+        writer.writerow(['City', 'Year', 'Country'])
+        # Write the data rows
+        writer.writerows(flattened_data)
 
 

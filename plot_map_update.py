@@ -3,6 +3,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import math
 import matplotlib.colors as colors
+from geopandas import GeoDataFrame
+from shapely.geometry import Point
 
 def get_closest_lower_year(my_list, year):
     left, right = 0, len(my_list) - 1
@@ -41,7 +43,7 @@ file_years = list(map(lambda x: str(int(x)),file_years))
 # years = list(filter(lambda x: not math.isnan(x) ,geotagged_df['year'].unique()))
 # years = list(map(lambda x: str(int(x)),years))
 
-years = list(map(lambda x: str(int(x)), list(range(1980,2015))))
+years = list(map(lambda x: str(int(x)), list(range(1959,1960))))
 
 
 # Normalize the data for the colormap
@@ -86,21 +88,32 @@ for idx,y in enumerate(years):
             color_rgb = cmap(norm(weight))[:3]  # Get RGB values from the colormap
             gdf.loc[gdf.index == country, 'color'] = '#%02x%02x%02x' % tuple(int(c * 255) for c in color_rgb)
 
+
+
+    geometry = [Point(xy) for xy in zip(geotagged_df.loc[geotagged_df['year'] == int(y),"geonames_lng"],geotagged_df.loc[geotagged_df['year'] == int(y),"geonames_lat"])]
+    crs = {'init': 'epsg:4326'}
+    caps_points = GeoDataFrame(geotagged_df.loc[geotagged_df['year'] == int(y),"geonames_name"], crs=crs, geometry=geometry)
+
     # Plotting the choropleth map
-    fig, ax = plt.subplots(1, 1,  figsize=(15, 10))
+    fig, ax = plt.subplots(1, 1) # ,  figsize=(15, 10)
 
     # Timer
     timer = fig.canvas.new_timer(interval = 3000) #creating a timer object and setting an interval of 3000 milliseconds
     timer.add_callback(close_event)
 
     ax.set_aspect('equal')  
-    #gdf.plot(facecolor=gdf['color'], edgecolor='0.8', linewidth=0.8, ax=ax, legend=True)
-    gdf.plot(column='weight', cmap='OrRd', linewidth=0.8, ax=ax, edgecolor='0.8', legend=True)
+    gdf.plot(facecolor=gdf['color'], edgecolor='0.8', linewidth=0.8, ax=ax, legend=True)
+    #gdf.plot(column='weight', cmap='OrRd', linewidth=0.8, ax=ax, edgecolor='0.8', legend=True)
+
+    # Plot cities
+    caps_points.plot(ax = ax, marker = "p", markersize = 0.1, c = "red", )
     # Write years in title 
     ax.set_title('Choropleth Map {}'.format(str(y)))
     ax.set_axis_off()  # Turn off the axis to remove the axis frame
-    plt.savefig('plots/individual years label/'+ax.get_title() + '.png')
+    cbar = plt.cm.ScalarMappable(norm=norm, cmap=cmap)
+    fig.colorbar(cbar)
+    #plt.savefig('plots/individual years points/'+ax.get_title() + '.png')
     #timer.start()
-    #plt.show()
-    close_event()
+    plt.show()
+    #close_event()
     
