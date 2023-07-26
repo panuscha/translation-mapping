@@ -94,30 +94,30 @@ try:
             if found:    
                 country_names.append(country_name)     
             else:
-                k = (geo_row['geonames_name'], map_year)
+                k = (i, geo_row['geonames_name'], geo_row['year'])
                 if geo_row['geonames_country'] in historical_basemap['NAME'].values:
                     country_names.append(geo_row['geonames_country'])
                     saved_country_dict[dict_key] = country_name
                     not_found_cities[k] = geo_row['geonames_country']
                 else:
                     country_names.append(None) 
-                    not_found_cities[k] = None                 
+                    not_found_cities[k] = None               
         except:
             country_names.append(None)    
             map_years.append(None)      
 except:
     print("error on row {i}")
 finally:
-    geotagged_df['map_year'] = map_years
-    geotagged_df['historical_coutry_name'] = country_names
-    geotagged_df.to_csv("geotagged_new.csv")
+    # geotagged_df['map_year'] = map_years
+    # geotagged_df['historical_coutry_name'] = country_names
+    # geotagged_df.to_csv("geotagged_new_new.csv")
 
-    flattened_data = [(key[0], key[1], value) for key, value in not_found_cities.items()]
+    flattened_data = [(key[0], key[1], key[2], value) for key, value in not_found_cities.items()]
     
-    with open('cities_not_found.csv', 'w', newline='') as file:
+    with open('cities_not_found.csv', 'w', newline='', encoding = 'utf8') as file:
         writer = csv.writer(file)
         # Write the header row
-        writer.writerow(['City', 'Year', 'Country'])
+        writer.writerow(['Index', 'City', 'Year', 'Country'])
         # Write the data rows
         writer.writerows(flattened_data)
 
