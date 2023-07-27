@@ -41,17 +41,18 @@ for i, row in geotagged_df.iterrows():
 
 # Create a DataFrame from the dictionary
 weights_df = pd.DataFrame(plot_dict_dicts).fillna(0)
-weights_df.to_csv('weights_df.csv')
+#weights_df.to_csv('weights_df.csv')
+
 # Transpose the DataFrame to have countries as rows and years as columns
 weights_df = weights_df.T
 
 # Optionally, you can rename the index column (years) to 'Year'
 weights_df.index.name = 'Year'
 
-window_size = 3
+window_size = 5
 weights_df_ma = weights_df.rolling(window=window_size, axis=0, min_periods=1).mean()
 
-weights_df_ma.to_csv('weights_ma.csv')
+#weights_df_ma.to_csv('weights_ma.csv')
 
 
 file_years = list(filter(lambda x: not math.isnan(x) ,geotagged_df['map_year'].unique()))
@@ -94,6 +95,9 @@ for idx,y in enumerate(years):
     # Set the weights for countries with available data
     for country in common_countries_columns:
         weight =  weights_df_ma[country][weights_df_ma.index == y ].T.sort_index().values
+        # When the weight was below 1, it did not plot any colour 
+        if weight > 0 :
+            weight +=3
         if isinstance(gdf.loc[country, 'weight'], (int, float, np.int64, np.float64)):
             gdf.loc[country, 'weight'] = weight
         else:    
