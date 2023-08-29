@@ -25,7 +25,7 @@ def get_closest_lower_year(my_list, year):
 def close_event():
     plt.close() #timer calls this function after 3 seconds and closes the window
 
-geotagged_path = "geotagged_new_new.csv"
+geotagged_path = "geotagged/geotagged_new_new.csv"
 geotagged_df = pd.read_csv(geotagged_path)
 
 plot_dict_dicts = {}

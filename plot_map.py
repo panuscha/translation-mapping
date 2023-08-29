@@ -8,7 +8,7 @@ def close_event():
     plt.close() #timer calls this function after 3 seconds and closes the window
 
 
-geotagged_df = pd.read_csv("geotagged_new.csv")
+geotagged_df = pd.read_csv("geotagged/geotagged_new.csv")
 
 plot_dict_dicts = {}
 
