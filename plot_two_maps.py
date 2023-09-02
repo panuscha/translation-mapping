@@ -1,25 +1,26 @@
 import geopandas as gpd
 import matplotlib.pyplot as plt
 import pandas as pd
-
+import numpy as np
 
 folder_path = "C:/Users/Panuskova/Nextcloud/translation-mapping/"
 
-geotagged_df = pd.read_csv("geotagged/geotagged_lang.csv")
+geotagged_df = pd.read_csv("geotagged/geotagged_lang_hist_country_new.csv")
 
+map_years = np.unique(geotagged_df['map_year']) 
 
- 
+for map_year in map_years:
+    if map_years > 1993: 
+        # Load the GeoJSON map
+        historical_geojson_path = folder_path + 'historical-basemaps/geojson/world_' + str(map_year)+ '.geojson'
 
-# Load the GeoJSON map
-historical_geojson_path = folder_path + 'historical-basemaps/geojson/world_' + str(1960)+ '.geojson'
+        # Read historical borders GeoJSON using GeoPandas
+        historical_borders = gpd.read_file(historical_geojson_path)
 
-# Read historical borders GeoJSON using GeoPandas
-historical_borders = gpd.read_file(historical_geojson_path)
+        language_geojson_path = folder_path + 'language-basemaps/' + "GERMAN SPEAKING.geojson"
 
-language_geojson_path = folder_path + 'language-basemaps/' + "GERMAN SPEAKING.geojson"
-
-# Read coloring GeoJSON using GeoPandas
-coloring_data = gpd.read_file(language_geojson_path)
+        # Read coloring GeoJSON using GeoPandas
+        coloring_data = gpd.read_file(language_geojson_path)
 
 # Create a base plot
 fig, ax = plt.subplots(figsize=(10, 8))
