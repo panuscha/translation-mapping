@@ -4,9 +4,9 @@ def save_to_dict(countries, map_year, df_dict, row):
     for country in countries:
                 key = (country, map_year) 
                 if key in df_dict:
-                    df_dict[key] += row['weight']    
+                    df_dict[key] += row['weight'] / len(countries)   
                 else:
-                    df_dict[key] =  row['weight']
+                    df_dict[key] =  row['weight'] / len(countries)
 
 #geotagged_df = pd.read_csv("geotagged/geotagged_germany_country_update.csv")
 geotagged_df = pd.read_excel("geotagged/geotagged_germany_country_update.xlsx")
@@ -18,20 +18,20 @@ df_dict = {}
 for map_year in map_years:
     for _, row in geotagged_df[geotagged_df['map_year'] == map_year].iterrows():
         
-        german_speaking = row['geonames_country'] == 'Austria' or row['region_country_name'] == 'Switzerland ger' or  row['geonames_country'] == 'Liechtenstein'
+        german_speaking = row['geonames_country'] == 'Austria' or row['geonames_country'] == 'Switzerland' or  row['geonames_country'] == 'Liechtenstein'
         german_language = row['language'] == 'ger'
         
-        french_speaking = row['geonames_country'] == 'France' or row['region_country_name'] == 'Switzerland fre' or row['region_country_name'] == 'Belgium fre' or row['geonames_country'] == 'Monaco'
+        french_speaking = row['geonames_country'] == 'France' or row['geonames_country'] == 'Switzerland' or row['geonames_country'] == 'Belgium' or row['geonames_country'] == 'Monaco'
         french_language = row['language'] == 'fre'
         french_countries = ['France', 'Switzerland fre', 'Belgium fre', 'Monaco']
         french_cond = french_language and french_speaking
 
-        dutch_speaking = row['region_country_name'] == 'Belgium dut' or row['geonames_country'] == 'Netherlands'
+        dutch_speaking = row['geonames_country'] == 'Belgium' or row['geonames_country'] == 'Netherlands'
         dutch_language = row['language'] == 'dut'
         dutch_countries = ['Belgium dut', 'Netherlands']
         dutch_cond = dutch_language and dutch_speaking
 
-        italian_speaking = row['region_country_name'] == 'Switzerland it' or row['geonames_country'] == 'Italy'
+        italian_speaking = row['geonames_country'] == 'Switzerland' or row['geonames_country'] == 'Italy'
         italian_language = row['language'] == 'ita'
         italian_countries = ['Switzerland ita', 'Italy']
         italian_cond = italian_language and italian_speaking
@@ -50,14 +50,10 @@ for map_year in map_years:
         if map_year < 1994:
             german_cond = german_language and (row['region_country_name'] == 'West Germany' or german_speaking) 
             german_countries = ['West Germany', 'Austria', 'Switzerland ger',  'Liechtenstein'] 
-            
-            slav_language = row['language'] == 'slv'
-            yugoslav_cond = slav_language and (row['geonames_country'] == 'Slovenia' or row['geonames_country'] == 'Serbia')
-            yugoslav_countries = ['Slovenia', 'Croatia', 'Bosnia and Herzegovina', 'Serbia', 'Montenegro', 'North Macedonia']
-
+        
             czech_slovak_speaking = row['geonames_country'] == 'Czechia' or row['geonames_country'] == 'Slovakia'
             czech_slovak_cond = czech_slovak_speaking
-            czech_slovak_countries = ['Czechia', 'Slovakia']
+            czech_slovak_countries = ['Czech Republic', 'Slovakia']
 
             germany_rest_cond = False
 
@@ -66,8 +62,6 @@ for map_year in map_years:
             german_countries = ['West Germany', 'East Germany', 'Austria', 'Switzerland ger',  'Liechtenstein'] 
 
             germany_rest_cond = row['geonames_country'] == 'Germany'
-
-            yugoslav_cond = False 
 
             czech_slovak_cond = False  
         
@@ -116,12 +110,6 @@ for map_year in map_years:
         if serbo_croatian_cond:
             save_to_dict(serbo_croatian_countries, map_year, df_dict, row) 
             continue                
-
-        ##### SLAV SPEAKING ####         
-
-        if yugoslav_cond:
-            save_to_dict(yugoslav_countries, map_year, df_dict, row) 
-            continue
 
         ##### CZECH SLOVAK SPEAKING ####         
 

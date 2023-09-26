@@ -5,34 +5,42 @@ import numpy as np
 
 folder_path = "C:/Users/Panuskova/Nextcloud/translation-mapping/"
 
-geotagged_df = pd.read_csv("geotagged/geotagged_lang_hist_country_new.csv")
+#geotagged_df = pd.read_excel("geotagged/geotagged_germany_country_update.xlsx")
+weights_df = pd.read_csv("weights/weights_language_families.csv")
 
-map_years = np.unique(geotagged_df['map_year']) 
+map_years = np.unique(weights_df['map_year']) 
 
 for map_year in map_years:
-    if map_years > 1993: 
-        # Load the GeoJSON map
-        historical_geojson_path = folder_path + 'historical-basemaps/geojson/world_' + str(map_year)+ '.geojson'
+        
+    weights_df_year = weights_df[weights_df['map_year'] == map_year]
 
-        # Read historical borders GeoJSON using GeoPandas
-        historical_borders = gpd.read_file(historical_geojson_path)
+    # Load the GeoJSON map
+    historical_geojson_path = folder_path + 'historical-basemaps/geojson/world_' + str(map_year)+ '.geojson'
 
-        language_geojson_path = folder_path + 'language-basemaps/' + "GERMAN SPEAKING.geojson"
+    # Read historical borders GeoJSON using GeoPandas
+    historical_borders = gpd.read_file(historical_geojson_path)
 
-        # Read coloring GeoJSON using GeoPandas
-        coloring_data = gpd.read_file(language_geojson_path)
+    language_geojson_path = folder_path + 'language-basemaps/' + "combined.geojson"
 
-# Create a base plot
-fig, ax = plt.subplots(figsize=(10, 8))
-coloring_data.plot(ax=ax, color='red', edgecolor='none', linewidth=1)
-historical_borders.plot(ax=ax, color='none', edgecolor='black', linewidth=0.5)
+    # Read basemap GeoJSON using GeoPandas
+    coloring_data = gpd.read_file(language_geojson_path)
 
+    # Merge weights with the basemap
+    merged = coloring_data.merge(weights_df_year, left_on='NAME', right_on='country', how='left')
 
+    # Create a base plot
+    fig, ax = plt.subplots(1, 1, figsize=(12, 8))
 
-# Customize plot appearance
-ax.set_title('Historical Map')
-ax.set_xlabel('Longitude')
-ax.set_ylabel('Latitude')
+    # Plot the choropleth map
+    merged.plot(ax = ax, column='weights', cmap='YlOrRd', edgecolor='None', legend=True)
 
-# Show the plot
-plt.show()
+    #coloring_data.plot(ax=ax, color='red', edgecolor='none', linewidth=1)
+    historical_borders.plot(ax=ax, color='none', edgecolor='black', linewidth=0.5)
+
+    # Customize plot appearance
+    ax.set_title('Translation Map ' + str(map_year))
+    ax.set_xlabel('Longitude')
+    ax.set_ylabel('Latitude')
+
+    # Show the plot
+    plt.show()

@@ -75,10 +75,10 @@ combined_gdf = gpd.GeoDataFrame(pd.concat([ not_switzerland , switzerland_fre_gd
 # combined_gdf.loc[combined_gdf.NUTS_ID == 'CH05','NAME'] = 'Switzerland ger'
 # combined_gdf.loc[combined_gdf.NUTS_ID == 'CH06','NAME'] = 'Switzerland ger'
 
-combined_gdf.loc[combined_gdf.NUTS_ID == 'CH07','NAME'] = 'Switzerland it'
+combined_gdf.loc[combined_gdf.NUTS_ID == 'CH07','NAME'] = 'Switzerland ita'
 
 # Add more GeoDataFrames as needed
-combined_gdf.to_file('combined.geojson', driver='GeoJSON')
+combined_gdf.to_file('language-basemaps/combined.geojson', driver='GeoJSON')
 
 fig, ax = plt.subplots(figsize=(10, 8))
 combined_gdf.plot(ax=ax, color = None, edgecolor = 'black', linewidth=1)
