@@ -1,4 +1,4 @@
-;year;language;geonames_name;geonames_country;geonames_id;geonames_lat;geonames_lng;weight;country_codes;germany;map_year;region_country_name;pozn.
+id;year;language;geonames_name;geonames_country;geonames_id;geonames_lat;geonames_lng;weight;country_codes;germany;map_year;region_country_name;pozn.
 16490;1817;sla;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;1815;Czech Republic;
 16492;1818;sla;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;1815;Czech Republic;
 25383;1819;ger;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;1815;Czech Republic;
@@ -4927,7 +4927,7 @@
 2142;1956;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;1945;France;
 26376;1956;ger;Rudolstadt;Germany;2843355;50.72043;11.34046;1.0;DEU;West Germany;1945;West Germany;East Germany
 4615;1956;ger;Berlin;Germany;2950159;52.52437;13.41053;1.0;DEU;East Germany;1945;East Germany;
-5128;1956;kor;Pyongyang;North Korea;1871859;39.03385;125.75432;1.0;PRK;;1945;Korea, Democratic People's Republic of;
+5128;1956;kor;Pyongyang;North Korea;1871859;39.03385;125.75432;1.0;PRK;;1945;"""Korea, Democratic People's Republic of""";
 7500;1956;rum;Bucharest;Romania;683506;44.43225;26.10626;1.0;ROU;;1945;Romania;
 18389;1956;hrv;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;1945;Czech Republic;
 16917;1956;hun;Budapest;Hungary;3054643;47.49835;19.04045;1.0;HUN;;1945;Hungary;
@@ -5324,7 +5324,7 @@
 20686;1958;pol;Warsaw;Poland;756135;52.22977;21.01178;1.0;POL;;1945;Poland;
 4271;1958;hun;Budapest;Hungary;3054643;47.49835;19.04045;1.0;HUN;;1945;Hungary;
 7590;1958;slo;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;1945;Czech Republic;
-9006;1958;kor;Pyongyang;North Korea;1871859;39.03385;125.75432;1.0;PRK;;1945;Korea, Democratic People's Republic of;
+9006;1958;kor;Pyongyang;North Korea;1871859;39.03385;125.75432;1.0;PRK;;1945;"""Korea, Democratic People's Republic of""";
 7579;1958;slo;Bratislava;Slovakia;3060972;48.14816;17.10674;1.0;SVK;;1945;Slovakia;
 7578;1958;slo;Bratislava;Slovakia;3060972;48.14816;17.10674;1.0;SVK;;1945;Slovakia;
 7576;1958;slo;Bratislava;Slovakia;3060972;48.14816;17.10674;1.0;SVK;;1945;Slovakia;
@@ -7529,7 +7529,7 @@
 27590;1965;fre;Lausanne;Switzerland;2659994;46.516;6.63282;1.0;CHE;;1960;Switzerland fre;
 15105;1965;ger;Leipzig;Germany;2879139;51.33962;12.37129;1.0;DEU;West Germany;1960;West Germany;East Germany
 27583;1965;ger;Stuttgart;Germany;2825297;48.78232;9.17702;1.0;DEU;East Germany;1960;East Germany;West Germany
-27821;1965;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;Korea, Republic of;
+27821;1965;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;"""Korea, Republic of""";
 18517;1965;eng;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;1960;Czech Republic;
 14693;1965;hrv;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;1960;Czech Republic;
 9222;1965;eng;London;United Kingdom;2643743;51.50853;-0.12574;1.0;GBR;;1960;United Kingdom;
@@ -9943,7 +9943,7 @@
 4052;1972;fre;Rome;Italy;3169070;41.89193;12.51133;1.0;ITA;;1960;Italy;
 20927;1972;eng;Lewisburg;United States;4636442;35.44924;-86.78889;1.0;USA;;1960;United States;
 132;1972;hun;Bratislava;Slovakia;3060972;48.14816;17.10674;1.0;SVK;;1960;Slovakia;
-8754;1972;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;Korea, Republic of;
+8754;1972;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;"""Korea, Republic of""";
 27558;1972;dan;Copenhagen;Denmark;2618425;55.67594;12.56553;1.0;DNK;;1960;Denmark;
 15031;1972;ger;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;1960;Czech Republic;
 8702;1972;pol;Katowice;Poland;3096472;50.25841;19.02754;1.0;POL;;1960;Poland;
@@ -12892,7 +12892,7 @@
 21206;1982;eng;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;1960;Czech Republic;
 27630;1982;ger;Vienna;Austria;2761369;48.20849;16.37208;0.5;AUT;;1960;Austria;
 10961;1982;ger;Munich;Germany;2867714;48.13743;11.57549;1.0;DEU;West Germany;1960;West Germany;
-3557;1982;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;Korea, Republic of;
+3557;1982;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;"""Korea, Republic of""";
 25328;1982;ger;Frankfurt am Main;Germany;2925533;50.11552;8.68417;0.25;DEU;West Germany;1960;West Germany;
 1832;1982;pol;Warsaw;Poland;756135;52.22977;21.01178;1.0;POL;;1960;Poland;
 10128;1982;slo;Bratislava;Slovakia;3060972;48.14816;17.10674;1.0;SVK;;1960;Slovakia;
@@ -13368,7 +13368,7 @@
 7183;1983;gre;Athens;Greece;264371;37.98376;23.72784;1.0;GRC;;1960;Greece;
 10539;1983;ger;Stuttgart;Germany;2825297;48.78232;9.17702;1.0;DEU;West Germany;1960;West Germany;
 26915;1983;ger;Stuttgart;Germany;2825297;48.78232;9.17702;0.1666666666666666;DEU;West Germany;1960;West Germany;
-11421;1983;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;Korea, Republic of;
+11421;1983;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;"""Korea, Republic of""";
 25691;1983;eng;Toronto;Canada;6167865;43.70011;-79.4163;0.5;CAN;;1960;Canada;
 25690;1983;eng;Ann Arbor;United States;4984247;42.27756;-83.74088;0.5;USA;;1960;United States;
 21792;1983;eng;Oxford;United Kingdom;2640729;51.75222;-1.25596;0.3333333333333333;GBR;;1960;United Kingdom;
@@ -13708,7 +13708,7 @@
 12795;1984;hrv;Sarajevo;Bosnia and Herzegovina;3191281;43.84864;18.35644;1.0;BIH;;1960;Bosnia and Herzegovina;
 23918;1984;ger;Zurich;Switzerland;2657896;47.36667;VIII.55;0.5;CHE;;1960;Switzerland ger;
 23917;1984;ger;Vienna;Austria;2761369;48.20849;16.37208;0.5;AUT;;1960;Austria;
-1825;1984;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;Korea, Republic of;
+1825;1984;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;"""Korea, Republic of""";
 15927;1984;fre;Berlin;Germany;2950159;52.52437;13.41053;1.0;DEU;West Germany;1960;West Germany;East Germany
 9965;1984;slv;Ljubljana;Slovenia;3196359;46.05108;14.50513;1.0;SVN;;1960;Slovenia;
 12805;1984;hrv;Sarajevo;Bosnia and Herzegovina;3191281;43.84864;18.35644;1.0;BIH;;1960;Bosnia and Herzegovina;
@@ -15474,7 +15474,7 @@
 13337;1988;por;Rio de Janeiro;Brazil;3451190;-22.90642;-43.18223;1.0;BRA;;1960;Brazil;
 10316;1988;ger;Hauzenberg;Germany;2908661;48.64957;13.62645;1.0;DEU;West Germany;1960;West Germany;
 14490;1988;dut;Antwerp;Belgium;2803138;51.22047;4.40026;1.0;BEL;;1960;Belgium dut;
-13098;1988;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;Korea, Republic of;
+13098;1988;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;"""Korea, Republic of""";
 12130;1988;dan;Copenhagen;Denmark;2618425;55.67594;12.56553;1.0;DNK;;1960;Denmark;
 13744;1988;tur;Istanbul;Turkey;745044;41.01384;28.94966;1.0;TUR;;1960;Turkey;
 11924;1988;bul;Sofia;Bulgaria;727011;42.69751;23.32415;1.0;BGR;;1960;Bulgaria;
@@ -15492,7 +15492,7 @@
 1865;1988;srd;Nuoro;Italy;3172154;40.31991;9.32568;1.0;ITA;;1960;Italy;
 10538;1988;ger;Berlin;Germany;2950159;52.52437;13.41053;1.0;DEU;East Germany;1960;East Germany;
 2412;1988;eng;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;1960;Czech Republic;
-11701;1988;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;Korea, Republic of;
+11701;1988;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;"""Korea, Republic of""";
 9815;1988;ger;Berlin;Germany;2950159;52.52437;13.41053;0.5;DEU;East Germany;1960;East Germany;
 12144;1988;dan;Copenhagen;Denmark;2618425;55.67594;12.56553;1.0;DNK;;1960;Denmark;
 9814;1988;ger;Weimar;Germany;2812482;50.9803;11.32903;0.5;DEU;East Germany;1960;East Germany;
@@ -15513,7 +15513,7 @@
 26814;1988;eng;New York;United States;5128581;40.71427;-74.00597;0.3333333333333333;USA;;1960;United States;
 24690;1988;eng;New York;United States;5128581;40.71427;-74.00597;0.5;USA;;1960;United States;
 11407;1988;ita;Milan;Italy;3173435;45.46427;9.18951;1.0;ITA;;1960;Italy;
-13135;1988;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;Korea, Republic of;
+13135;1988;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;"""Korea, Republic of""";
 14421;1988;ger;Munich;Germany;2867714;48.13743;11.57549;0.5;DEU;West Germany;1960;West Germany;
 24691;1988;eng;London;United Kingdom;2643743;51.50853;-0.12574;0.5;GBR;;1960;United Kingdom;
 8425;1988;swe;Lund;Sweden;2693678;55.70584;13.19321;1.0;SWE;;1960;Sweden;
@@ -15526,7 +15526,7 @@
 15028;1988;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;1960;France;
 678;1988;tur;Istanbul;Turkey;745044;41.01384;28.94966;1.0;TUR;;1960;Turkey;
 12433;1988;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;1960;France;
-13112;1988;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;Korea, Republic of;
+13112;1988;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;"""Korea, Republic of""";
 1008;1988;eng;New York;United States;5128581;40.71427;-74.00597;1.0;USA;;1960;United States;
 24051;1988;ger;Frankfurt am Main;Germany;2925533;50.11552;8.68417;0.5;DEU;West Germany;1960;West Germany;
 13480;1988;slv;Ljubljana;Slovenia;3196359;46.05108;14.50513;1.0;SVN;;1960;Slovenia;
@@ -15832,7 +15832,7 @@
 14328;1989;ger;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;1960;Czech Republic;
 3629;1989;ger;Hanau;Germany;2911007;50.13423;8.91418;1.0;DEU;West Germany;1960;West Germany;
 22618;1989;ger;Cologne;Germany;2886242;50.93333;VI.95;0.5;DEU;West Germany;1960;West Germany;
-13111;1989;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;Korea, Republic of;
+13111;1989;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;"""Korea, Republic of""";
 22617;1989;ger;Cologne;Germany;2886242;50.93333;VI.95;0.5;DEU;West Germany;1960;West Germany;
 1209;1989;ger;Frankfurt am Main;Germany;2925533;50.11552;8.68417;1.0;DEU;West Germany;1960;West Germany;
 9411;1989;srp;Belgrade;Serbia;792680;44.80401;20.46513;1.0;SRB;;1960;Serbia;
@@ -16580,7 +16580,7 @@
 3030;1990;hun;Bratislava;Slovakia;3060972;48.14816;17.10674;0.5;SVK;;1960;Slovakia;
 14681;1990;spa;Barcelona;Spain;3128760;41.38879;2.15899;1.0;ESP;;1960;Spain;
 27048;1990;eng;Boston;United States;4930956;42.35843;-71.05977;0.3333333333333333;USA;;1960;United States;
-13107;1990;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;Korea, Republic of;
+13107;1990;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;"""Korea, Republic of""";
 20171;1990;spa;Barcelona;Spain;3128760;41.38879;2.15899;1.0;ESP;;1960;Spain;
 20173;1990;tur;Istanbul;Turkey;745044;41.01384;28.94966;1.0;TUR;;1960;Turkey;
 20174;1990;tur;Istanbul;Turkey;745044;41.01384;28.94966;1.0;TUR;;1960;Turkey;
@@ -16633,7 +16633,7 @@
 21274;1990;eng;New York;United States;5128581;40.71427;-74.00597;0.5;USA;;1960;United States;
 14417;1990;ger;Vienna;Austria;2761369;48.20849;16.37208;1.0;AUT;;1960;Austria;
 24060;1990;ger;Vienna;Austria;2761369;48.20849;16.37208;0.125;AUT;;1960;Austria;
-13122;1990;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;Korea, Republic of;
+13122;1990;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;"""Korea, Republic of""";
 21273;1990;eng;London;United Kingdom;2643743;51.50853;-0.12574;0.5;GBR;;1960;United Kingdom;
 24055;1990;ger;Zurich;Switzerland;2657896;47.36667;VIII.55;0.125;CHE;;1960;Switzerland ger;
 1228;1990;slv;Ljubljana;Slovenia;3196359;46.05108;14.50513;1.0;SVN;;1960;Slovenia;
@@ -16892,7 +16892,7 @@
 6802;1991;eng;London;United Kingdom;2643743;51.50853;-0.12574;1.0;GBR;;1960;United Kingdom;
 13338;1991;por;Lisbon;Portugal;2267057;38.71667;-9.13333;1.0;PRT;;1960;Portugal;
 3701;1991;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;1960;France;
-13099;1991;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;Korea, Republic of;
+13099;1991;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;"""Korea, Republic of""";
 1035;1991;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;1960;France;
 17019;1991;eng;Martin;Slovakia;3058780;49.06651;18.92399;1.0;SVK;;1960;Slovakia;
 1033;1991;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;1960;France;
@@ -17017,7 +17017,7 @@
 11399;1991;ita;Milan;Italy;3173435;45.46427;9.18951;1.0;ITA;;1960;Italy;
 22806;1991;eng;London;United Kingdom;2643743;51.50853;-0.12574;1.0;GBR;;1960;United Kingdom;
 3137;1991;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;1960;France;
-14422;1991;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;Korea, Republic of;
+14422;1991;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;"""Korea, Republic of""";
 16233;1991;eng;New York;United States;5128581;40.71427;-74.00597;1.0;USA;;1960;United States;
 7958;1991;ger;Frankfurt am Main;Germany;2925533;50.11552;8.68417;1.0;DEU;;1960;West Germany;
 1849;1991;slo;Bratislava;Slovakia;3060972;48.14816;17.10674;1.0;SVK;;1960;Slovakia;
@@ -17072,7 +17072,7 @@
 3451;1991;epo;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;1960;Czech Republic;
 4983;1991;ger;Frankfurt am Main;Germany;2925533;50.11552;8.68417;1.0;DEU;;1960;West Germany;
 7945;1991;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;1960;France;
-11420;1991;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;Korea, Republic of;
+11420;1991;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;"""Korea, Republic of""";
 9483;1991;swe;Lund;Sweden;2693678;55.70584;13.19321;1.0;SWE;;1960;Sweden;
 14345;1991;ita;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;1960;Czech Republic;
 16261;1991;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;1960;France;
@@ -17474,7 +17474,7 @@
 10016;1992;ger;Frankfurt am Main;Germany;2925533;50.11552;8.68417;0.5;DEU;;1960;West Germany;
 26691;1992;fre;La Tour-d'Aigues;France;3006213;43.72531;5.54796;0.5;FRA;;1960;France;
 24640;1992;eng;London;United Kingdom;2643743;51.50853;-0.12574;0.5;GBR;;1960;United Kingdom;
-587;1992;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;Korea, Republic of;
+587;1992;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;"""Korea, Republic of""";
 18664;1992;sla;Warsaw;Poland;756135;52.22977;21.01178;1.0;POL;;1960;Poland;
 3479;1992;dan;Copenhagen;Denmark;2618425;55.67594;12.56553;1.0;DNK;;1960;Denmark;
 13381;1992;rum;Bucharest;Romania;683506;44.43225;26.10626;1.0;ROU;;1960;Romania;
@@ -17493,7 +17493,7 @@
 18441;1992;dut;Baarn;Netherlands;2759544;52.21167;V.75;1.0;NLD;;1960;Netherlands;
 22846;1992;ger;Prague;Czechia;3067696;50.08804;14.42076;0.5;CZE;;1960;Czech Republic;
 22845;1992;ger;Prague;Czechia;3067696;50.08804;14.42076;0.5;CZE;;1960;Czech Republic;
-13123;1992;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;Korea, Republic of;
+13123;1992;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;"""Korea, Republic of""";
 22844;1992;ger;Vienna;Austria;2761369;48.20849;16.37208;0.5;AUT;;1960;Austria;
 11379;1992;ind;Jakarta;Indonesia;1642911;-6.21462;106.84513;1.0;IDN;;1960;Indonesia;
 7490;1992;rum;Bucharest;Romania;683506;44.43225;26.10626;1.0;ROU;;1960;Romania;
@@ -17531,7 +17531,7 @@
 1207;1992;ger;Frankfurt am Main;Germany;2925533;50.11552;8.68417;1.0;DEU;;1960;West Germany;
 27063;1992;eng;Toronto;Canada;6167865;43.70011;-79.4163;0.25;CAN;;1960;Canada;
 27062;1992;eng;New York;United States;5128581;40.71427;-74.00597;0.25;USA;;1960;United States;
-13110;1992;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;Korea, Republic of;
+13110;1992;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;"""Korea, Republic of""";
 12057;1992;chi;Hefei;China;1808722;31.86389;117.28083;1.0;CHN;;1960;China;
 1204;1992;ger;Hauzenberg;Germany;2908661;48.64957;13.62645;1.0;DEU;;1960;West Germany;
 18062;1992;por;Lisbon;Portugal;2267057;38.71667;-9.13333;1.0;PRT;;1960;Portugal;
@@ -17841,7 +17841,7 @@
 17339;1993;ger;Weinheim;Germany;2812174;49.54887;8.66697;1.0;DEU;;1960;West Germany;
 22694;1993;ger;Brandýs nad Labem-Starå Boleslav;Czechia;3078837;50.18709;14.66326;0.5;CZE;;1960;Czech Republic;
 7934;1993;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;1960;France;
-13113;1993;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;Korea, Republic of;
+13113;1993;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1960;"""Korea, Republic of""";
 15974;1993;ger;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;1960;Czech Republic;
 16663;1993;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;1960;France;
 7276;1993;hun;Budapest;Hungary;3054643;47.49835;19.04045;1.0;HUN;;1960;Hungary;
@@ -18195,7 +18195,7 @@
 17280;1994;fin;Helsinki;Finland;658225;60.16952;24.93545;1.0;FIN;;1994;Finland;
 27134;1994;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;1994;France;
 25658;1994;eng;London;United Kingdom;2643743;51.50853;-0.12574;0.5;GBR;;1994;United Kingdom;
-13125;1994;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;Korea, Republic of;
+13125;1994;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;"""Korea, Republic of""";
 1219;1994;ger;Hauzenberg;Germany;2908661;48.64957;13.62645;1.0;DEU;;1994;West Germany;
 8380;1994;spa;Madrid;Spain;3117735;40.4165;-3.70256;1.0;ESP;;1994;Spain;
 6418;1994;hun;London;United Kingdom;2643743;51.50853;-0.12574;1.0;GBR;;1994;United Kingdom;
@@ -18216,7 +18216,7 @@
 5356;1994;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;1994;France;
 27627;1994;slo;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;1994;Czech Republic;
 22903;1994;ger;Vienna;Austria;2761369;48.20849;16.37208;0.5;AUT;;1994;Austria;
-13137;1994;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;Korea, Republic of;
+13137;1994;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;"""Korea, Republic of""";
 20130;1994;hun;Budapest;Hungary;3054643;47.49835;19.04045;1.0;HUN;;1994;Hungary;
 7998;1994;ger;Frankfurt am Main;Germany;2925533;50.11552;8.68417;1.0;DEU;;1994;West Germany;
 21294;1994;fre;Marseille;France;2995469;43.29695;5.38107;0.5;FRA;;1994;France;
@@ -18247,7 +18247,7 @@
 20039;1994;eng;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;1994;Czech Republic;
 7989;1994;ger;Frankfurt am Main;Germany;2925533;50.11552;8.68417;1.0;DEU;;1994;West Germany;
 20043;1994;eng;London;United Kingdom;2643743;51.50853;-0.12574;1.0;GBR;;1994;United Kingdom;
-13103;1994;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;Korea, Republic of;
+13103;1994;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;"""Korea, Republic of""";
 3970;1994;hun;Budapest;Hungary;3054643;47.49835;19.04045;1.0;HUN;;1994;Hungary;
 8314;1994;pol;Warsaw;Poland;756135;52.22977;21.01178;1.0;POL;;1994;Poland;
 8027;1994;ger;Hamburg;Germany;2911298;53.55073;9.99302;1.0;DEU;;1994;West Germany;
@@ -18444,7 +18444,7 @@
 2196;1995;hun;PÊcs;Hungary;3046526;46.0725;18.23083;1.0;HUN;;1994;Hungary;
 8072;1995;hun;Budapest;Hungary;3054643;47.49835;19.04045;1.0;HUN;;1994;Hungary;
 7832;1995;dut;Amsterdam;Netherlands;2759794;52.37403;4.88969;1.0;NLD;;1994;Netherlands;
-20548;1995;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;Korea, Republic of;
+20548;1995;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;"""Korea, Republic of""";
 19920;1995;gem;Rolandseck;Germany;2845460;50.62932;VII.78;1.0;DEU;;1994;West Germany;
 26726;1995;fre;Saint-Pierre-la-Vieille;France;2977437;48.91923;-0.5763;1.0;FRA;;1994;France;
 9851;1995;ita;Genoa;Italy;3176219;44.40478;8.94439;1.0;ITA;;1994;Italy;
@@ -18457,7 +18457,7 @@
 9724;1995;ger;Weinheim;Germany;2812174;49.54887;8.66697;1.0;DEU;;1994;West Germany;
 428;1995;eng;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;1994;Czech Republic;
 25696;1995;eng;Toronto;Canada;6167865;43.70011;-79.4163;0.25;CAN;;1994;Canada;
-13102;1995;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;Korea, Republic of;
+13102;1995;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;"""Korea, Republic of""";
 13481;1995;spa;Mexico City;Mexico;3530597;19.42847;-99.12766;1.0;MEX;;1994;Mexico;
 12996;1995;ita;Milan;Italy;3173435;45.46427;9.18951;1.0;ITA;;1994;Italy;
 13468;1995;slv;Ljubljana;Slovenia;3196359;46.05108;14.50513;1.0;SVN;;1994;Slovenia;
@@ -18531,14 +18531,14 @@
 17046;1995;fre;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;1994;Czech Republic;
 1065;1995;ita;Rome;Italy;3169070;41.89193;12.51133;1.0;ITA;;1994;Italy;
 12370;1995;fin;Helsinki;Finland;658225;60.16952;24.93545;0.3333333333333333;FIN;;1994;Finland;
-13127;1995;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;Korea, Republic of;
+13127;1995;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;"""Korea, Republic of""";
 21536;1995;ger;Hamburg;Germany;2911298;53.55073;9.99302;0.5;DEU;;1994;West Germany;
 17996;1995;ita;Trieste;Italy;3165185;45.64953;13.77678;1.0;ITA;;1994;Italy;
 7142;1995;ger;Leipzig;Germany;2879139;51.33962;12.37129;1.0;DEU;;1994;East Germany;
 4034;1995;eng;London;United Kingdom;2643743;51.50853;-0.12574;1.0;GBR;;1994;United Kingdom;
 12444;1995;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;1994;France;
 7406;1995;nor;Oslo;Norway;3143244;59.91273;10.74609;1.0;NOR;;1994;Norway;
-13100;1995;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;Korea, Republic of;
+13100;1995;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;"""Korea, Republic of""";
 12222;1995;dut;Houten;Netherlands;2753557;52.02833;5.16806;0.5;NLD;;1994;Netherlands;
 12434;1995;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;1994;France;
 7209;1995;heb;Tel Aviv;Israel;293397;32.08088;34.78057;1.0;ISR;;1994;Israel;
@@ -18754,7 +18754,7 @@
 6874;1996;eng;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;1994;Czech Republic;
 27260;1996;fre;Monaco;Monaco;2993458;43.73333;7.41667;1.0;MCO;;1994;France;
 6877;1996;eng;Chicago;United States;4887398;41.85003;-87.65005;1.0;USA;;1994;United States;
-13095;1996;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;Korea, Republic of;
+13095;1996;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;"""Korea, Republic of""";
 11285;1996;ger;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;1994;Czech Republic;
 18004;1996;dut;Amsterdam;Netherlands;2759794;52.37403;4.88969;1.0;NLD;;1994;Netherlands;
 22937;1996;eng;Paris;France;2988507;48.85341;II.88;0.5;FRA;;1994;France;
@@ -18871,7 +18871,7 @@
 23528;1996;hun;Nyíregyhåza;Hungary;716935;47.95539;21.71671;1.0;HUN;;1994;Hungary;
 9986;1996;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;1994;France;
 11925;1996;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;1994;France;
-7374;1996;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;Korea, Republic of;
+7374;1996;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;"""Korea, Republic of""";
 1471;1996;epo;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;1994;Czech Republic;
 4207;1996;spa;Milan;Italy;3173435;45.46427;9.18951;1.0;ITA;;1994;Italy;
 22123;1996;fre;Grenoble;France;3014728;45.17869;5.71479;0.5;FRA;;1994;France;
@@ -19216,7 +19216,7 @@
 14567;1997;ger;Munich;Germany;2867714;48.13743;11.57549;1.0;DEU;;1994;West Germany;
 9992;1997;ger;Hanau;Germany;2911007;50.13423;8.91418;1.0;DEU;;1994;West Germany;
 11793;1997;ger;Salzburg;Austria;2766824;47.79941;13.04399;0.3333333333333333;AUT;;1994;Austria;
-13130;1997;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;Korea, Republic of;
+13130;1997;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;"""Korea, Republic of""";
 20092;1997;ger;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;1994;Czech Republic;
 11317;1997;gre;Athens;Greece;264371;37.98376;23.72784;1.0;GRC;;1994;Greece;
 16085;1997;eng;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;1994;Czech Republic;
@@ -19275,7 +19275,7 @@
 152;1997;fre;Karlovy Vary;Czechia;3073803;50.23271;12.87117;0.5;CZE;;1994;Czech Republic;
 4176;1997;slv;Ljubljana;Slovenia;3196359;46.05108;14.50513;1.0;SVN;;1994;Slovenia;
 27050;1997;eng;Minneapolis;United States;5037649;44.97997;-93.26384;1.0;USA;;1994;United States;
-16183;1997;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;Korea, Republic of;
+16183;1997;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;"""Korea, Republic of""";
 13242;1997;per;Tehran;Iran;112931;35.69439;51.42151;1.0;IRN;;1994;Iran;
 22514;1997;ita;Padua;Italy;3171728;45.40797;11.88586;0.5;ITA;;1994;Italy;
 7994;1997;ger;Frankfurt am Main;Germany;2925533;50.11552;8.68417;1.0;DEU;;1994;West Germany;
@@ -19353,7 +19353,7 @@
 22070;1998;ger;Aarau;Switzerland;2661881;47.38878;8.04826;0.3333333333333333;CHE;;1994;Switzerland ger;
 26757;1998;chi;Taipei;Taiwan;1668341;25.04776;121.53185;1.0;TWN;;1994;Taiwan;
 4229;1998;eng;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;1994;Czech Republic;
-3630;1998;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;Korea, Republic of;
+3630;1998;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;"""Korea, Republic of""";
 4246;1998;ger;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;1994;Czech Republic;
 26626;1998;slo;Bratislava;Slovakia;3060972;48.14816;17.10674;1.0;SVK;;1994;Slovakia;
 26475;1998;spa;Barcelona;Spain;3128760;41.38879;2.15899;1.0;ESP;;1994;Spain;
@@ -19501,10 +19501,10 @@
 15297;1998;slv;Ljubljana;Slovenia;3196359;46.05108;14.50513;1.0;SVN;;1994;Slovenia;
 12877;1998;hun;Budapest;Hungary;3054643;47.49835;19.04045;1.0;HUN;;1994;Hungary;
 7185;1998;heb;Tel Aviv;Israel;293397;32.08088;34.78057;1.0;ISR;;1994;Israel;
-9628;1998;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;Korea, Republic of;
+9628;1998;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;"""Korea, Republic of""";
 6938;1998;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;1994;France;
 12407;1998;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;1994;France;
-13128;1998;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;Korea, Republic of;
+13128;1998;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;"""Korea, Republic of""";
 13388;1998;rum;Bucharest;Romania;683506;44.43225;26.10626;1.0;ROU;;1994;Romania;
 5821;1998;lit;Vilnius;Lithuania;593116;54.68916;25.2798;1.0;LTU;;1994;Lithuania;
 9663;1998;slo;Bratislava;Slovakia;3060972;48.14816;17.10674;1.0;SVK;;1994;Slovakia;
@@ -19611,7 +19611,7 @@
 12475;1998;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;1994;France;
 6347;1998;eng;London;United Kingdom;2643743;51.50853;-0.12574;1.0;GBR;;1994;United Kingdom;
 10481;1998;slo;Brno;Czechia;3078610;49.19522;16.60796;1.0;CZE;;1994;Czech Republic;
-13104;1998;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;Korea, Republic of;
+13104;1998;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;"""Korea, Republic of""";
 17767;1998;ger;Olomouc;Czechia;3069011;49.59552;17.25175;0.5;CZE;;1994;Czech Republic;
 14583;1998;ger;Munich;Germany;2867714;48.13743;11.57549;1.0;DEU;;1994;West Germany;
 17805;1998;eng;St Louis;United States;4407066;38.62727;-90.19789;1.0;USA;;1994;United States;
@@ -19733,7 +19733,7 @@
 2953;1999;slo;Bratislava;Slovakia;3060972;48.14816;17.10674;0.5;SVK;;1994;Slovakia;
 18476;1999;eng;Normal;United States;4903780;40.5142;-88.99063;1.0;USA;;1994;United States;
 10381;1999;hrv;Novi Sad;Serbia;3194360;45.25167;19.83694;1.0;SRB;;1994;Serbia;
-1086;1999;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;Korea, Republic of;
+1086;1999;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;"""Korea, Republic of""";
 9283;1999;ita;Brescia;Italy;3181554;45.53558;10.21472;1.0;ITA;;1994;Italy;
 12308;1999;eng;New York;United States;5128581;40.71427;-74.00597;1.0;USA;;1994;United States;
 18502;1999;eng;Toronto;Canada;6167865;43.70011;-79.4163;1.0;CAN;;1994;Canada;
@@ -19946,7 +19946,7 @@
 24669;1999;eng;New York;United States;5128581;40.71427;-74.00597;0.25;USA;;1994;United States;
 13747;1999;tur;Istanbul;Turkey;745044;41.01384;28.94966;1.0;TUR;;1994;Turkey;
 7695;1999;swe;Stockholm;Sweden;2673730;59.32938;18.06871;1.0;SWE;;1994;Sweden;
-13131;1999;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;Korea, Republic of;
+13131;1999;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;"""Korea, Republic of""";
 13140;1999;lav;Riga;Latvia;456172;56.946;24.10589;1.0;LVA;;1994;Latvia;
 16669;1999;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;1994;France;
 11034;1999;hun;Bratislava;Slovakia;3060972;48.14816;17.10674;1.0;SVK;;1994;Slovakia;
@@ -19998,11 +19998,11 @@
 26765;1999;eng;Boston;United States;4930956;42.35843;-71.05977;0.3333333333333333;USA;;1994;United States;
 4124;1999;pol;Krakow;Poland;3094802;50.06143;19.93658;1.0;POL;;1994;Poland;
 4181;1999;slv;Ljubljana;Slovenia;3196359;46.05108;14.50513;1.0;SVN;;1994;Slovenia;
-13116;1999;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;Korea, Republic of;
+13116;1999;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;"""Korea, Republic of""";
 18410;1999;ger;Linz;Austria;2772400;48.30639;14.28611;1.0;AUT;;1994;Austria;
 20859;1999;ita;Milan;Italy;3173435;45.46427;9.18951;1.0;ITA;;1994;Italy;
 16147;1999;lit;Vilnius;Lithuania;593116;54.68916;25.2798;1.0;LTU;;1994;Lithuania;
-13096;1999;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;Korea, Republic of;
+13096;1999;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;"""Korea, Republic of""";
 13591;1999;spa;Mexico City;Mexico;3530597;19.42847;-99.12766;1.0;MEX;;1994;Mexico;
 26995;1999;por;São Paulo;Brazil;3448439;-23.5475;-46.63611;0.3333333333333333;BRA;;1994;Brazil;
 26996;1999;por;Rio de Janeiro;Brazil;3451190;-22.90642;-43.18223;0.3333333333333333;BRA;;1994;Brazil;
@@ -20027,7 +20027,7 @@
 19474;1999;heb;Tel Aviv;Israel;293397;32.08088;34.78057;1.0;ISR;;1994;Israel;
 10041;1999;ger;Vienna;Austria;2761369;48.20849;16.37208;0.5;AUT;;1994;Austria;
 7423;1999;per;Tehran;Iran;112931;35.69439;51.42151;1.0;IRN;;1994;Iran;
-16144;1999;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;Korea, Republic of;
+16144;1999;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;1994;"""Korea, Republic of""";
 5541;1999;eng;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;1994;Czech Republic;
 26331;1999;chi;Taipei;Taiwan;1668341;25.04776;121.53185;1.0;TWN;;1994;Taiwan;
 24846;1999;ger;Frankfurt am Main;Germany;2925533;50.11552;8.68417;0.25;DEU;;1994;West Germany;
@@ -20109,7 +20109,7 @@
 14498;2000;dut;Krommenie;Netherlands;2752240;52.49917;IV.25;1.0;NLD;;2000;Netherlands;
 1418;2000;hun;Bratislava;Slovakia;3060972;48.14816;17.10674;1.0;SVK;;2000;Slovakia;
 5684;2000;ger;Leipzig;Germany;2879139;51.33962;12.37129;1.0;DEU;;2000;East Germany;
-586;2000;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2000;Korea, Republic of;
+586;2000;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2000;"""Korea, Republic of""";
 18266;2000;lit;Kaunas;Lithuania;598316;54.90272;23.90961;1.0;LTU;;2000;Lithuania;
 16288;2000;ger;Riedstadt;Germany;3272941;49.83411;8.49621;1.0;DEU;;2000;West Germany;
 23123;2000;eng;London;United Kingdom;2643743;51.50853;-0.12574;0.3333333333333333;GBR;;2000;United Kingdom;
@@ -20214,7 +20214,7 @@
 13054;2000;ita;Milan;Italy;3173435;45.46427;9.18951;1.0;ITA;;2000;Italy;
 13051;2000;ita;Milan;Italy;3173435;45.46427;9.18951;1.0;ITA;;2000;Italy;
 4707;2000;eng;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;2000;Czech Republic;
-13105;2000;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2000;Korea, Republic of;
+13105;2000;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2000;"""Korea, Republic of""";
 25999;2000;eng;Washington;United States;4140963;38.89511;-77.03637;1.0;USA;;2000;United States;
 21592;2000;ger;Eltville;Germany;2930646;50.02858;8.11754;0.5;DEU;;2000;West Germany;
 12096;2000;chi;Hong Kong;Hong Kong;1819729;22.27832;114.17469;1.0;HKG;;2000;;
@@ -20402,7 +20402,7 @@
 21831;2000;ger;Berlin;Germany;2950159;52.52437;13.41053;0.5;DEU;;2000;East Germany;
 21832;2000;ger;Weimar;Germany;2812482;50.9803;11.32903;0.5;DEU;;2000;East Germany;
 21881;2000;ger;Munich;Germany;2867714;48.13743;11.57549;0.5;DEU;;2000;West Germany;
-13132;2000;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2000;Korea, Republic of;
+13132;2000;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2000;"""Korea, Republic of""";
 23116;2000;eng;Melbourne;Australia;2158177;-37.814;144.96332;1.0;AUS;;2000;Australia;
 26133;2000;chi;Taipei;Taiwan;1668341;25.04776;121.53185;1.0;TWN;;2000;Taiwan;
 22383;2000;spa;Barcelona;Spain;3128760;41.38879;2.15899;0.25;ESP;;2000;Spain;
@@ -20576,7 +20576,7 @@
 4505;2001;ger;Stuttgart;Germany;2825297;48.78232;9.17702;0.5;DEU;;2000;West Germany;
 990;2001;eng;New York;United States;5128581;40.71427;-74.00597;1.0;USA;;2000;United States;
 4163;2001;rum;Iasi;Romania;675810;47.16667;27.VI;1.0;ROU;;2000;Romania;
-17096;2001;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2000;Korea, Republic of;
+17096;2001;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2000;"""Korea, Republic of""";
 19667;2001;ger;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;2000;Czech Republic;
 11398;2001;ita;Palermo;Italy;2523920;38.13205;13.33561;1.0;ITA;;2000;Italy;
 12915;2001;hun;Budapest;Hungary;3054643;47.49835;19.04045;1.0;HUN;;2000;Hungary;
@@ -20759,7 +20759,7 @@
 4876;2001;ger;Munich;Germany;2867714;48.13743;11.57549;1.0;DEU;;2000;West Germany;
 13069;2001;ita;Milan;Italy;3173435;45.46427;9.18951;1.0;ITA;;2000;Italy;
 4866;2001;eng;London;United Kingdom;2643743;51.50853;-0.12574;1.0;GBR;;2000;United Kingdom;
-13106;2001;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2000;Korea, Republic of;
+13106;2001;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2000;"""Korea, Republic of""";
 25930;2001;eng;Mississauga;Canada;6075357;43.5789;-79.6583;1.0;CAN;;2000;Canada;
 7865;2001;eng;London;United Kingdom;2643743;51.50853;-0.12574;1.0;GBR;;2000;United Kingdom;
 10745;2001;ger;Bremen;Germany;2944388;53.07582;8.80717;1.0;DEU;;2000;West Germany;
@@ -20787,7 +20787,7 @@
 9301;2001;ger;Vienna;Austria;2761369;48.20849;16.37208;0.5;AUT;;2000;Austria;
 10606;2001;eng;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;2000;Czech Republic;
 10885;2001;spa;Buenos Aires;Argentina;3435910;-34.61315;-58.37723;1.0;ARG;;2000;Argentina;
-9289;2001;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2000;Korea, Republic of;
+9289;2001;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2000;"""Korea, Republic of""";
 13610;2001;spa;Barcelona;Spain;3128760;41.38879;2.15899;1.0;ESP;;2000;Spain;
 10407;2001;lit;Vilnius;Lithuania;593116;54.68916;25.2798;1.0;LTU;;2000;Lithuania;
 1901;2001;slo;Bratislava;Slovakia;3060972;48.14816;17.10674;1.0;SVK;;2000;Slovakia;
@@ -20886,7 +20886,7 @@
 13298;2002;pol;Warsaw;Poland;756135;52.22977;21.01178;1.0;POL;;2000;Poland;
 4141;2002;pol;Poznan;Poland;3088171;52.40692;16.92993;1.0;POL;;2000;Poland;
 22324;2002;fre;Saint-Amand-les-Eaux;France;2981839;50.44718;3.43076;0.5;FRA;;2000;France;
-16419;2002;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2000;Korea, Republic of;
+16419;2002;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2000;"""Korea, Republic of""";
 16671;2002;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;2000;France;
 11418;2002;jpn;Tokyo;Japan;1850147;35.6895;139.69171;1.0;JPN;;2000;Japan;
 4145;2002;pol;Poznan;Poland;3088171;52.40692;16.92993;1.0;POL;;2000;Poland;
@@ -21020,8 +21020,8 @@
 6480;2002;ger;Munich;Germany;2867714;48.13743;11.57549;0.5;DEU;;2000;West Germany;
 6479;2002;ger;Stuttgart;Germany;2825297;48.78232;9.17702;0.5;DEU;;2000;West Germany;
 22110;2002;ger;Vienna;Austria;2761369;48.20849;16.37208;0.5;AUT;;2000;Austria;
-1090;2002;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2000;Korea, Republic of;
-7370;2002;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2000;Korea, Republic of;
+1090;2002;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2000;"""Korea, Republic of""";
+7370;2002;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2000;"""Korea, Republic of""";
 13187;2002;nor;Oslo;Norway;3143244;59.91273;10.74609;1.0;NOR;;2000;Norway;
 12919;2002;hun;Budapest;Hungary;3054643;47.49835;19.04045;1.0;HUN;;2000;Hungary;
 17108;2002;slo;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;2000;Czech Republic;
@@ -21643,14 +21643,14 @@
 19344;2004;hun;Szeged;Hungary;715429;46.253;20.14824;1.0;HUN;;2000;Hungary;
 5801;2004;jpn;Tokyo;Japan;1850147;35.6895;139.69171;1.0;JPN;;2000;Japan;
 8099;2004;hun;Budapest;Hungary;3054643;47.49835;19.04045;1.0;HUN;;2000;Hungary;
-5813;2004;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2000;Korea, Republic of;
+5813;2004;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2000;"""Korea, Republic of""";
 17314;2004;pol;Gdansk;Poland;3099434;54.35227;18.64912;1.0;POL;;2000;Poland;
 13604;2004;spa;Buenos Aires;Argentina;3435910;-34.61315;-58.37723;1.0;ARG;;2000;Argentina;
 5810;2004;jpn;Tokyo;Japan;1850147;35.6895;139.69171;1.0;JPN;;2000;Japan;
 1220;2004;ita;Pesaro;Italy;3171173;43.90921;XII.64;1.0;ITA;;2000;Italy;
 5808;2004;jpn;Tokyo;Japan;1850147;35.6895;139.69171;1.0;JPN;;2000;Japan;
 24261;2004;pol;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;2000;Czech Republic;
-9735;2004;kor;Paju;South Korea;1840898;37.761;126.77272;1.0;KOR;;2000;Korea, Republic of;
+9735;2004;kor;Paju;South Korea;1840898;37.761;126.77272;1.0;KOR;;2000;"""Korea, Republic of""";
 3675;2004;slo;Bratislava;Slovakia;3060972;48.14816;17.10674;1.0;SVK;;2000;Slovakia;
 3677;2004;eng;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;2000;Czech Republic;
 9761;2004;bul;Sofia;Bulgaria;727011;42.69751;23.32415;1.0;BGR;;2000;Bulgaria;
@@ -22260,7 +22260,7 @@
 12472;2005;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;2000;France;
 12415;2005;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;2000;France;
 9966;2005;spa;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;2000;Czech Republic;
-7369;2005;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2000;Korea, Republic of;
+7369;2005;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2000;"""Korea, Republic of""";
 13369;2005;rum;Bucharest;Romania;683506;44.43225;26.10626;1.0;ROU;;2000;Romania;
 22950;2005;spa;Barcelona;Spain;3128760;41.38879;2.15899;1.0;ESP;;2000;Spain;
 26672;2005;rum;Târgu Lăpuş;Romania;665009;47.45261;23.86539;1.0;ROU;;2000;Romania;
@@ -22592,7 +22592,7 @@
 3145;2006;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;2000;France;
 15400;2006;tur;Ankara;Turkey;323786;39.91987;32.85427;1.0;TUR;;2000;Turkey;
 1858;2006;spa;Barcelona;Spain;3128760;41.38879;2.15899;1.0;ESP;;2000;Spain;
-8231;2006;kor;Paju;South Korea;1840898;37.761;126.77272;1.0;KOR;;2000;Korea, Republic of;
+8231;2006;kor;Paju;South Korea;1840898;37.761;126.77272;1.0;KOR;;2000;"""Korea, Republic of""";
 1380;2006;dut;Amsterdam;Netherlands;2759794;52.37403;4.88969;1.0;NLD;;2000;Netherlands;
 22780;2006;ger;Neu-Isenburg;Germany;2864820;50.04832;8.69406;1.0;DEU;;2000;West Germany;
 13752;2006;tur;Istanbul;Turkey;745044;41.01384;28.94966;1.0;TUR;;2000;Turkey;
@@ -22622,7 +22622,7 @@
 19189;2006;eng;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;2000;Czech Republic;
 1178;2006;eng;Rotterdam;Netherlands;2747891;51.9225;4.47917;1.0;NLD;;2000;Netherlands;
 12249;2006;dut;Amsterdam;Netherlands;2759794;52.37403;4.88969;1.0;NLD;;2000;Netherlands;
-1092;2006;kor;Paju;South Korea;1840898;37.761;126.77272;1.0;KOR;;2000;Korea, Republic of;
+1092;2006;kor;Paju;South Korea;1840898;37.761;126.77272;1.0;KOR;;2000;"""Korea, Republic of""";
 19187;2006;eng;Mcely;Czechia;3070913;50.29426;15.07588;1.0;CZE;;2000;Czech Republic;
 18996;2006;eng;Merrick;United States;5126630;40.66288;-73.55152;1.0;USA;;2000;United States;
 18997;2006;eng;Merrick;United States;5126630;40.66288;-73.55152;1.0;USA;;2000;United States;
@@ -22742,7 +22742,7 @@
 20379;2006;ita;Rome;Italy;3169070;41.89193;12.51133;1.0;ITA;;2000;Italy;
 21325;2006;eng;Evanston;United States;4891382;42.04114;-87.69006;1.0;USA;;2000;United States;
 5732;2006;hun;Budapest;Hungary;3054643;47.49835;19.04045;1.0;HUN;;2000;Hungary;
-7373;2006;kor;Paju;South Korea;1840898;37.761;126.77272;1.0;KOR;;2000;Korea, Republic of;
+7373;2006;kor;Paju;South Korea;1840898;37.761;126.77272;1.0;KOR;;2000;"""Korea, Republic of""";
 10767;2006;bul;Sofia;Bulgaria;727011;42.69751;23.32415;1.0;BGR;;2000;Bulgaria;
 4468;2006;spa;Barcelona;Spain;3128760;41.38879;2.15899;1.0;ESP;;2000;Spain;
 4462;2006;bul;Sofia;Bulgaria;727011;42.69751;23.32415;1.0;BGR;;2000;Bulgaria;
@@ -23266,7 +23266,7 @@
 11675;2008;eng;London;United Kingdom;2643743;51.50853;-0.12574;1.0;GBR;;2000;United Kingdom;
 18055;2008;ger;Ottensheim;Austria;2769342;48.33246;14.17425;1.0;AUT;;2000;Austria;
 21113;2008;slo;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;2000;Czech Republic;
-13109;2008;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2000;Korea, Republic of;
+13109;2008;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2000;"""Korea, Republic of""";
 26389;2008;ger;Dßsseldorf;Germany;2934246;51.22172;6.77616;1.0;DEU;;2000;West Germany;
 1451;2008;swe;Malmo;Sweden;2692969;55.60587;13.00073;1.0;SWE;;2000;Sweden;
 19035;2008;pol;Warsaw;Poland;756135;52.22977;21.01178;1.0;POL;;2000;Poland;
@@ -23570,7 +23570,7 @@
 23131;2008;eng;New York;United States;5128581;40.71427;-74.00597;0.5;USA;;2000;United States;
 7047;2008;ger;Zurich;Switzerland;2657896;47.36667;VIII.55;1.0;CHE;;2000;Switzerland ger;
 16795;2008;pol;Poznan;Poland;3088171;52.40692;16.92993;1.0;POL;;2000;Poland;
-13134;2008;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2000;Korea, Republic of;
+13134;2008;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2000;"""Korea, Republic of""";
 27224;2008;fre;Amsterdam;Netherlands;2759794;52.37403;4.88969;0.5;NLD;;2000;Netherlands;
 3114;2008;ger;Munich;Germany;2867714;48.13743;11.57549;1.0;DEU;;2000;West Germany;
 3135;2008;eng;London;United Kingdom;2643743;51.50853;-0.12574;1.0;GBR;;2000;United Kingdom;
@@ -23619,7 +23619,7 @@
 7880;2008;eng;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;2000;Czech Republic;
 22642;2008;ger;Ljubljana;Slovenia;3196359;46.05108;14.50513;0.25;SVN;;2000;Slovenia;
 10397;2008;hun;Budapest;Hungary;3054643;47.49835;19.04045;1.0;HUN;;2000;Hungary;
-13121;2008;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2000;Korea, Republic of;
+13121;2008;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2000;"""Korea, Republic of""";
 401;2008;dut;'s-Hertogenbosch;Netherlands;2747351;51.69917;5.30417;1.0;NLD;;2000;Netherlands;
 3149;2008;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;2000;France;
 23383;2008;ger;St. PÜlten;Austria;2766429;48.2;15.63333;0.5;AUT;;2000;Austria;
@@ -23669,7 +23669,7 @@
 27678;2009;bul;Sofia;Bulgaria;727011;42.69751;23.32415;1.0;BGR;;2000;Bulgaria;
 5257;2009;hun;Bratislava;Slovakia;3060972;48.14816;17.10674;1.0;SVK;;2000;Slovakia;
 10185;2009;eng;Toronto;Canada;6167865;43.70011;-79.4163;1.0;CAN;;2000;Canada;
-3126;2009;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2000;Korea, Republic of;
+3126;2009;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2000;"""Korea, Republic of""";
 1611;2009;eng;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;2000;Czech Republic;
 12838;2009;hrv;Zagreb;Croatia;3186886;45.81444;15.97798;1.0;HRV;;2000;Croatia;
 13431;2009;rus;St Petersburg;Russia;498817;59.93863;30.31413;1.0;RUS;;2000;Russia;
@@ -23797,7 +23797,7 @@
 16081;2009;chi;Changsha;China;1815577;28.19874;112.97087;1.0;CHN;;2000;China;
 11998;2009;baq;Donostia / San Sebastian;Spain;3110044;43.31283;-1.97499;0.5;ESP;;2000;Spain;
 4957;2009;eng;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;2000;Czech Republic;
-20202;2009;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2000;Korea, Republic of;
+20202;2009;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2000;"""Korea, Republic of""";
 7478;2009;por;Mem Martins;Portugal;2266464;38.79443;-9.34284;1.0;PRT;;2000;Portugal;
 9293;2009;rum;Oradea;Romania;671768;47.0458;21.91833;1.0;ROU;;2000;Romania;
 9726;2009;ger;Frankfurt am Main;Germany;2925533;50.11552;8.68417;1.0;DEU;;2000;West Germany;
@@ -23818,7 +23818,7 @@
 4820;2009;eng;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;2000;Czech Republic;
 16737;2009;ger;Vienna;Austria;2761369;48.20849;16.37208;1.0;AUT;;2000;Austria;
 22705;2009;eng;Greenhaugh;United Kingdom;2647969;55.17921;-2.32281;0.5;GBR;;2000;United Kingdom;
-13119;2009;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2000;Korea, Republic of;
+13119;2009;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2000;"""Korea, Republic of""";
 17852;2009;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;2000;France;
 12626;2009;ger;Munich;Germany;2867714;48.13743;11.57549;1.0;DEU;;2000;West Germany;
 18110;2009;dut;Amsterdam;Netherlands;2759794;52.37403;4.88969;1.0;NLD;;2000;Netherlands;
@@ -23834,7 +23834,7 @@
 13778;2009;bul;Sofia;Bulgaria;727011;42.69751;23.32415;1.0;BGR;;2000;Bulgaria;
 6679;2009;ara;Brandýs nad Labem-Starå Boleslav;Czechia;3078837;50.18709;14.66326;1.0;CZE;;2000;Czech Republic;
 19752;2009;pol;Prague;Czechia;3067696;50.08804;14.42076;0.5;CZE;;2000;Czech Republic;
-8234;2009;kor;Paju;South Korea;1840898;37.761;126.77272;1.0;KOR;;2000;Korea, Republic of;
+8234;2009;kor;Paju;South Korea;1840898;37.761;126.77272;1.0;KOR;;2000;"""Korea, Republic of""";
 11182;2009;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;2000;France;
 10420;2009;pol;Warsaw;Poland;756135;52.22977;21.01178;1.0;POL;;2000;Poland;
 947;2009;chi;Nanchang;China;1800163;28.68396;115.85306;1.0;CHN;;2000;China;
@@ -23997,9 +23997,9 @@
 16509;2010;slv;Ljubljana;Slovenia;3196359;46.05108;14.50513;1.0;SVN;;2010;Slovenia;
 16042;2010;pol;Poznan;Poland;3088171;52.40692;16.92993;1.0;POL;;2010;Poland;
 14075;2010;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;2010;France;
-7372;2010;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
+7372;2010;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
 26268;2010;chi;Taipei;Taiwan;1668341;25.04776;121.53185;1.0;TWN;;2010;Taiwan;
-1089;2010;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
+1089;2010;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
 9744;2010;slv;Ljubljana;Slovenia;3196359;46.05108;14.50513;1.0;SVN;;2010;Slovenia;
 19457;2010;heb;Bnei Brak;Israel;295514;32.08074;34.8338;1.0;ISR;;2010;Israel;
 5775;2010;hun;Budapest;Hungary;3054643;47.49835;19.04045;1.0;HUN;;2010;Hungary;
@@ -24007,7 +24007,7 @@
 22947;2010;ger;Berlin;Germany;2950159;52.52437;13.41053;0.5;DEU;;2010;East Germany;
 3601;2010;slo;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;2010;Czech Republic;
 5762;2010;hun;Budapest;Hungary;3054643;47.49835;19.04045;1.0;HUN;;2010;Hungary;
-7368;2010;kor;Paju;South Korea;1840898;37.761;126.77272;1.0;KOR;;2010;Korea, Republic of;
+7368;2010;kor;Paju;South Korea;1840898;37.761;126.77272;1.0;KOR;;2010;"""Korea, Republic of""";
 3608;2010;eng;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;2010;Czech Republic;
 10008;2010;ger;Munich;Germany;2867714;48.13743;11.57549;1.0;DEU;;2010;West Germany;
 5706;2010;ger;Leipzig;Germany;2879139;51.33962;12.37129;1.0;DEU;;2010;East Germany;
@@ -24145,7 +24145,7 @@
 22838;2010;fre;Lausanne;Switzerland;2659994;46.516;6.63282;0.5;CHE;;2010;Switzerland fre;
 22839;2010;fre;Paris;France;2988507;48.85341;II.88;0.5;FRA;;2010;France;
 16660;2010;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;2010;France;
-13925;2010;eng;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
+13925;2010;eng;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
 5608;2010;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;2010;France;
 16195;2010;srp;Podgorica;Montenegro;3193044;42.44111;19.26361;1.0;MNE;;2010;Montenegro;
 19247;2010;eng;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;2010;Czech Republic;
@@ -24203,7 +24203,7 @@
 1028;2010;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;2010;France;
 14677;2010;spa;Madrid;Spain;3117735;40.4165;-3.70256;1.0;ESP;;2010;Spain;
 12882;2010;hun;Budapest;Hungary;3054643;47.49835;19.04045;1.0;HUN;;2010;Hungary;
-588;2010;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
+588;2010;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
 8078;2010;hun;Budapest;Hungary;3054643;47.49835;19.04045;1.0;HUN;;2010;Hungary;
 17823;2010;eng;Melbourne;Australia;2158177;-37.814;144.96332;1.0;AUS;;2010;Australia;
 18191;2010;eng;Munich;Germany;2867714;48.13743;11.57549;1.0;DEU;;2010;West Germany;
@@ -24371,7 +24371,7 @@
 13614;2011;spa;Barcelona;Spain;3128760;41.38879;2.15899;1.0;ESP;;2010;Spain;
 19242;2011;fre;Nantes;France;2990969;47.21725;-1.55336;1.0;FRA;;2010;France;
 1511;2011;pol;Wroclaw;Poland;3081368;51.1;17.03333;1.0;POL;;2010;Poland;
-13114;2011;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
+13114;2011;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
 17902;2011;ger;Berlin;Germany;2950159;52.52437;13.41053;1.0;DEU;;2010;East Germany;
 8299;2011;pol;Warsaw;Poland;756135;52.22977;21.01178;1.0;POL;;2010;Poland;
 18350;2011;ger;Riedlhßtte;Germany;2847084;48.90704;13.38238;1.0;DEU;;2010;West Germany;
@@ -24400,7 +24400,7 @@
 8313;2011;pol;Warsaw;Poland;756135;52.22977;21.01178;1.0;POL;;2010;Poland;
 27693;2011;ara;Cairo;Egypt;360630;30.06263;31.24967;1.0;EGY;;2010;Egypt;
 601;2011;pol;Warsaw;Poland;756135;52.22977;21.01178;1.0;POL;;2010;Poland;
-13108;2011;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
+13108;2011;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
 7875;2011;eng;New York;United States;5128581;40.71427;-74.00597;1.0;USA;;2010;United States;
 12734;2011;ger;Munich;Germany;2867714;48.13743;11.57549;1.0;DEU;;2010;West Germany;
 2828;2011;ger;Wuppertal;Germany;2805753;51.25627;7.14816;1.0;DEU;;2010;West Germany;
@@ -24516,8 +24516,8 @@
 17085;2011;hun;Budapest;Hungary;3054643;47.49835;19.04045;1.0;HUN;;2010;Hungary;
 4773;2011;pol;Warsaw;Poland;756135;52.22977;21.01178;1.0;POL;;2010;Poland;
 9862;2011;mac;Skopje;North Macedonia;785842;41.99646;21.43141;1.0;MKD;;2010;Macedonia;
-9861;2011;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
-9860;2011;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
+9861;2011;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
+9860;2011;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
 1697;2011;spa;Barcelona;Spain;3128760;41.38879;2.15899;1.0;ESP;;2010;Spain;
 5976;2011;swe;Stockholm;Sweden;2673730;59.32938;18.06871;1.0;SWE;;2010;Sweden;
 3164;2011;rum;Cluj-Napoca;Romania;681290;46.76667;23.VI;1.0;ROU;;2010;Romania;
@@ -24539,7 +24539,7 @@
 27125;2011;pol;Lublin;Poland;765876;51.25;22.56667;1.0;POL;;2010;Poland;
 56;2011;eng;New York;United States;5128581;40.71427;-74.00597;1.0;USA;;2010;United States;
 5948;2011;slv;Kranj;Slovenia;3197378;46.23887;14.35561;1.0;SVN;;2010;Slovenia;
-19027;2011;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
+19027;2011;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
 9868;2011;por;Rio de Janeiro;Brazil;3451190;-22.90642;-43.18223;1.0;BRA;;2010;Brazil;
 494;2011;geo;Tbilisi;Georgia;611717;41.69411;44.83368;1.0;GEO;;2010;Georgia;
 9890;2011;slo;Brno;Czechia;3078610;49.19522;16.60796;1.0;CZE;;2010;Czech Republic;
@@ -24592,12 +24592,12 @@
 14186;2011;ger;Oberursel;Germany;2858738;50.20731;8.57747;1.0;DEU;;2010;West Germany;
 9674;2011;chi;Tianjin;China;1792947;39.14222;117.17667;1.0;CHN;;2010;China;
 14177;2011;ger;Passau;Germany;2855328;48.5665;13.43122;1.0;DEU;;2010;West Germany;
-1085;2011;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
-1087;2011;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
+1085;2011;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
+1087;2011;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
 16032;2011;pol;Warsaw;Poland;756135;52.22977;21.01178;1.0;POL;;2010;Poland;
 11778;2011;pol;Warsaw;Poland;756135;52.22977;21.01178;1.0;POL;;2010;Poland;
 3132;2011;eng;London;United Kingdom;2643743;51.50853;-0.12574;1.0;GBR;;2010;United Kingdom;
-1088;2011;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
+1088;2011;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
 4974;2011;ger;Vimperk;Czechia;3062888;49.05857;13.78286;1.0;CZE;;2010;Czech Republic;
 4973;2011;eng;Vimperk;Czechia;3062888;49.05857;13.78286;1.0;CZE;;2010;Czech Republic;
 15977;2011;pol;Krakow;Poland;3094802;50.06143;19.93658;1.0;POL;;2010;Poland;
@@ -24651,11 +24651,11 @@
 9994;2011;slo;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;2010;Czech Republic;
 18634;2011;pol;Warsaw;Poland;756135;52.22977;21.01178;1.0;POL;;2010;Poland;
 10471;2011;hrv;Zagreb;Croatia;3186886;45.81444;15.97798;1.0;HRV;;2010;Croatia;
-18617;2011;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
+18617;2011;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
 1339;2011;ger;Vienna;Austria;2761369;48.20849;16.37208;1.0;AUT;;2010;Austria;
 539;2011;ger;Neumarkt in der Oberpfalz;Germany;2864549;49.28028;11.46278;1.0;DEU;;2010;West Germany;
 19153;2011;ita;Brno;Czechia;3078610;49.19522;16.60796;1.0;CZE;;2010;Czech Republic;
-1590;2011;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
+1590;2011;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
 19152;2011;ita;Brno;Czechia;3078610;49.19522;16.60796;1.0;CZE;;2010;Czech Republic;
 13434;2011;rus;St Petersburg;Russia;498817;59.93863;30.31413;1.0;RUS;;2010;Russia;
 19151;2011;ita;Brno;Czechia;3078610;49.19522;16.60796;1.0;CZE;;2010;Czech Republic;
@@ -24730,7 +24730,7 @@
 12548;2012;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;2010;France;
 12521;2012;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;2010;France;
 12386;2012;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;2010;France;
-13133;2012;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
+13133;2012;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
 26480;2012;glg;Pontevedra;Spain;3113209;42.431;-8.64435;1.0;ESP;;2010;Spain;
 11891;2012;pol;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;2010;Czech Republic;
 13093;2012;jpn;Tokyo;Japan;1850147;35.6895;139.69171;1.0;JPN;;2010;Japan;
@@ -24760,7 +24760,7 @@
 616;2012;pol;Warsaw;Poland;756135;52.22977;21.01178;1.0;POL;;2010;Poland;
 602;2012;pol;Warsaw;Poland;756135;52.22977;21.01178;1.0;POL;;2010;Poland;
 13235;2012;per;Tehran;Iran;112931;35.69439;51.42151;1.0;IRN;;2010;Iran;
-13129;2012;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
+13129;2012;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
 633;2012;rus;Moscow;Russia;524901;55.75222;37.61556;1.0;RUS;;2010;Russia;
 12435;2012;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;2010;France;
 12212;2012;dut;Amsterdam;Netherlands;2759794;52.37403;4.88969;1.0;NLD;;2010;Netherlands;
@@ -24795,7 +24795,7 @@
 22268;2012;ara;Beirut;Lebanon;276781;33.89332;35.50157;0.5;LBN;;2010;Lebanon;
 420;2012;eng;New York;United States;5128581;40.71427;-74.00597;1.0;USA;;2010;United States;
 11395;2012;ita;Rome;Italy;3169070;41.89193;12.51133;1.0;ITA;;2010;Italy;
-16699;2012;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
+16699;2012;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
 18243;2012;ger;Leipzig;Germany;2879139;51.33962;12.37129;1.0;DEU;;2010;East Germany;
 2711;2012;ger;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;2010;Czech Republic;
 2710;2012;ger;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;2010;Czech Republic;
@@ -24874,7 +24874,7 @@
 16248;2012;rum;Bucharest;Romania;683506;44.43225;26.10626;1.0;ROU;;2010;Romania;
 5972;2012;swe;Stockholm;Sweden;2673730;59.32938;18.06871;1.0;SWE;;2010;Sweden;
 20466;2012;jpn;Tokyo;Japan;1850147;35.6895;139.69171;1.0;JPN;;2010;Japan;
-20713;2012;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
+20713;2012;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
 18557;2012;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;2010;France;
 219;2012;ger;Nymburk;Czechia;3069236;50.18605;15.04167;1.0;CZE;;2010;Czech Republic;
 15683;2012;swe;Malmo;Sweden;2692969;55.60587;13.00073;1.0;SWE;;2010;Sweden;
@@ -24942,7 +24942,7 @@
 8237;2012;mac;Skopje;North Macedonia;785842;41.99646;21.43141;1.0;MKD;;2010;Macedonia;
 7888;2012;eng;New York;United States;5128581;40.71427;-74.00597;0.5;USA;;2010;United States;
 7849;2012;dut;Amsterdam;Netherlands;2759794;52.37403;4.88969;1.0;NLD;;2010;Netherlands;
-20345;2012;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
+20345;2012;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
 22601;2012;eng;London;United Kingdom;2643743;51.50853;-0.12574;1.0;GBR;;2010;United Kingdom;
 5900;2012;rus;Moscow;Russia;524901;55.75222;37.61556;1.0;RUS;;2010;Russia;
 10404;2012;ita;Rome;Italy;3169070;41.89193;12.51133;1.0;ITA;;2010;Italy;
@@ -24951,7 +24951,7 @@
 15499;2012;swe;Stockholm;Sweden;2673730;59.32938;18.06871;1.0;SWE;;2010;Sweden;
 6225;2012;ger;Vienna;Austria;2761369;48.20849;16.37208;1.0;AUT;;2010;Austria;
 5937;2012;slv;Preddvor;Slovenia;3192560;46.3025;14.42306;1.0;SVN;;2010;Slovenia;
-7375;2012;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
+7375;2012;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
 23876;2012;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;2010;France;
 17075;2012;ger;Leipzig;Germany;2879139;51.33962;12.37129;1.0;DEU;;2010;East Germany;
 13836;2012;lit;Vilnius;Lithuania;593116;54.68916;25.2798;1.0;LTU;;2010;Lithuania;
@@ -25067,7 +25067,7 @@
 19267;2012;dut;Antwerp;Belgium;2803138;51.22047;4.40026;0.5;BEL;;2010;Belgium dut;
 19224;2012;slo;Bratislava;Slovakia;3060972;48.14816;17.10674;1.0;SVK;;2010;Slovakia;
 9440;2012;ger;Hamburg;Germany;2911298;53.55073;9.99302;1.0;DEU;;2010;West Germany;
-7371;2012;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
+7371;2012;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
 17217;2012;ger;Berlin;Germany;2950159;52.52437;13.41053;1.0;DEU;;2010;East Germany;
 16033;2013;pol;Warsaw;Poland;756135;52.22977;21.01178;1.0;POL;;2010;Poland;
 21406;2013;heb;Tel Aviv;Israel;293397;32.08088;34.78057;1.0;ISR;;2010;Israel;
@@ -25093,7 +25093,7 @@
 21713;2013;fre;Issy-les-Moulineaux;France;3012649;48.82104;2.27718;0.5;FRA;;2010;France;
 16360;2013;pol;Zabrze;Poland;3080985;50.32492;18.78576;1.0;POL;;2010;Poland;
 21712;2013;fre;Paris;France;2988507;48.85341;II.88;0.5;FRA;;2010;France;
-13126;2013;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
+13126;2013;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
 22163;2013;eng;Harmondsworth;United Kingdom;6951076;51.48836;-0.47757;0.5;GBR;;2010;United Kingdom;
 22162;2013;eng;New York;United States;5128581;40.71427;-74.00597;0.5;USA;;2010;United States;
 7921;2013;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;2010;France;
@@ -25187,11 +25187,11 @@
 1112;2013;spa;Barcelona;Spain;3128760;41.38879;2.15899;1.0;ESP;;2010;Spain;
 959;2013;dut;Amsterdam;Netherlands;2759794;52.37403;4.88969;0.5;NLD;;2010;Netherlands;
 27120;2013;eng;North Haven;United States;4839704;41.39093;-72.85954;1.0;USA;;2010;United States;
-20894;2013;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
+20894;2013;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
 12005;2013;bos;Sarajevo;Bosnia and Herzegovina;3191281;43.84864;18.35644;1.0;BIH;;2010;Bosnia and Herzegovina;
 17731;2013;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;2010;France;
 6290;2013;ara;Beirut;Lebanon;276781;33.89332;35.50157;1.0;LBN;;2010;Lebanon;
-13101;2013;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
+13101;2013;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
 410;2013;eng;London;United Kingdom;2643743;51.50853;-0.12574;1.0;GBR;;2010;United Kingdom;
 17958;2013;spa;Buenos Aires;Argentina;3435910;-34.61315;-58.37723;1.0;ARG;;2010;Argentina;
 17928;2013;ger;Berlin;Germany;2950159;52.52437;13.41053;0.5;DEU;;2010;East Germany;
@@ -25510,7 +25510,7 @@
 20538;2014;heb;Jerusalem;Israel;281184;31.76904;35.21633;1.0;ISR;;2010;Israel;
 4167;2014;rus;Moscow;Russia;524901;55.75222;37.61556;0.5;RUS;;2010;Russia;
 5817;2014;lav;Riga;Latvia;456172;56.946;24.10589;1.0;LVA;;2010;Latvia;
-74;2014;kor;Paju;South Korea;1840898;37.761;126.77272;1.0;KOR;;2010;Korea, Republic of;
+74;2014;kor;Paju;South Korea;1840898;37.761;126.77272;1.0;KOR;;2010;"""Korea, Republic of""";
 21030;2014;ger;Klagenfurt;Austria;2774326;46.62472;14.30528;1.0;AUT;;2010;Austria;
 3785;2014;eng;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;2010;Czech Republic;
 4939;2014;jpn;Tokyo;Japan;1850147;35.6895;139.69171;1.0;JPN;;2010;Japan;
@@ -25684,12 +25684,12 @@
 22841;2014;slv;Vnanje Gorice;Slovenia;3187505;46.00722;14.42194;0.5;SVN;;2010;Slovenia;
 22835;2014;eng;New York;United States;5128581;40.71427;-74.00597;0.5;USA;;2010;United States;
 22834;2014;eng;London;United Kingdom;2643743;51.50853;-0.12574;0.5;GBR;;2010;United Kingdom;
-13118;2014;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
+13118;2014;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
 14926;2014;rum;Bucharest;Romania;683506;44.43225;26.10626;1.0;ROU;;2010;Romania;
 23829;2014;eng;New York;United States;5128581;40.71427;-74.00597;0.5;USA;;2010;United States;
 16215;2014;fre;Les Cabannes;France;3001643;44.06682;1.94025;1.0;FRA;;2010;France;
 1468;2014;epo;Torun;Poland;3083271;53.01375;18.59814;1.0;POL;;2010;Poland;
-13124;2014;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
+13124;2014;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
 14740;2014;chi;Xianggang;China;1914540;23.38861;112.82111;1.0;CHN;;2010;China;
 16362;2014;pol;Zabrze;Poland;3080985;50.32492;18.78576;1.0;POL;;2010;Poland;
 13359;2014;por;São Paulo;Brazil;3448439;-23.5475;-46.63611;1.0;BRA;;2010;Brazil;
@@ -25701,7 +25701,7 @@
 2244;2014;fre;Arles;France;3036938;43.67681;4.63031;1.0;FRA;;2010;France;
 23830;2014;eng;Lawrence;United States;4274277;38.97167;-95.23525;0.5;USA;;2010;United States;
 10304;2014;lat;Červený Kostelec;Czechia;3077955;50.47626;16.09289;1.0;CZE;;2010;Czech Republic;
-13136;2014;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
+13136;2014;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
 2428;2014;fre;Les Cabannes;France;3001643;44.06682;1.94025;1.0;FRA;;2010;France;
 24982;2014;spa;Mexico City;Mexico;3530597;19.42847;-99.12766;0.5;MEX;;2010;Mexico;
 24981;2014;spa;Barcelona;Spain;3128760;41.38879;2.15899;0.5;ESP;;2010;Spain;
@@ -25737,7 +25737,7 @@
 8032;2014;ger;Berlin;Germany;2950159;52.52437;13.41053;1.0;DEU;;2010;East Germany;
 22129;2014;ukr;Kyiv;Ukraine;703448;50.45466;30.5238;1.0;UKR;;2010;Ukraine;
 11981;2014;ara;Casablanca;Morocco;2553604;33.58831;-7.61138;1.0;MAR;;2010;Morocco;
-7376;2014;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
+7376;2014;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
 27161;2014;eng;London;United Kingdom;2643743;51.50853;-0.12574;1.0;GBR;;2010;United Kingdom;
 13768;2014;vie;Ho Chi Minh City;Vietnam;1566083;10.82302;106.62965;0.5;VNM;;2010;Vietnam;
 13772;2014;ara;Cairo;Egypt;360630;30.06263;31.24967;1.0;EGY;;2010;Egypt;
@@ -25817,7 +25817,7 @@
 27092;2014;eng;London;United Kingdom;2643743;51.50853;-0.12574;1.0;GBR;;2010;United Kingdom;
 13297;2014;pol;Warsaw;Poland;756135;52.22977;21.01178;1.0;POL;;2010;Poland;
 2713;2014;jpn;Tokyo;Japan;1850147;35.6895;139.69171;1.0;JPN;;2010;Japan;
-1091;2014;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
+1091;2014;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
 1355;2014;mac;Skopje;North Macedonia;785842;41.99646;21.43141;1.0;MKD;;2010;Macedonia;
 8328;2014;rum;Bucharest;Romania;683506;44.43225;26.10626;1.0;ROU;;2010;Romania;
 24498;2014;ger;Reinbek;Germany;2848845;53.51703;X.88;0.3333333333333333;DEU;;2010;West Germany;
@@ -25892,7 +25892,7 @@
 24500;2015;ger;Berlin;Germany;2950159;52.52437;13.41053;0.5;DEU;;2010;East Germany;
 24499;2015;ger;Stuttgart;Germany;2825297;48.78232;9.17702;0.5;DEU;;2010;West Germany;
 5703;2015;ger;Leipzig;Germany;2879139;51.33962;12.37129;1.0;DEU;;2010;East Germany;
-13833;2015;kor;Paju;South Korea;1840898;37.761;126.77272;1.0;KOR;;2010;Korea, Republic of;
+13833;2015;kor;Paju;South Korea;1840898;37.761;126.77272;1.0;KOR;;2010;"""Korea, Republic of""";
 1556;2015;pol;Bydgoszcz;Poland;3102014;53.1235;18.00762;1.0;POL;;2010;Poland;
 13839;2015;nor;Oslo;Norway;3143244;59.91273;10.74609;1.0;NOR;;2010;Norway;
 13840;2015;per;Tehran;Iran;112931;35.69439;51.42151;1.0;IRN;;2010;Iran;
@@ -25997,7 +25997,7 @@
 19766;2015;fre;Nantes;France;2990969;47.21725;-1.55336;1.0;FRA;;2010;France;
 27717;2015;ara;Homs;Syria;169577;34.72682;36.72339;1.0;SYR;;2010;Syria;
 19254;2015;ger;Landsberg am Lech;Germany;2881509;48.04819;10.88282;1.0;DEU;;2010;West Germany;
-19773;2015;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
+19773;2015;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
 27716;2015;ara;Cairo;Egypt;360630;30.06263;31.24967;1.0;EGY;;2010;Egypt;
 14145;2015;eng;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;2010;Czech Republic;
 9672;2015;bul;Sofia;Bulgaria;727011;42.69751;23.32415;1.0;BGR;;2010;Bulgaria;
@@ -26210,7 +26210,7 @@
 18499;2015;eng;New York;United States;5128581;40.71427;-74.00597;1.0;USA;;2010;United States;
 6211;2015;ita;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;2010;Czech Republic;
 11480;2015;pol;Warsaw;Poland;756135;52.22977;21.01178;1.0;POL;;2010;Poland;
-13120;2015;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
+13120;2015;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
 6217;2015;slo;Říčany;Czechia;3066878;49.99168;14.65427;1.0;CZE;;2010;Czech Republic;
 1223;2015;pol;Bydgoszcz;Poland;3102014;53.1235;18.00762;1.0;POL;;2010;Poland;
 7886;2015;eng;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;2010;Czech Republic;
@@ -26489,7 +26489,7 @@
 5318;2016;slv;Ljubljana;Slovenia;3196359;46.05108;14.50513;1.0;SVN;;2010;Slovenia;
 14102;2016;slv;Vnanje Gorice;Slovenia;3187505;46.00722;14.42194;1.0;SVN;;2010;Slovenia;
 5911;2016;rus;Moscow;Russia;524901;55.75222;37.61556;1.0;RUS;;2010;Russia;
-8233;2016;kor;Paju;South Korea;1840898;37.761;126.77272;1.0;KOR;;2010;Korea, Republic of;
+8233;2016;kor;Paju;South Korea;1840898;37.761;126.77272;1.0;KOR;;2010;"""Korea, Republic of""";
 4967;2016;ita;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;2010;Czech Republic;
 6210;2016;eng;Ostrava;Czechia;3068799;49.83465;18.28204;0.5;CZE;;2010;Czech Republic;
 9196;2016;pol;Warsaw;Poland;756135;52.22977;21.01178;1.0;POL;;2010;Poland;
@@ -26573,7 +26573,7 @@
 26065;2016;eng;Makati City;Philippines;1703417;14.55027;121.03269;1.0;PHL;;2010;Philippines;
 12586;2016;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;2010;France;
 943;2016;chi;Changji;China;1529569;44.00782;87.30461;1.0;CHN;;2010;China;
-1093;2016;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
+1093;2016;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
 21723;2016;spa;Barcelona;Spain;3128760;41.38879;2.15899;1.0;ESP;;2010;Spain;
 3328;2016;fre;Villeneuve-d'Ascq;France;6543862;50.61669;3.16664;0.5;FRA;;2010;France;
 17311;2016;mac;Skopje;North Macedonia;785842;41.99646;21.43141;1.0;MKD;;2010;Macedonia;
@@ -26582,7 +26582,7 @@
 6718;2016;chi;Beijing;China;1816670;39.9075;116.39723;1.0;CHN;;2010;China;
 1212;2016;ger;Wilhelmshorst;Germany;2808674;52.33184;13.0622;1.0;DEU;;2010;East Germany;
 21932;2016;jpn;Yokohama;Japan;1848354;35.43333;139.65;1.0;JPN;;2010;Japan;
-13115;2016;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
+13115;2016;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
 19482;2016;pol;Warsaw;Poland;756135;52.22977;21.01178;1.0;POL;;2010;Poland;
 17320;2016;slv;Ljubljana;Slovenia;3196359;46.05108;14.50513;1.0;SVN;;2010;Slovenia;
 6707;2016;cat;Barcelona;Spain;3128760;41.38879;2.15899;1.0;ESP;;2010;Spain;
@@ -26768,7 +26768,7 @@
 6752;2017;dut;Amsterdam;Netherlands;2759794;52.37403;4.88969;1.0;NLD;;2010;Netherlands;
 23098;2017;eng;New York;United States;5128581;40.71427;-74.00597;0.5;USA;;2010;United States;
 23099;2017;eng;London;United Kingdom;2643743;51.50853;-0.12574;0.5;GBR;;2010;United Kingdom;
-8232;2017;kor;Paju;South Korea;1840898;37.761;126.77272;1.0;KOR;;2010;Korea, Republic of;
+8232;2017;kor;Paju;South Korea;1840898;37.761;126.77272;1.0;KOR;;2010;"""Korea, Republic of""";
 16315;2017;fre;Grenoble;France;3014728;45.17869;5.71479;1.0;FRA;;2010;France;
 4786;2017;pol;Lublin;Poland;765876;51.25;22.56667;0.5;POL;;2010;Poland;
 21891;2017;eng;London;United Kingdom;2643743;51.50853;-0.12574;1.0;GBR;;2010;United Kingdom;
@@ -27035,7 +27035,7 @@
 4902;2018;est;Tallinn;Estonia;588409;59.43696;24.75353;1.0;EST;;2010;Estonia;
 27430;2018;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;2010;France;
 6221;2018;ger;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;2010;Czech Republic;
-4940;2018;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
+4940;2018;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
 6230;2018;hun;Budapest;Hungary;3054643;47.49835;19.04045;1.0;HUN;;2010;Hungary;
 10580;2018;ger;Berlin;Germany;2950159;52.52437;13.41053;1.0;DEU;;2010;East Germany;
 6287;2018;mac;Skopje;North Macedonia;785842;41.99646;21.43141;1.0;MKD;;2010;Macedonia;
@@ -27295,7 +27295,7 @@
 12565;2018;fre;Paris;France;2988507;48.85341;II.88;1.0;FRA;;2010;France;
 1218;2018;ger;GÜttingen;Germany;2918632;51.53443;9.93228;1.0;DEU;;2010;East Germany;
 25741;2018;fre;Paris;France;2988507;48.85341;II.88;0.5;FRA;;2010;France;
-13117;2018;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
+13117;2018;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
 12507;2018;fre;Ho Chi Minh City;Vietnam;1566083;10.82302;106.62965;0.5;VNM;;2010;Vietnam;
 758;2018;ukr;Lviv;Ukraine;702550;49.83826;24.02324;1.0;UKR;;2010;Ukraine;
 10054;2018;spa;Barcelona;Spain;3128760;41.38879;2.15899;1.0;ESP;;2010;Spain;
@@ -27323,7 +27323,7 @@
 25024;2018;lat;Brno;Czechia;3078610;49.19522;16.60796;1.0;CZE;;2010;Czech Republic;
 24942;2018;spa;Barcelona;Spain;3128760;41.38879;2.15899;1.0;ESP;;2010;Spain;
 1115;2018;spa;Barcelona;Spain;3128760;41.38879;2.15899;1.0;ESP;;2010;Spain;
-7367;2018;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
+7367;2018;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
 3594;2018;ger;Zubrnice;Czechia;3061323;50.64945;14.22038;1.0;CZE;;2010;Czech Republic;
 22166;2018;eng;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;2010;Czech Republic;
 12962;2018;ita;Milan;Italy;3173435;45.46427;9.18951;1.0;ITA;;2010;Italy;
@@ -27445,7 +27445,7 @@
 19031;2019;slo;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;2010;Czech Republic;
 1659;2019;ger;Heidelberg;Germany;2907911;49.40768;8.69079;1.0;DEU;;2010;West Germany;
 9906;2019;vie;Hanoi;Vietnam;1581130;21.0245;105.84117;1.0;VNM;;2010;Vietnam;
-13097;2019;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
+13097;2019;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
 19029;2019;hun;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;2010;Czech Republic;
 11790;2019;slo;Bratislava;Slovakia;3060972;48.14816;17.10674;1.0;SVK;;2010;Slovakia;
 19024;2019;spa;Lupenice;Czechia;3071355;50.13289;16.27378;1.0;CZE;;2010;Czech Republic;
@@ -27596,7 +27596,7 @@
 3616;2019;spa;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;2010;Czech Republic;
 22085;2019;chi;Yanji;China;2033467;42.88825;129.50241;0.5;CHN;;2010;China;
 22084;2019;chi;Guangzhou;China;1809858;23.11667;113.25;0.5;CHN;;2010;China;
-7366;2019;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;Korea, Republic of;
+7366;2019;kor;Seoul;South Korea;1835848;37.566;126.9784;1.0;KOR;;2010;"""Korea, Republic of""";
 3755;2019;ita;Turin;Italy;3165524;45.07049;7.68682;1.0;ITA;;2010;Italy;
 26882;2019;ger;Leipzig;Germany;2879139;51.33962;12.37129;0.5;DEU;;2010;East Germany;
 22714;2019;eng;Prague;Czechia;3067696;50.08804;14.42076;1.0;CZE;;2010;Czech Republic;
