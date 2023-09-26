@@ -10,7 +10,7 @@ weights_df = pd.read_csv("weights/weights_language_families.csv")
 
 map_years = np.unique(weights_df['map_year']) 
 
-for map_year in map_years:
+for idx, map_year in enumerate(map_years):
         
     weights_df_year = weights_df[weights_df['map_year'] == map_year]
 
@@ -28,19 +28,27 @@ for map_year in map_years:
     # Merge weights with the basemap
     merged = coloring_data.merge(weights_df_year, left_on='NAME', right_on='country', how='left')
 
+    # Bounding box of the map - Europe
+    bbox =  [-10, 35, 60, 75] # [minx, miny, maxx, maxy] - minimal longitude, minimal latitude, maximal longitude, maximal latitude
+
     # Create a base plot
     fig, ax = plt.subplots(1, 1, figsize=(12, 8))
 
     # Plot the choropleth map
-    merged.plot(ax = ax, column='weights', cmap='YlOrRd', edgecolor='None', legend=True)
+    merged.clip(bbox).plot(ax = ax, column='weights', cmap='YlOrRd', edgecolor='None', legend=True)
 
     #coloring_data.plot(ax=ax, color='red', edgecolor='none', linewidth=1)
-    historical_borders.plot(ax=ax, color='none', edgecolor='black', linewidth=0.5)
+    historical_borders.clip(bbox).plot(ax=ax, color='none', edgecolor='black', linewidth=0.5)
 
     # Customize plot appearance
-    ax.set_title('Translation Map ' + str(map_year))
-    ax.set_xlabel('Longitude')
-    ax.set_ylabel('Latitude')
+    if idx < len(map_years) - 1:
+        ax.set_title('Europe Czech Translations {} - {}'.format(str(map_year), map_years[idx+1]-1) )
+    else:
+        ax.set_title('Europe Czech Translations {}'.format(str(map_year)) )        
+    plt.grid(False)
+    ax.set_axis_off() 
+
+    plt.savefig('plots/language/'+ax.get_title() + '.png')
 
     # Show the plot
-    plt.show()
+    #plt.show()
