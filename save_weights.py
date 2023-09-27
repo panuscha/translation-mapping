@@ -4,9 +4,9 @@ def save_to_dict(countries, map_year, df_dict, row, div):
     for country in countries:
                 key = (country, map_year) 
                 if key in df_dict:
-                    df_dict[key] += row['weight'] / div   
+                    df_dict[key] += row['weight']    
                 else:
-                    df_dict[key] =  row['weight'] / div
+                    df_dict[key] =  row['weight'] 
 
 #geotagged_df = pd.read_csv("geotagged/geotagged_germany_country_update.csv")
 geotagged_df = pd.read_excel("geotagged/geotagged_germany_country_update.xlsx")

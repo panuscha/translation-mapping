@@ -48,7 +48,7 @@ for idx, map_year in enumerate(map_years):
     plt.grid(False)
     ax.set_axis_off() 
 
-    plt.savefig('plots/language/'+ax.get_title() + '.png')
+    plt.savefig('plots/language/'+ax.get_title() + ' multiple.png')
 
     # Show the plot
     #plt.show()
