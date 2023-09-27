@@ -4,9 +4,9 @@ def save_to_dict(countries, map_year, df_dict, row, div):
     for country in countries:
                 key = (country, map_year) 
                 if key in df_dict:
-                    df_dict[key] += row['weight']    
+                    df_dict[key] += row['weight'] / div   
                 else:
-                    df_dict[key] =  row['weight'] 
+                    df_dict[key] =  row['weight'] / div
 
 #geotagged_df = pd.read_csv("geotagged/geotagged_germany_country_update.csv")
 geotagged_df = pd.read_excel("geotagged/geotagged_germany_country_update.xlsx")
@@ -108,7 +108,10 @@ for map_year in map_years:
         ##### SERBO-CROATIAN SPEAKING ####         
 
         if serbo_croatian_cond:
-            save_to_dict(serbo_croatian_countries, map_year, df_dict, row, 4) 
+            if map_year < 1994:
+                save_to_dict(serbo_croatian_countries, map_year, df_dict, row, 1)
+            else:
+                save_to_dict(serbo_croatian_countries, map_year, df_dict, row, 4)     
             continue                
 
         ##### CZECH SLOVAK SPEAKING ####         
