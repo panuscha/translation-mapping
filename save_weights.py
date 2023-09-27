@@ -47,6 +47,8 @@ for map_year in map_years:
         belgian_cond = row['geonames_country'] == 'Belgium'
         belgian_countries = ['Belgium dut', 'Belgium fre']
 
+
+
         if map_year < 1994:
             german_cond = german_language and (row['region_country_name'] == 'West Germany' or german_speaking) 
             german_countries = ['West Germany', 'Austria', 'Switzerland ger',  'Liechtenstein'] 
@@ -106,7 +108,12 @@ for map_year in map_years:
                 save_to_dict(serbo_croatian_countries, map_year, df_dict, row)
             else:
                 save_to_dict(serbo_croatian_countries, map_year, df_dict, row)     
-            continue                
+            continue  
+
+        ##### HUNGARIAN SPEAKING #### 
+
+        if row['language'] == 'hun':
+            save_to_dict(['Hungary'], map_year, df_dict, row)            
 
         ##### REST #### 
 
