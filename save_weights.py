@@ -1,12 +1,12 @@
 import pandas as pd
 
-def save_to_dict(countries, map_year, df_dict, row, div):
+def save_to_dict(countries, map_year, df_dict, row):
     for country in countries:
                 key = (country, map_year) 
                 if key in df_dict:
-                    df_dict[key] += row['weight'] / div   
+                    df_dict[key] += row['weight']    
                 else:
-                    df_dict[key] =  row['weight'] / div
+                    df_dict[key] =  row['weight'] 
 
 #geotagged_df = pd.read_csv("geotagged/geotagged_germany_country_update.csv")
 geotagged_df = pd.read_excel("geotagged/geotagged_germany_country_update.xlsx")
@@ -50,10 +50,6 @@ for map_year in map_years:
         if map_year < 1994:
             german_cond = german_language and (row['region_country_name'] == 'West Germany' or german_speaking) 
             german_countries = ['West Germany', 'Austria', 'Switzerland ger',  'Liechtenstein'] 
-        
-            czech_slovak_speaking = row['geonames_country'] == 'Czechia' or row['geonames_country'] == 'Slovakia'
-            czech_slovak_cond = czech_slovak_speaking
-            czech_slovak_countries = ['Czech Republic', 'Slovakia']
 
             germany_rest_cond = False
 
@@ -61,64 +57,56 @@ for map_year in map_years:
             german_cond = german_language and (row['geonames_country'] == 'Germany' or german_speaking)
             german_countries = ['West Germany', 'East Germany', 'Austria', 'Switzerland ger',  'Liechtenstein'] 
 
-            germany_rest_cond = row['geonames_country'] == 'Germany'
-
-            czech_slovak_cond = False  
+            germany_rest_cond = row['geonames_country'] == 'Germany'  
         
         ##### GERMAN SPEAKING ##### 
 
         if german_cond:
-            save_to_dict(german_countries, map_year, df_dict, row, 3)  
+            save_to_dict(german_countries, map_year, df_dict, row)  
             continue
 
         if germany_rest_cond:
-            save_to_dict(['West Germany', 'East Germany'], map_year, df_dict, row, 1)
+            save_to_dict(['West Germany', 'East Germany'], map_year, df_dict, row)
             continue
 
         ##### FRENCH SPEAKING #### 
 
         if french_cond:
-            save_to_dict(french_countries, map_year, df_dict, row, 3)  
+            save_to_dict(french_countries, map_year, df_dict, row)  
             continue
 
         ##### ITALIAN SPEAKING #### 
 
         if italian_cond:
-            save_to_dict(italian_countries, map_year, df_dict, row, 1)  
+            save_to_dict(italian_countries, map_year, df_dict, row)  
             continue
 
         ##### DUTCH SPEAKING #### 
         
         if dutch_cond:
-            save_to_dict(dutch_countries, map_year, df_dict, row, 2)
+            save_to_dict(dutch_countries, map_year, df_dict, row)
             continue
         
         ##### SWITZERLAND #### 
 
         if swiss_cond:
-            save_to_dict(swiss_countries, map_year, df_dict, row, 1)  
+            save_to_dict(swiss_countries, map_year, df_dict, row)  
             continue
 
         ##### BELGIUM #### 
 
         if belgian_cond:
-            save_to_dict(belgian_countries, map_year, df_dict, row, 1)  
+            save_to_dict(belgian_countries, map_year, df_dict, row)  
             continue
         
         ##### SERBO-CROATIAN SPEAKING ####         
 
         if serbo_croatian_cond:
             if map_year < 1994:
-                save_to_dict(serbo_croatian_countries, map_year, df_dict, row, 1)
+                save_to_dict(serbo_croatian_countries, map_year, df_dict, row)
             else:
-                save_to_dict(serbo_croatian_countries, map_year, df_dict, row, 4)     
+                save_to_dict(serbo_croatian_countries, map_year, df_dict, row)     
             continue                
-
-        ##### CZECH SLOVAK SPEAKING ####         
-
-        if czech_slovak_cond:
-            save_to_dict(czech_slovak_countries, map_year, df_dict, row, 1)   
-            continue
 
         ##### REST #### 
 
