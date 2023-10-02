@@ -84,10 +84,10 @@ for plot_year in plot_years:
             # SOVIET
             russian_speaking =  (row['geonames_country'] == 'Estonia' or row['geonames_country'] == 'Lithuania' or  row['geonames_country'] == 'Latvia' or  
                                  row['geonames_country'] == 'Byelarus' or row['geonames_country'] == 'Ukraine' or row['geonames_country'] == 'Moldova' or
-                                 row['geonames_country'] == 'Russia')
+                                 row['geonames_country'] == 'Russia' or row['geonames_country'] == 'Georgia' or row['geonames_country'] == 'Azerbaijan')
             russian_language = row['language'] == 'rus'
             soviet_cond = russian_language and russian_speaking
-            soviet_countries = ['Estonia', 'Lithuania', 'Latvia', 'Byelarus', 'Ukraine', 'Moldova', 'Russia']
+            soviet_countries = ['Estonia', 'Lithuania', 'Latvia', 'Byelarus', 'Ukraine', 'Moldova', 'Russia', 'Georgia', 'Azerbaijan']
 
         else:
             german_cond = german_language and (row['geonames_country'] == 'Germany' or german_speaking)
