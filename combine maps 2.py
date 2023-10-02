@@ -10,7 +10,6 @@ source_gdf = gpd.read_file('historical-basemaps/geojson/world_1960.geojson')
 
 
 
-
 #### EAST AND WEST GERMANY #####
 
 # Load the second GeoJSON file (target file where you want to replace one polygon)

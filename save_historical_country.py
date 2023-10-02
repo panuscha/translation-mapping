@@ -39,7 +39,7 @@ file_years = list(filter(lambda x: x is not None, file_years))
 file_years = list(map(lambda x: int(x), file_years))
 
 print(file_years)
-geotagged_df = pd.read_csv("geotagged.csv")
+geotagged_df = pd.read_csv("geotagged/geotagged_germany.csv")
 
 saved_country_dict = {}
 
@@ -88,7 +88,7 @@ try:
             else:
                 country_name =  saved_country_dict[dict_key]
                 found = True
-
+                
             map_years.append(map_year) 
 
             if found:    
@@ -108,9 +108,9 @@ try:
 except:
     print("error on row {i}")
 finally:
-    # geotagged_df['map_year'] = map_years
-    # geotagged_df['historical_coutry_name'] = country_names
-    # geotagged_df.to_csv("geotagged_new_new.csv")
+    geotagged_df['map_year'] = map_years
+    geotagged_df['historical_country_name'] = country_names
+    geotagged_df.to_csv("geotagged_germany_historical_country.csv")
 
     flattened_data = [(key[0], key[1], key[2], value) for key, value in not_found_cities.items()]
     

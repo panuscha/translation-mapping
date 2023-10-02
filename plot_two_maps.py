@@ -15,7 +15,8 @@ for idx, map_year in enumerate(map_years):
     weights_df_year = weights_df[weights_df['map_year'] == map_year]
 
     # Load the GeoJSON map
-    historical_geojson_path = folder_path + 'historical-basemaps/geojson/world_' + str(map_year)+ '.geojson'
+    #historical_geojson_path = folder_path + 'historical-basemaps/geojson/world_' + str(map_year)+ '.geojson'
+    historical_geojson_path = folder_path + 'historical-basemaps/years/world_' + str(map_year)+ '.geojson'
 
     # Read historical borders GeoJSON using GeoPandas
     historical_borders = gpd.read_file(historical_geojson_path)
@@ -48,7 +49,7 @@ for idx, map_year in enumerate(map_years):
     plt.grid(False)
     ax.set_axis_off() 
 
-    plt.savefig('plots/language/'+ax.get_title() + '.png')
+    plt.savefig('plots/language new map/'+ax.get_title() + '.png')
 
     # Show the plot
     #plt.show()
