@@ -84,6 +84,8 @@ gdf1 = gpd.read_file('C:/Users/Panuskova/Nextcloud/translation-mapping/language-
 #switzerland_nuts = gdf1[gdf1['NUTS_ID'].str.startswith('CH')]
 not_switzerland = combined_gdf[combined_gdf.NAME != "Switzerland"]
 
+not_switzerland = not_switzerland[not_switzerland.NAME != '' ] 
+
 ## French swiss
 switzerland_fre = gdf1[gdf1['NUTS_ID'].isin(['CH01', 'CH02'])]
 switzerland_fre_geometry = switzerland_fre.unary_union
@@ -98,9 +100,10 @@ switzerland_ger_gdf['NAME'] = 'Switzerland ger'
 
 ##Italian swiss
 switzerland_it = gdf1[gdf1['NUTS_ID'].isin(['CH07'])]
- 
-combined_gdf = gpd.GeoDataFrame(pd.concat([ not_switzerland , switzerland_fre_gdf, switzerland_ger_gdf, switzerland_it], ignore_index=True))
+combined_gdf = gpd.GeoDataFrame(pd.concat([ not_switzerland , switzerland_fre_gdf, switzerland_ger_gdf, switzerland_it ], ignore_index=True))
 combined_gdf.loc[combined_gdf.NUTS_ID == 'CH07','NAME'] = 'Switzerland ita'
+
+combined_gdf = combined_gdf[combined_gdf['NAME'].notna()]
 
 
 # Add more GeoDataFrames as needed

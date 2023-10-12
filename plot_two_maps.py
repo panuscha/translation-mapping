@@ -3,12 +3,25 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 
+import matplotlib.colors as colors
+
 folder_path = "C:/Users/Panuskova/Nextcloud/translation-mapping/"
 
 #geotagged_df = pd.read_excel("geotagged/geotagged_germany_country_update.xlsx")
 weights_df = pd.read_csv("weights/weights_language_families.csv")
 
 map_years = np.unique(weights_df['map_year']) 
+
+# Normalize the data for the colormap
+vmin = 1
+vmax = 1
+for year in weights_df['map_year'].unique():
+    for hist_country in weights_df.loc[weights_df['map_year'] == year, 'country' ].unique():
+        vmax = max(vmax, weights_df.loc[(weights_df['map_year'] == year) & (weights_df['country'] == hist_country), 'weights'].sum())
+print(vmax)
+
+norm = colors.Normalize(vmin=vmin, vmax=vmax)
+
 
 for idx, map_year in enumerate(map_years):
         
@@ -29,14 +42,30 @@ for idx, map_year in enumerate(map_years):
     # Merge weights with the basemap
     merged = coloring_data.merge(weights_df_year, left_on='NAME', right_on='country', how='left')
 
+    merged = merged.set_index('NAME')
+    
+    # Define the colormap for non-zero values
+    cmap = plt.cm.OrRd
+
+    # Create a new 'color' column in the GeoDataFrame and set it to white (neutral) for all countries
+    merged['color'] = '#ffffff'
+
+    # Set the color for countries with available data
+    for _, row in weights_df[weights_df['map_year'] == map_year].iterrows():
+        country = row['country']
+        weight = row['weights']
+        if weight > 0:
+            color_rgb = cmap(norm(weight))[:3]  # Get RGB values from the colormap
+            merged.loc[merged.index == country, 'color'] = '#%02x%02x%02x' % tuple(int(c * 255) for c in color_rgb)
+
     # Bounding box of the map - Europe
-    bbox =  [-10, 35, 60, 75] # [minx, miny, maxx, maxy] - minimal longitude, minimal latitude, maximal longitude, maximal latitude
+    bbox = [-10, 35, 60, 75] # [minx, miny, maxx, maxy] - minimal longitude, minimal latitude, maximal longitude, maximal latitude
 
     # Create a base plot
     fig, ax = plt.subplots(1, 1, figsize=(12, 8))
 
     # Plot the choropleth map
-    merged.clip(bbox).plot(ax = ax, column='weights', cmap='YlOrRd', edgecolor='None', legend=True)
+    merged.clip(bbox).plot(ax = ax, facecolor=merged.clip(bbox)['color'], edgecolor='None', legend=True)
 
     #coloring_data.plot(ax=ax, color='red', edgecolor='none', linewidth=1)
     historical_borders.clip(bbox).plot(ax=ax, color='none', edgecolor='black', linewidth=0.5)
@@ -49,7 +78,10 @@ for idx, map_year in enumerate(map_years):
     plt.grid(False)
     ax.set_axis_off() 
 
-    plt.savefig('plots/language new map/'+ax.get_title() + '.png')
+    cbar = plt.cm.ScalarMappable(norm=norm, cmap=cmap)
+    fig.colorbar(cbar)
+
+    plt.savefig('plots/language normalized/'+ax.get_title() + '.png')
 
     # Show the plot
     #plt.show()
