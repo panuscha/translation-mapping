@@ -8,7 +8,8 @@ import matplotlib.colors as colors
 folder_path = "C:/Users/Panuskova/Nextcloud/translation-mapping/"
 
 #geotagged_df = pd.read_excel("geotagged/geotagged_germany_country_update.xlsx")
-weights_df = pd.read_csv("weights/weights_language_families.csv")
+#weights_df = pd.read_csv("weights/weights_language_families.csv")
+weights_df = pd.read_csv('weights/weights_only_major_language_families.csv')
 
 map_years = np.unique(weights_df['map_year']) 
 
@@ -59,7 +60,7 @@ for idx, map_year in enumerate(map_years):
             merged.loc[merged.index == country, 'color'] = '#%02x%02x%02x' % tuple(int(c * 255) for c in color_rgb)
 
     # Bounding box of the map - Europe
-    bbox = [-10, 35, 60, 75] # [minx, miny, maxx, maxy] - minimal longitude, minimal latitude, maximal longitude, maximal latitude
+    bbox = [-10, 40, 40, 65] # [minx, miny, maxx, maxy] - minimal longitude, minimal latitude, maximal longitude, maximal latitude
 
     # Create a base plot
     fig, ax = plt.subplots(1, 1, figsize=(12, 8))
@@ -81,7 +82,7 @@ for idx, map_year in enumerate(map_years):
     cbar = plt.cm.ScalarMappable(norm=norm, cmap=cmap)
     fig.colorbar(cbar)
 
-    plt.savefig('plots/language normalized/'+ax.get_title() + '.png')
+    plt.savefig('plots/language normalized major only/'+ax.get_title() + '.png')
 
     # Show the plot
     #plt.show()
