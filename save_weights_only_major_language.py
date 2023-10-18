@@ -129,6 +129,12 @@ for plot_year in plot_years:
         # SLOVAK
         slovak_language = row['language'] == 'slo'
 
+        # CATALAN
+        catalan_speaking = row['region_country_name'] == 'Catalonia'
+        catalan_language = row['language'] == 'cat'
+        catalan_cond = catalan_language and catalan_speaking
+
+
         if plot_year < 1989:
             german_cond = german_language and (row['region_country_name'] == 'West Germany' or german_speaking) 
             german_countries = ['West Germany', 'Austria', 'Switzerland ger',  'Liechtenstein'] 
@@ -224,6 +230,12 @@ for plot_year in plot_years:
 
         if spanish_cond:
             save_to_dict(spanish_countries, plot_year, df_dict, row)  
+            continue
+
+        #### CATALAN ####
+        
+        if catalan_cond:
+            save_to_dict(['Catalonia'], plot_year, df_dict, row)  
             continue
 
         #### SOVIET ####
