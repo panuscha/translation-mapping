@@ -1,0 +1,1250 @@
+,country,language,map_year,weights
+0,Austria,ger,1918,29.16666666666667
+1,France,fre,1918,35.0
+2,Poland,pol,1918,28.0
+3,United States,eng,1918,23.839393939393936
+4,Czechoslovakia,rus,1918,16.0
+5,Germany,ger,1918,100.1666666666667
+6,United Kingdom of Great Britain and Ireland,eng,1918,44.29015151515152
+7,Yugoslavia,hrv,1918,24.0
+8,Yugoslavia,srp,1918,3.0
+9,Czechoslovakia,ukr,1918,9.0
+10,Czechoslovakia,ger,1918,64.16666666666667
+11,Romania,rum,1918,9.0
+12,Canada,ukr,1918,1.0
+13,France,eng,1918,1.0
+14,Germany,eng,1918,1.5
+15,Austria,eng,1918,0.5
+16,United States,ger,1918,3.0
+17,Czechoslovakia,wen,1918,3.0
+18,USSR,rus,1918,9.166666666666666
+19,Czechoslovakia,fre,1918,98.0
+20,Czechoslovakia,eng,1918,28.5
+21,Yugoslavia,slv,1918,32.0
+22,Switzerland,ger,1918,1.5
+23,Switzerland,fre,1918,6.0
+24,Czechoslovakia,slo,1918,57.0
+25,Ukraine,yid,1918,1.0
+26,Spain,spa,1918,12.0
+27,Czechoslovakia,pol,1918,7.0
+28,Ukraine,ukr,1918,3.5
+29,Netherlands,epo,1918,1.0
+30,Czechoslovakia,epo,1918,8.0
+31,Czechoslovakia,hrv,1918,3.0
+32,Mandatory Palestine (GB),heb,1918,1.0
+33,Finland,ger,1918,1.0
+34,Poland,ukr,1918,1.5
+35,Chinese Warlords,chi,1918,2.0
+36,Yugoslavia,eng,1918,0.5
+37,Czechoslovakia,ido,1918,1.0
+38,Czechoslovakia,sla,1918,10.0
+39,Germany,wen,1918,10.0
+40,Spain,cat,1918,5.0
+41,Germany,pol,1918,4.0
+42,Italy,ita,1918,6.0
+43,Czechoslovakia,alb,1918,1.0
+44,British Raj,eng,1918,0.5818181818181818
+45,Chinese Warlords,eng,1918,0.2909090909090909
+46,Denmark,eng,1918,0.2909090909090909
+47,Canada,eng,1918,0.4159090909090909
+48,Germany,ukr,1918,1.0
+49,Australia,eng,1918,0.2909090909090909
+50,Germany,rus,1918,0.5
+51,Germany,hrv,1918,2.0
+52,Romania,ukr,1918,1.0
+53,Czechoslovakia,hun,1918,6.0
+54,Germany,fre,1918,0.5
+55,Austria,fre,1918,0.5
+56,Italy,slv,1918,3.0
+57,Poland,hrv,1918,1.0
+58,Denmark,dan,1918,5.0
+59,Czechoslovakia,ita,1918,1.0
+60,Czechoslovakia,grc,1918,1.0
+61,Sweden,swe,1918,3.0
+62,Turkey,tur,1918,2.0
+63,United States,slo,1918,1.0
+64,Latvia,lav,1918,3.0
+65,Finland,fin,1918,1.0
+66,Poland,ger,1918,1.0
+67,Estonia,est,1918,1.0
+68,Latvia,rus,1918,2.333333333333333
+69,Poland,yid,1918,1.0
+70,Latvia,yid,1918,1.0
+71,Italy,ita,1929,16.5
+72,United States,eng,1929,34.83333333333333
+73,Netherlands,dut,1929,20.0
+74,Czechoslovakia,eng,1929,19.333333333333336
+75,Sweden,swe,1929,10.0
+76,Czechoslovakia,slo,1929,42.5
+77,Yugoslavia,slv,1929,26.0
+78,Czechoslovakia,pol,1929,8.0
+79,USSR,rus,1929,13.0
+80,Austria,ger,1929,14.033333333333335
+81,United Kingdom of Great Britain and Ireland,eng,1929,52.666666666666664
+82,Germany,ger,1929,70.06666666666668
+83,Chinese Warlords,chi,1929,3.0
+84,Ukraine,ukr,1929,1.5
+85,Czechoslovakia,ukr,1929,5.5
+86,Belgium,fre,1929,1.0
+87,Czechoslovakia,ger,1929,106.44999999999999
+88,France,fre,1929,62.00000000000001
+89,Estonia,est,1929,2.0
+90,Romania,rum,1929,2.0
+91,Poland,pol,1929,25.0
+92,Czechoslovakia,sla,1929,4.0
+93,Czechoslovakia,fre,1929,47.0
+94,Germany,eng,1929,2.0
+95,Poland,ukr,1929,8.0
+96,Switzerland,ger,1929,7.45
+97,Canada,eng,1929,0.6666666666666666
+98,Yugoslavia,hrv,1929,21.0
+99,France,eng,1929,3.0
+100,Yugoslavia,srp,1929,3.0
+101,France,ger,1929,1.0
+102,Czechoslovakia,wen,1929,1.0
+103,Poland,yid,1929,0.5
+104,United Kingdom of Great Britain and Ireland,ger,1929,1.0
+105,Czechoslovakia,epo,1929,18.0
+106,France,hun,1929,1.0
+107,Germany,wen,1929,7.0
+108,Norway,nor,1929,1.0
+109,Latvia,yid,1929,1.5
+110,Spain,spa,1929,6.0
+111,Latvia,lav,1929,3.0
+112,Denmark,dan,1929,6.0
+113,Poland,rus,1929,1.0
+114,Germany,pol,1929,3.0
+115,Czechoslovakia,hun,1929,16.0
+116,Lithuania,lit,1929,2.0
+117,Empire of Japan,jpn,1929,1.0
+118,Germany,hrv,1929,2.0
+119,Austria,eng,1929,0.5
+120,Czechoslovakia,roa,1929,1.0
+121,Ukraine,yid,1929,1.0
+122,Czechoslovakia,hrv,1929,2.0
+123,Czechoslovakia,heb,1929,1.0
+124,White Russia,bel,1929,1.0
+125,Mandatory Palestine (GB),heb,1929,3.0
+126,Czechoslovakia,rus,1929,10.0
+127,Greece,gre,1929,1.0
+128,USSR,tat,1929,1.0
+129,USSR,fin,1929,1.0
+130,Switzerland,roh,1929,1.0
+131,Yugoslavia,slo,1929,0.5
+132,France,epo,1929,2.0
+133,Hungary,slo,1929,1.0
+134,France,spa,1929,1.0
+135,USSR,ger,1929,3.0
+136,Czechoslovakia,ita,1929,2.0
+137,Germany,srp,1929,1.0
+138,Hungary,hun,1929,2.0
+139,Netherlands,ger,1929,2.0
+140,Netherlands,eng,1929,1.0
+141,Finland,fin,1929,2.0
+142,Netherlands,epo,1929,1.0
+143,France,dut,1929,1.0
+144,France,rus,1929,1.0
+145,Czechoslovakia,spa,1929,1.0
+146,Germany,ita,1929,0.5
+147,Czechoslovakia,ven,1929,1.0
+148,Azerbaijan,arm,1929,1.0
+149,United Kingdom of Great Britain and Ireland,slv,1929,1.0
+150,Czechoslovakia,slv,1929,1.0
+151,Yugoslavia,mak,1929,1.0
+152,Argentina,spa,1929,1.0
+153,Czechoslovakia,oci,1929,1.0
+154,United Kingdom,eng,1945,75.5
+155,Belgium,fre,1945,1.0
+156,United States,eng,1945,25.333333333333332
+157,Germany (Soviet),ger,1945,156.08333333333331
+158,Czechoslovakia,rus,1945,38.0
+159,France,fre,1945,54.0
+160,USSR,rus,1945,103.0
+161,Israel,heb,1945,12.0
+162,Czechoslovakia,slo,1945,127.0
+163,Chile,spa,1945,1.0
+164,Yugoslavia,slv,1945,20.0
+165,Denmark,dan,1945,12.0
+166,Belgium,eng,1945,1.0
+167,Bulgaria,bul,1945,39.0
+168,Switzerland,ger,1945,19.583333333333336
+169,Czechoslovakia,pol,1945,16.5
+170,Spain,spa,1945,7.0
+171,Hungary,hun,1945,35.666666666666664
+172,Argentina,spa,1945,9.0
+173,Czechoslovakia,cre,1945,2.0
+174,Czechoslovakia,eng,1945,47.833333333333336
+175,Italy,ita,1945,23.0
+176,United States,slo,1945,2.0
+177,Czechoslovakia,ger,1945,59.666666666666664
+178,Iceland,ice,1945,1.0
+179,Czechoslovakia,fre,1945,22.5
+180,Czechoslovakia,che,1945,2.0
+181,Poland,pol,1945,169.5
+182,USSR,ukr,1945,15.0
+183,Switzerland,eng,1945,1.0
+184,Norway,nor,1945,10.0
+185,Yugoslavia,hrv,1945,42.0
+186,Netherlands,dut,1945,9.0
+187,Sweden,ger,1945,3.0
+188,Czechoslovakia,hrv,1945,8.0
+189,Denmark,swe,1945,1.0
+190,Sweden,swe,1945,10.0
+191,Yugoslavia,srp,1945,11.0
+192,Austria,ger,1945,36.583333333333336
+193,Czechoslovakia,spa,1945,3.0
+194,Czechoslovakia,ita,1945,6.0
+195,Sweden,dan,1945,1.0
+196,Finland,fin,1945,2.0
+197,Yugoslavia,fre,1945,1.0
+198,Brazil,por,1945,1.5
+199,Portugal,por,1945,1.5
+200,Germany (USA),ger,1945,15.166666666666668
+201,United Kingdom,ger,1945,0.75
+202,Germany (Soviet),lav,1945,1.0
+203,Czechoslovakia,cad,1945,1.0
+204,Germany (USA),eng,1945,2.0
+205,Italy,slv,1945,3.0
+206,Czechoslovakia,jpn,1945,1.0
+207,Germany (Soviet),wen,1945,6.0
+208,Germany (UK),ger,1945,10.666666666666668
+209,Netherlands,epo,1945,1.0
+210,China,chi,1945,22.0
+211,United States,yid,1945,1.0
+212,Czechoslovakia,epo,1945,4.0
+213,Netherlands,eng,1945,0.3333333333333333
+214,Czechoslovakia,chi,1945,3.0
+215,Romania,rum,1945,9.0
+216,Mexico,spa,1945,2.0
+217,France,spa,1945,1.0
+218,India,urd,1945,1.0
+219,Czechoslovakia,hun,1945,36.333333333333336
+220,USSR,lit,1945,2.0
+221,Japan (USA),jpn,1945,5.0
+222,USSR,arm,1945,3.0
+223,Iran,per,1945,1.0
+224,India,hin,1945,1.0
+225,Australia,eng,1945,1.5
+226,Austria,eng,1945,1.5
+227,Poland,ger,1945,1.5
+228,Czechoslovakia,srp,1945,1.0
+229,Mongolia,mon,1945,2.0
+230,Israel,eng,1945,1.0
+231,United Kingdom,hrv,1945,1.0
+232,Czechoslovakia,ukr,1945,5.0
+233,Hungary,eng,1945,1.0
+234,USSR,wen,1945,1.0
+235,Italy,fre,1945,2.0
+236,United Kingdom,pol,1945,4.0
+237,Poland,eng,1945,1.0
+238,United Kingdom,epo,1945,3.0
+239,Yugoslavia,mac,1945,1.0
+240,Czechoslovakia,slv,1945,2.0
+241,Israel,yid,1945,1.0
+242,Canada,fre,1945,1.0
+243,Turkey,tur,1945,1.0
+244,Spain,epo,1945,1.0
+245,Germany (Soviet),eng,1945,2.0
+246,Canada,che,1945,1.0
+247,China,mon,1945,1.0
+248,Italy,hrv,1945,1.0
+249,Lebanon,ara,1945,1.0
+250,Romania,hun,1945,2.0
+251,Hungary,mad,1945,1.0
+252,Switzerland,fre,1945,3.5
+253,Germany (Soviet),srp,1945,1.0
+254,Greece,gre,1945,1.0
+255,Czechoslovakia,swe,1945,1.0
+256,USSR,fin,1945,1.0
+257,Yugoslavia,bos,1945,1.0
+258,USSR,chm,1945,1.0
+259,Norway,swe,1945,1.0
+260,Netherlands,ger,1945,0.5
+261,Belgium,ger,1945,0.5
+262,Cuba,spa,1945,1.0
+263,USSR,bel,1945,1.0
+264,Czechoslovakia,chv,1945,1.0
+265,Sri Lanka,eng,1945,1.0
+266,Czechoslovakia,eng,1956,97.49999999999999
+267,Czechoslovakia,dut,1956,10.0
+268,Germany (Soviet),ger,1956,138.5
+269,China,chi,1956,38.0
+270,Czechoslovakia,slo,1956,372.0
+271,Czechoslovakia,ger,1956,280.33333333333337
+272,Czechoslovakia,hun,1956,126.5
+273,Poland,pol,1956,174.5
+274,Czechoslovakia,chv,1956,1.0
+275,Norway,dan,1956,1.0
+276,Hungary,hun,1956,136.5
+277,Bulgaria,bul,1956,18.0
+278,United Kingdom,ger,1956,2.0
+279,France,fre,1956,74.0
+280,USSR,rus,1956,202.0
+281,Czechoslovakia,por,1956,2.0
+282,Spain,spa,1956,10.5
+283,Romania,rum,1956,35.0
+284,Albania,alb,1956,7.0
+285,Czechoslovakia,fre,1956,72.5
+286,Yugoslavia,slv,1956,45.5
+287,Yugoslavia,hrv,1956,47.0
+288,Germany (USA),ger,1956,11.833333333333334
+289,Czechoslovakia,cre,1956,1.0
+290,Austria,ger,1956,33.53333333333333
+291,Italy,ita,1956,30.5
+292,Finland,fin,1956,17.5
+293,USSR,geo,1956,2.0
+294,United States,ukr,1956,1.0
+295,Italy,fre,1956,5.0
+296,Switzerland,ger,1956,12.783333333333331
+297,Czechoslovakia,pol,1956,30.5
+298,Czechoslovakia,rus,1956,21.0
+299,Czechoslovakia,slv,1956,4.5
+300,Czechoslovakia,ukr,1956,9.0
+301,India,tel,1956,2.0
+302,Germany (UK),ger,1956,9.250000000000002
+303,Hungary,ger,1956,1.0
+304,Germany (Soviet),srp,1956,1.0
+305,Germany (Soviet),wen,1956,7.0
+306,USSR,lit,1956,9.0
+307,Korea (USSR),kor,1956,2.0
+308,Czechoslovakia,hrv,1956,14.0
+309,Czechoslovakia,rum,1956,1.0
+310,United Kingdom,eng,1956,119.08333333333333
+311,Japan (USA),jpn,1956,3.0
+312,Netherlands,dut,1956,37.5
+313,Indonesia,ind,1956,1.0
+314,USSR,lav,1956,6.0
+315,United States,eng,1956,40.166666666666664
+316,Sweden,dan,1956,1.0
+317,Japan (USA),eng,1956,0.5
+318,Lebanon,arm,1956,2.0
+319,Czechoslovakia,epo,1956,8.0
+320,Belgium,dut,1956,1.0
+321,USSR,tat,1956,1.0
+322,Denmark,dan,1956,15.0
+323,Australia,eng,1956,1.0833333333333333
+324,Slovenia,slv,1956,2.0
+325,Argentina,spa,1956,4.0
+326,Sweden,swe,1956,18.5
+327,Germany (USA),eng,1956,1.0
+328,Norway,nor,1956,4.0
+329,Hungary,spa,1956,2.0
+330,Brazil,spa,1956,1.0
+331,Brazil,por,1956,6.0
+332,USSR,ukr,1956,26.0
+333,Netherlands,eng,1956,1.3333333333333333
+334,Germany (UK),eng,1956,0.5
+335,Austria,eng,1956,5.0
+336,USSR,est,1956,13.0
+337,Germany (Soviet),hun,1956,2.0
+338,Czechoslovakia,wen,1956,5.0
+339,Switzerland,fre,1956,7.5
+340,Iran,per,1956,3.0
+341,Israel,heb,1956,12.0
+342,United States,ger,1956,0.25
+343,Czechoslovakia,ita,1956,5.5
+344,Belgium,fre,1956,4.0
+345,Netherlands,fre,1956,1.0
+346,Yugoslavia,eng,1956,1.0
+347,USSR,tgk,1956,1.0
+348,Yugoslavia,srp,1956,14.0
+349,France,eng,1956,1.3333333333333333
+350,Czechoslovakia,spa,1956,13.0
+351,USSR,kir,1956,1.0
+352,United States,fre,1956,1.0
+353,New Zealand,eng,1956,1.5
+354,USSR,aze,1956,5.0
+355,Poland,eng,1956,2.0
+356,Germany (France),ger,1956,0.3333333333333333
+357,East Germany,ger,1956,235.00000000000009
+358,West Germany,ger,1956,119.68333333333334
+359,Bulgaria,tur,1956,1.0
+360,Czechoslovakia,ice,1956,1.0
+361,Czechoslovakia,alb,1956,1.0
+362,East Germany,wen,1956,7.0
+363,Yugoslavia,epo,1956,1.0
+364,Japan,jpn,1956,7.0
+365,Czechoslovakia,fin,1956,0.5
+366,Sweden,ger,1956,1.0
+367,Czechoslovakia,vie,1956,1.0
+368,Yugoslavia,mac,1956,1.0
+369,Egypt,ara,1956,3.0
+370,Vietnam,vie,1956,4.0
+371,USSR,sla,1956,2.0
+372,USSR,uzb,1956,1.0
+373,Norway,epo,1956,0.5
+374,Denmark,epo,1956,0.5
+375,Portugal,por,1956,5.0
+376,East Germany,eng,1956,2.333333333333333
+377,West Germany,eng,1956,2.6666666666666665
+378,Greece,gre,1956,1.5
+379,Italy,eng,1956,2.0
+380,East Germany,fre,1956,1.0
+381,Cuba,spa,1956,2.0
+382,United Kingdom,spa,1956,3.0
+383,USSR,kaz,1956,1.0
+384,Netherlands,fry,1956,1.0
+385,Turkey,tur,1956,5.0
+386,Romania,rus,1956,1.0
+387,Mexico,spa,1956,10.5
+388,Romania,hun,1956,1.0
+389,United States,slo,1956,1.0
+390,USSR,pol,1956,1.0
+391,Sweden,rus,1956,1.0
+392,United States,rus,1956,1.0
+393,East Germany,pol,1956,2.0
+394,West Germany,swe,1956,1.0
+395,USSR,eng,1956,1.25
+396,Canada,eng,1956,3.75
+397,USSR,rum,1956,3.0
+398,Czechoslovakia,swe,1956,0.5
+399,USSR,slo,1956,1.0
+400,Czechoslovakia,gre,1956,0.5
+401,India,mal,1956,1.0
+402,United Kingdom,fre,1956,1.0
+403,USSR,srp,1956,1.0
+404,Netherlands,epo,1956,1.0
+405,Yugoslavia,alb,1956,1.0
+406,Germany,ger,1956,0.5
+407,Spain,epo,1956,1.0
+408,Mongolia,mon,1956,3.0
+409,Yugoslavia,bos,1956,1.0
+410,France,cat,1956,1.0
+411,Greece,ger,1956,0.5
+412,Czechoslovakia,jpn,1956,1.0
+413,"Korea, Republic of",kor,1956,1.0
+414,Italy,slv,1956,1.0
+415,USSR,arm,1956,1.0
+416,France,dut,1956,0.5
+417,Czechoslovakia,bul,1956,1.0
+418,Italy,ger,1956,0.5
+419,Liechtenstein,rus,1956,3.0
+420,USSR,fre,1956,1.0
+421,India,hin,1956,2.0
+422,United States,lav,1956,1.0
+423,Czechoslovakia,sla,1956,1.0
+424,Iran,per,1967,3.0
+425,East Germany,ger,1967,253.3412698412699
+426,Czechoslovakia,hun,1967,102.0
+427,Czechoslovakia,ger,1967,106.83333333333333
+428,Romania,rum,1967,29.0
+429,United Kingdom,eng,1967,112.49999999999994
+430,Czechoslovakia,eng,1967,43.166666666666664
+431,Hungary,hun,1967,122.5
+432,West Germany,ger,1967,426.445238095238
+433,Czechoslovakia,slo,1967,194.5
+434,Czechoslovakia,fre,1967,21.5
+435,Canada,fre,1967,3.0
+436,Switzerland,ger,1967,83.59285714285714
+437,Austria,ger,1967,43.95396825396824
+438,USSR,rus,1967,108.0
+439,United States,eng,1967,149.75
+440,Denmark,dan,1967,42.0
+441,France,fre,1967,169.5
+442,Switzerland,fre,1967,12.5
+443,Poland,pol,1967,145.0
+444,Yugoslavia,slo,1967,2.0
+445,USSR,ukr,1967,23.0
+446,Czechoslovakia,pol,1967,29.0
+447,Yugoslavia,srp,1967,15.0
+448,Yugoslavia,slv,1967,48.0
+449,USSR,est,1967,11.0
+450,USSR,tuk,1967,2.0
+451,Czechoslovakia,epo,1967,6.0
+452,Mexico,spa,1967,13.0
+453,Netherlands,dut,1967,50.5
+454,Canada,eng,1967,17.916666666666664
+455,Italy,ita,1967,73.0
+456,Finland,fin,1967,21.999999999999996
+457,Brazil,por,1967,3.0
+458,Belgium,fre,1967,13.0
+459,Czechoslovakia,spa,1967,7.5
+460,Czechoslovakia,rus,1967,18.0
+461,Yugoslavia,hrv,1967,18.0
+462,USSR,kaz,1967,4.0
+463,Israel,heb,1967,10.0
+464,USSR,arm,1967,4.0
+465,Sweden,swe,1967,40.99999999999999
+466,USSR,lit,1967,12.0
+467,Yugoslavia,mac,1967,5.0
+468,Italy,fre,1967,5.0
+469,Pakistan,urd,1967,1.0
+470,India,tel,1967,2.0
+471,Japan,jpn,1967,27.0
+472,Czechoslovakia,ita,1967,6.0
+473,Denmark,ice,1967,1.0
+474,Yugoslavia,alb,1967,1.0
+475,East Germany,hin,1967,1.0
+476,France,eng,1967,1.3333333333333333
+477,USSR,lav,1967,6.0
+478,Norway,nor,1967,8.0
+479,Norway,dan,1967,1.0
+480,Turkey,tur,1967,11.0
+481,Bulgaria,bul,1967,22.0
+482,Australia,fre,1967,1.0
+483,Spain,spa,1967,20.0
+484,West Germany,eng,1967,4.0
+485,Spain,ita,1967,1.0
+486,Belgium,dut,1967,4.5
+487,Czechoslovakia,rum,1967,1.0
+488,Australia,eng,1967,5.0
+489,Czechoslovakia,hrv,1967,6.0
+490,Italy,eng,1967,3.0
+491,Argentina,spa,1967,6.5
+492,Switzerland,eng,1967,2.0
+493,Japan,eng,1967,4.0
+494,Czechoslovakia,ukr,1967,2.0
+495,Italy,chv,1967,1.0
+496,Czechoslovakia,chv,1967,6.0
+497,Cuba,spa,1967,5.0
+498,Czechoslovakia,dut,1967,1.0
+499,Austria,pol,1967,1.0
+500,Czechoslovakia,srp,1967,1.0
+501,Czechoslovakia,swe,1967,1.0
+502,United States,ger,1967,1.5
+503,East Germany,wen,1967,5.0
+504,Panama,spa,1967,1.0
+505,United Kingdom,dut,1967,1.0
+506,East Germany,eng,1967,4.333333333333334
+507,Greece,gre,1967,6.0
+508,Ecuador,spa,1967,1.0
+509,Switzerland,fry,1967,1.0
+510,Romania,hun,1967,0.5
+511,United Kingdom,ger,1967,4.5
+512,Hungary,spa,1967,1.0
+513,Czechoslovakia,bul,1967,4.0
+514,Spain,epo,1967,1.0
+515,West Germany,fre,1967,3.0
+516,Portugal,por,1967,2.0
+517,United Kingdom,fre,1967,2.5
+518,USSR,uzb,1967,1.0
+519,USSR,rum,1967,3.0
+520,West Germany,slo,1967,2.0
+521,USSR,kir,1967,1.0
+522,Canada,pol,1967,2.0
+523,Canada,sla,1967,2.0
+524,Canada,ukr,1967,1.0
+525,India,hin,1967,1.0
+526,"Korea, Republic of",kor,1967,1.0
+527,Netherlands,dan,1967,1.0
+528,Chile,spa,1967,1.0
+529,South Africa,afr,1967,3.0
+530,United States,fre,1967,1.0
+531,Spain,eng,1967,1.0
+532,Czechoslovakia,slv,1967,1.0
+533,East Germany,fre,1967,1.0
+534,China,chi,1967,1.0
+535,Czechoslovakia,fin,1967,1.0
+536,West Germany,ita,1967,1.0
+537,Colombia,spa,1967,2.0
+538,Liechtenstein,ger,1967,2.0
+539,Czechoslovakia,cat,1967,2.0
+540,Venezuela,por,1967,1.0
+541,Venezuela,spa,1967,1.0
+542,Switzerland,rus,1967,1.0
+543,Vietnam,vie,1967,1.0
+544,Netherlands,ger,1967,0.3333333333333333
+545,Mongolia,mon,1967,2.0
+546,Czechoslovakia,jpn,1967,1.0
+547,USSR,bel,1967,2.0
+548,Austria,eng,1967,1.0
+549,Switzerland,hrv,1967,1.0
+550,Indonesia,ind,1967,2.0
+551,South Africa,ger,1967,1.0
+552,Hungary,slo,1967,0.5
+553,Czechoslovakia,sla,1967,2.0
+554,Spain,cat,1967,2.0
+555,Yugoslavia,eng,1967,1.0
+556,Italy,swe,1967,1.5
+557,Netherlands,fre,1967,1.0
+558,Bulgaria,rus,1967,1.0
+559,Italy,ger,1967,1.0
+560,Switzerland,che,1967,1.0
+561,Sweden,ger,1967,0.5
+562,Czechoslovakia,che,1967,1.0
+563,Albania,alb,1967,1.0
+564,France,ger,1967,1.0
+565,USSR,tgk,1967,1.0
+566,Switzerland,swe,1967,0.25
+567,West Germany,swe,1967,0.25
+568,Poland,pol,1978,199.75
+569,Netherlands,dut,1978,98.99999999999999
+570,West Germany,ger,1978,465.9174603174602
+571,France,fre,1978,283.33333333333337
+572,Czechoslovakia,ger,1978,104.83333333333333
+573,United States,eng,1978,146.76666666666665
+574,Czechoslovakia,pol,1978,17.0
+575,Czechoslovakia,fre,1978,25.0
+576,Czechoslovakia,slo,1978,200.0
+577,East Germany,ger,1978,303.47857142857134
+578,Hungary,hun,1978,148.0
+579,Indonesia,ind,1978,1.0
+580,Austria,ger,1978,40.55396825396826
+581,East Germany,wen,1978,10.5
+582,Czechoslovakia,wen,1978,6.5
+583,Sweden,swe,1978,76.33333333333334
+584,USSR,lit,1978,3.0
+585,Israel,heb,1978,30.0
+586,Italy,slo,1978,2.0
+587,Yugoslavia,mac,1978,8.0
+588,Canada,fre,1978,2.8333333333333335
+589,Brazil,por,1978,11.5
+590,Italy,fre,1978,6.0
+591,Denmark,dan,1978,29.0
+592,Japan,jpn,1978,19.0
+593,Belgium,fre,1978,9.5
+594,Italy,ita,1978,101.0
+595,United Kingdom,eng,1978,115.34999999999995
+596,Norway,nor,1978,30.0
+597,USSR,rus,1978,109.16666666666664
+598,Switzerland,ger,1978,55.38333333333334
+599,South Africa,afr,1978,3.0
+600,Czechoslovakia,hun,1978,88.0
+601,Switzerland,eng,1978,2.0
+602,Turkey,tur,1978,22.0
+603,Czechoslovakia,rus,1978,18.833333333333336
+604,Yugoslavia,slv,1978,50.0
+605,Liechtenstein,ger,1978,2.0
+606,Greece,gre,1978,21.0
+607,Czechoslovakia,eng,1978,33.25
+608,Argentina,spa,1978,6.833333333333333
+609,Colombia,spa,1978,2.8333333333333335
+610,Finland,fin,1978,47.00000000000002
+611,Hong Kong,chi,1978,1.0
+612,Czechoslovakia,epo,1978,9.5
+613,USSR,ukr,1978,14.0
+614,USSR,est,1978,12.0
+615,Austria,ita,1978,0.5
+616,Bulgaria,bul,1978,34.0
+617,Austria,fre,1978,1.0
+618,Romania,rum,1978,38.0
+619,Czechoslovakia,chv,1978,2.0
+620,Switzerland,ita,1978,0.5
+621,USSR,arm,1978,7.0
+622,Italy,swe,1978,1.0
+623,Thailand,tha,1978,1.0
+624,USSR,aze,1978,2.0
+625,Switzerland,fre,1978,8.333333333333332
+626,Czechoslovakia,hrv,1978,4.0
+627,China,chi,1978,26.0
+628,Yugoslavia,hrv,1978,50.0
+629,Spain,spa,1978,88.25
+630,West Germany,swe,1978,0.6666666666666666
+631,USSR,lav,1978,7.0
+632,Mongolia,mon,1978,1.0
+633,France,ger,1978,1.5
+634,USSR,tuk,1978,1.0
+635,Switzerland,swe,1978,0.6666666666666666
+636,Cuba,spa,1978,12.666666666666666
+637,Canada,ita,1978,3.0
+638,Belgium,dut,1978,11.0
+639,Romania,hun,1978,4.0
+640,Switzerland,rus,1978,3.0
+641,Portugal,por,1978,8.5
+642,Czechoslovakia,spa,1978,13.0
+643,Canada,eng,1978,23.63333333333333
+644,Yugoslavia,srp,1978,34.0
+645,Czechoslovakia,gre,1978,1.0
+646,Hungary,eng,1978,7.5
+647,USSR,kaz,1978,3.0
+648,United Kingdom,ger,1978,4.0
+649,France,hun,1978,2.0
+650,West Germany,pol,1978,2.0
+651,Czechoslovakia,dut,1978,3.0
+652,Australia,eng,1978,5.75
+653,Switzerland,hrv,1978,2.0
+654,Czechoslovakia,slv,1978,4.0
+655,Finland,swe,1978,0.3333333333333333
+656,Czechoslovakia,ita,1978,3.0
+657,USSR,uzb,1978,2.0
+658,West Germany,fre,1978,2.0
+659,Italy,ger,1978,1.0
+660,Canada,rus,1978,2.0
+661,Yugoslavia,alb,1978,3.0
+662,West Germany,eng,1978,3.0
+663,Spain,cat,1978,18.0
+664,Netherlands,fry,1978,1.0
+665,Dominican Republic,spa,1978,1.0
+666,United States,slv,1978,1.0
+667,Czechoslovakia,srp,1978,2.0
+668,East Germany,hin,1978,1.0
+669,Italy,epo,1978,0.5
+670,USSR,ger,1978,2.0
+671,"Korea, Republic of",kor,1978,7.0
+672,Netherlands,eng,1978,1.75
+673,Mexico,spa,1978,7.916666666666666
+674,United Kingdom,dut,1978,1.0
+675,USSR,rum,1978,2.0
+676,Czechoslovakia,por,1978,2.0
+677,Yugoslavia,bos,1978,2.0
+678,Netherlands,ger,1978,3.0
+679,Canada,slo,1978,2.0
+680,Yugoslavia,ger,1978,1.0
+681,France,eng,1978,1.0
+682,Czechoslovakia,che,1978,3.0
+683,South Africa,eng,1978,0.5
+684,Nicaragua,spa,1978,1.0
+685,Finland,ger,1978,1.0
+686,Czechoslovakia,ukr,1978,1.0
+687,United States,ger,1978,1.3333333333333333
+688,Paraguay,grn,1978,2.0
+689,USSR,kir,1978,1.0
+690,Czechoslovakia,lat,1978,1.0
+691,Austria,eng,1978,0.5
+692,India,hin,1978,1.0
+693,Canada,ger,1978,1.0
+694,Czechoslovakia,cre,1978,1.0
+695,Switzerland,slo,1978,1.0
+696,United Kingdom,pol,1978,2.25
+697,West Germany,slo,1978,1.0
+698,East Germany,fre,1978,1.0
+699,East Germany,eng,1978,2.0
+700,USSR,kaa,1978,1.0
+701,Vietnam,vie,1978,1.0
+702,Sweden,eng,1978,5.0
+703,Iran,per,1978,8.0
+704,Iraq,kur,1978,1.0
+705,Dominican Republic,crp,1978,1.0
+706,Yugoslavia,eng,1978,3.0
+707,Israel,eng,1978,2.0
+708,USSR,tgk,1978,2.0
+709,Brazil,epo,1978,1.0
+710,Czechoslovakia,sla,1978,3.0
+711,East Germany,pol,1978,2.0
+712,India,eng,1978,1.0
+713,Costa Rica,spa,1978,2.0
+714,USSR,geo,1978,1.0
+715,Syria,ara,1978,1.0
+716,USSR,bel,1978,1.0
+717,Japan,fre,1978,1.0
+718,China,por,1978,1.0
+719,Denmark,dut,1978,1.0
+720,Norway,ita,1978,1.0
+721,Panama,slo,1978,2.0
+722,Japan,eng,1978,1.0
+723,United Kingdom,fre,1978,1.0
+724,West Germany,dan,1978,1.0
+725,United Kingdom,spa,1978,0.25
+726,United States,spa,1978,0.25
+727,,fao,1978,1.0
+728,France,ita,1978,1.0
+729,Italy,slv,1978,1.0
+730,Spain,ach,1978,1.0
+731,Israel,spa,1978,1.0
+732,Mexico,che,1978,1.0
+733,Spain,baq,1978,1.0
+734,Czechoslovakia,bul,1978,1.0
+735,USSR,eng,1978,2.0
+736,Taiwan,chi,1978,5.0
+737,Italy,srd,1978,1.0
+738,France,rus,1978,1.0
+739,Iran,ira,1978,1.0
+740,West Germany,sla,1978,0.6666666666666666
+741,Austria,sla,1978,0.3333333333333333
+742,Lebanon,ara,1978,1.0
+743,United States,eng,1989,239.60000000000014
+744,Italy,ita,1989,202.0
+745,West Germany,ger,1989,228.90833333333342
+746,East Germany,ger,1989,90.78333333333332
+747,France,fre,1989,364.16666666666663
+748,USSR,est,1989,7.0
+749,United Kingdom,eng,1989,175.56666666666663
+750,USSR,hun,1989,1.0
+751,Austria,ger,1989,64.06666666666669
+752,Yugoslavia,hrv,1989,19.0
+753,Poland,pol,1989,154.0
+754,Switzerland,ger,1989,32.04166666666666
+755,Netherlands,dut,1989,98.99999999999999
+756,Czechoslovakia,slo,1989,94.0
+757,Hungary,hun,1989,114.16666666666666
+758,Czechoslovakia,ger,1989,45.5
+759,Australia,eng,1989,5.0
+760,Portugal,por,1989,14.833333333333334
+761,Spain,cat,1989,40.0
+762,Turkey,tur,1989,40.0
+763,Yugoslavia,slv,1989,14.5
+764,Mexico,spa,1989,30.333333333333336
+765,Finland,fin,1989,32.999999999999986
+766,Spain,spa,1989,139.83333333333331
+767,Switzerland,eng,1989,2.0
+768,Czechoslovakia,slv,1989,0.5
+769,Czechoslovakia,hun,1989,19.833333333333332
+770,Sweden,swe,1989,46.0
+771,Iran,per,1989,26.0
+772,Denmark,dan,1989,62.0
+773,Switzerland,fre,1989,8.0
+774,USSR,tuk,1989,1.0
+775,Denmark,nor,1989,1.0
+776,United States,vie,1989,1.0
+777,Belgium,dut,1989,8.0
+778,Czechoslovakia,pol,1989,6.5
+779,Yugoslavia,mac,1989,6.0
+780,United Kingdom,pol,1989,2.0
+781,USSR,rus,1989,31.0
+782,Netherlands,eng,1989,1.0
+783,"Korea, Republic of",kor,1989,30.0
+784,Yugoslavia,srp,1989,11.0
+785,Argentina,spa,1989,3.0
+786,Norway,nor,1989,50.0
+787,Spain,epo,1989,2.0
+788,Japan,jpn,1989,42.0
+789,USSR,lit,1989,3.0
+790,Israel,heb,1989,41.0
+791,Czechoslovakia,fre,1989,3.0
+792,Taiwan,chi,1989,62.83333333333333
+793,Romania,hun,1989,1.0
+794,Brazil,por,1989,15.166666666666668
+795,USSR,ukr,1989,4.0
+796,Japan,eng,1989,1.0
+797,West Germany,pol,1989,1.0
+798,Canada,eng,1989,27.749999999999996
+799,East Germany,eng,1989,0.5
+800,West Germany,eng,1989,1.5
+801,Greece,gre,1989,27.0
+802,Yugoslavia,eng,1989,1.0
+803,China,chi,1989,38.66666666666667
+804,Romania,rum,1989,39.0
+805,Bulgaria,bul,1989,23.0
+806,Italy,spa,1989,2.0
+807,Cuba,spa,1989,2.5
+808,Czechoslovakia,rus,1989,3.0
+809,Japan,fre,1989,2.0
+810,USSR,lav,1989,2.0
+811,Austria,epo,1989,3.0
+812,Poland,ger,1989,1.0
+813,Indonesia,ind,1989,3.0
+814,Italy,ger,1989,0.5333333333333333
+815,Czechoslovakia,nor,1989,1.0
+816,Spain,ger,1989,0.2
+817,United Kingdom,chi,1989,1.0
+818,United States,ger,1989,1.3333333333333333
+819,Lebanon,ara,1989,6.0
+820,Czechoslovakia,spa,1989,2.5
+821,East Germany,wen,1989,1.5
+822,Czechoslovakia,wen,1989,0.5
+823,Czechoslovakia,sla,1989,13.0
+824,Turkey,ger,1989,0.5
+825,Colombia,spa,1989,2.333333333333333
+826,France,eng,1989,1.0
+827,Philippines,tgl,1989,1.0
+828,Czechoslovakia,eng,1989,28.0
+829,Egypt,ara,1989,3.0
+830,Belgium,fre,1989,6.833333333333333
+831,France,ita,1989,2.0
+832,Czechoslovakia,rum,1989,1.0
+833,India,hin,1989,3.0
+834,United Kingdom,ger,1989,1.0
+835,Ireland,eng,1989,1.0
+836,Czechoslovakia,epo,1989,3.0
+837,Czechoslovakia,ita,1989,2.0
+838,India,eng,1989,3.25
+839,Mexico,eng,1989,1.0
+840,Canada,fre,1989,1.5
+841,Yugoslavia,bos,1989,1.0
+842,Spain,baq,1989,7.0
+843,West Germany,rus,1989,1.0
+844,Brazil,epo,1989,3.0
+845,Switzerland,ita,1989,2.0
+846,Austria,slv,1989,2.5
+847,United States,cat,1989,1.0
+848,Germany,ger,1989,250.2166666666668
+849,Poland,sla,1989,1.0
+850,Bahamas,eng,1989,3.0
+851,France,bre,1989,1.0
+852,Romania,rom,1989,1.0
+853,Yugoslavia,slo,1989,1.0
+854,Hungary,eng,1989,1.4999999999999998
+855,Sweden,kur,1989,1.0
+856,Hong Kong,chi,1989,1.5
+857,Iran,ger,1989,1.25
+858,Czech Republic,ger,1989,75.0
+859,Czech Republic,eng,1989,74.33333333333333
+860,Slovenia,slv,1989,34.5
+861,Serbia,hrv,1989,2.0
+862,Slovakia,slo,1989,26.0
+863,Czech Republic,slo,1989,37.0
+864,Vietnam,vie,1989,5.0
+865,Russia,rus,1989,20.5
+866,Spain,eng,1989,4.0
+867,Lithuania,lit,1989,12.5
+868,Latvia,lav,1989,3.0
+869,Ukraine,ukr,1989,4.0
+870,Estonia,est,1989,8.0
+871,Czech Republic,fre,1989,8.0
+872,Taiwan,eng,1989,1.0
+873,Czech Republic,epo,1989,8.0
+874,Czech Republic,pol,1989,6.5
+875,Italy,fre,1989,3.0
+876,Czech Republic,spa,1989,3.0
+877,Slovakia,pol,1989,0.5
+878,Israel,eng,1989,2.0
+879,United Kingdom,hun,1989,1.5
+880,Russia,ger,1989,0.6666666666666666
+881,Serbia,srp,1989,7.0
+882,Czech Republic,ita,1989,8.5
+883,Slovakia,hun,1989,9.0
+884,Czech Republic,sla,1989,1.0
+885,France,epo,1989,1.0
+886,Poland,eng,1989,1.0
+887,Germany,fre,1989,1.0
+888,Germany,eng,1989,1.0
+889,Germany,gem,1989,1.0
+890,Montenegro,hrv,1989,1.0
+891,Austria,eng,1989,0.5
+892,United States,fre,1989,0.5
+893,United States,hun,1989,0.5
+894,Croatia,hrv,1989,14.0
+895,United States,heb,1989,1.0
+896,Bosnia and Herzegovina,bos,1989,1.0
+897,France,spa,1989,0.5
+898,Monaco,fre,1989,1.0
+899,Ukraine,rus,1989,1.0
+900,Czech Republic,hun,1989,3.0
+901,Germany,wen,1989,1.0
+902,Croatia,srp,1989,4.0
+903,Iceland,ice,1989,3.0
+904,Greece,eng,1989,0.5
+905,Brazil,eng,1989,1.0
+906,Spain,por,1989,1.0
+907,Czech Republic,wen,1989,1.0
+908,Byelarus,bel,1989,2.0
+909,Singapore,eng,1989,2.0
+910,Albania,alb,1989,6.0
+911,Syria,ara,1989,5.0
+912,Byelarus,rus,1989,0.5
+913,Latvia,lit,1989,0.5
+914,Czech Republic,chi,1989,1.0
+915,Slovakia,eng,1989,1.0
+916,Sri Lanka,sin,1989,2.0
+917,Czech Republic,rus,1989,4.0
+918,Czech Republic,ara,1989,1.0
+919,Panama,spa,1989,1.0
+920,Italy,slv,1989,1.0
+921,Canada,ukr,1989,1.0
+922,Italy,eng,1989,1.0
+923,United States,ita,1989,0.5
+924,Russia,yid,1989,1.0
+925,Spain,pol,1989,0.5
+926,United States,yid,1989,1.0
+927,United States,eng,2000,157.58333333333331
+928,Portugal,por,2000,6.5
+929,Israel,eng,2000,2.0
+930,United Kingdom,eng,2000,106.33333333333336
+931,Netherlands,dut,2000,89.5
+932,Germany,ger,2000,426.03333333333313
+933,Slovenia,slv,2000,104.5
+934,Hungary,hun,2000,196.0
+935,France,fre,2000,285.50000000000006
+936,Spain,spa,2000,192.91666666666669
+937,Greece,gre,2000,14.0
+938,Slovakia,hun,2000,38.0
+939,Czech Republic,ger,2000,83.7
+940,Spain,eng,2000,4.5
+941,Czech Republic,eng,2000,172.83333333333334
+942,Germany,eng,2000,6.0
+943,Turkey,tur,2000,40.0
+944,Mexico,spa,2000,22.833333333333336
+945,Israel,heb,2000,23.0
+946,Italy,ita,2000,199.0
+947,Poland,pol,2000,281.0
+948,Japan,jpn,2000,69.0
+949,Vietnam,vie,2000,16.5
+950,Croatia,hrv,2000,52.5
+951,Macedonia,mac,2000,14.0
+952,"Korea, Republic of",kor,2000,26.0
+953,Lithuania,lit,2000,17.0
+954,Canada,eng,2000,31.333333333333332
+955,Russia,rus,2000,115.0
+956,Switzerland,ger,2000,15.533333333333335
+957,Bulgaria,bul,2000,72.0
+958,Croatia,srp,2000,1.5
+959,Serbia,srp,2000,28.5
+960,Belgium,fre,2000,2.5
+961,Austria,ger,2000,63.83333333333334
+962,Romania,rum,2000,78.0
+963,Slovakia,slo,2000,71.0
+964,Iran,per,2000,21.0
+965,Spain,cat,2000,30.0
+966,Czech Republic,rus,2000,16.0
+967,Argentina,spa,2000,19.75
+968,China,chi,2000,93.08333333333334
+969,Sweden,swe,2000,37.0
+970,Hong Kong,chi,2000,1.0
+971,Czech Republic,hun,2000,5.0
+972,Syria,ara,2000,7.0
+973,Syria,hrv,2000,1.0
+974,Serbia,hrv,2000,6.5
+975,Colombia,spa,2000,3.5
+976,Indonesia,ind,2000,5.0
+977,Taiwan,chi,2000,101.41666666666667
+978,Slovakia,eng,2000,1.3333333333333333
+979,Denmark,dan,2000,31.0
+980,Czech Republic,ita,2000,20.0
+981,Czech Republic,spa,2000,28.0
+982,Iran,sin,2000,2.0
+983,Norway,nor,2000,32.0
+984,Sri Lanka,sin,2000,3.0
+985,Ukraine,ukr,2000,12.0
+986,Albania,alb,2000,8.0
+987,Czech Republic,fre,2000,23.833333333333336
+988,Finland,fin,2000,26.0
+989,Russia,eng,2000,2.5
+990,Australia,eng,2000,8.083333333333332
+991,Czech Republic,epo,2000,7.0
+992,Estonia,est,2000,4.0
+993,Spain,baq,2000,4.0
+994,Denmark,eng,2000,0.5
+995,Canada,fre,2000,1.0
+996,,fre,2000,5.5
+997,Brazil,por,2000,9.5
+998,Belgium,dut,2000,5.5
+999,Sweden,epo,2000,8.0
+1000,Czech Republic,slo,2000,48.0
+1001,Zimbabwe,nde,2000,1.0
+1002,Iraq,kur,2000,1.0
+1003,Ecuador,spa,2000,1.0
+1004,Montenegro,srp,2000,3.0
+1005,Switzerland,fre,2000,17.666666666666664
+1006,Czech Republic,pol,2000,21.5
+1007,Colombia,eng,2000,1.0
+1008,Hungary,fre,2000,1.0
+1009,Italy,fre,2000,2.0
+1010,Latvia,lav,2000,7.0
+1011,France,eng,2000,4.5
+1012,Iceland,ice,2000,1.0
+1013,Czech Republic,slv,2000,0.5
+1014,United States,vie,2000,0.5
+1015,Canada,spa,2000,1.0
+1016,United Kingdom,spa,2000,1.0
+1017,Kuwait,ara,2000,1.0
+1018,Serbia,hun,2000,1.0
+1019,Czech Republic,tso,2000,1.0
+1020,Bosnia and Herzegovina,hrv,2000,1.0
+1021,Bosnia and Herzegovina,bos,2000,1.0
+1022,Japan,eng,2000,0.5
+1023,Germany,per,2000,1.0
+1024,United States,chi,2000,0.5
+1025,Hungary,eng,2000,1.5
+1026,Italy,spa,2000,2.0
+1027,Thailand,tha,2000,3.0
+1028,Pakistan,urd,2000,4.0
+1029,Netherlands,fry,2000,1.0
+1030,Czech Republic,dut,2000,1.0
+1031,Lebanon,ara,2000,6.5
+1032,France,ger,2000,1.0
+1033,Bahamas,eng,2000,1.0
+1034,Czech Republic,rum,2000,1.0
+1035,Slovakia,pol,2000,0.5
+1036,Czech Republic,swa,2000,1.0
+1037,France,rus,2000,2.0
+1038,United Kingdom,ger,2000,0.2
+1039,Byelarus,bel,2000,8.0
+1040,United States,ger,2000,0.2
+1041,Netherlands,spa,2000,1.5
+1042,Hungary,slv,2000,1.0
+1043,United States,pol,2000,1.5
+1044,Ireland,eng,2000,2.0
+1045,Zimbabwe,sna,2000,1.0
+1046,India,hin,2000,7.0
+1047,Italy,eng,2000,1.0
+1048,Netherlands,pol,2000,1.5
+1049,Netherlands,rus,2000,1.0
+1050,United States,rus,2000,1.0
+1051,Iceland,heb,2000,1.0
+1052,Spain,glg,2000,5.0
+1053,United States,dut,2000,1.0
+1054,Netherlands,eng,2000,4.0
+1055,Ukraine,slo,2000,1.0
+1056,Norway,swe,2000,1.0
+1057,Zimbabwe,eng,2000,1.0
+1058,Israel,fre,2000,1.0
+1059,Czech Republic,swe,2000,1.0
+1060,United States,spa,2000,1.5
+1061,Netherlands,srp,2000,0.5
+1062,United States,srp,2000,1.5
+1063,Netherlands,ukr,2000,1.0
+1064,United States,ukr,2000,1.0
+1065,Netherlands,rum,2000,2.5
+1066,Netherlands,arm,2000,2.0
+1067,Poland,epo,2000,1.0
+1068,Czech Republic,hrv,2000,1.0
+1069,Singapore,chi,2000,1.0
+1070,Switzerland,ita,2000,1.0
+1071,United States,fre,2000,1.5
+1072,Byelarus,rus,2000,1.0
+1073,Czech Republic,lav,2000,1.0
+1074,India,tam,2000,1.0
+1075,India,mal,2000,1.0
+1076,Panama,spa,2000,1.0
+1077,Czech Republic,jpn,2000,1.0
+1078,Czech Republic,chi,2000,1.0
+1079,Finland,eng,2000,1.0
+1080,Netherlands,hun,2000,1.0
+1081,United States,hun,2000,1.0
+1082,Netherlands,alb,2000,1.0
+1083,Netherlands,fre,2000,2.5
+1084,United States,rum,2000,0.5
+1085,Bosnia and Herzegovina,ger,2000,0.25
+1086,Germany,fre,2000,1.0
+1087,Slovenia,ger,2000,0.25
+1088,Belgium,eng,2000,1.0
+1089,Slovenia,hrv,2000,1.0
+1090,Czech Republic,por,2000,1.0
+1091,Germany,wen,2000,2.0
+1092,Egypt,ger,2000,1.0
+1093,Czech Republic,tib,2000,1.0
+1094,Czech Republic,srp,2000,1.0
+1095,Czech Republic,ara,2000,1.0
+1096,Morocco,ara,2000,2.5
+1097,Netherlands,ara,2000,1.0
+1098,Czech Republic,wen,2000,1.0
+1099,Georgia,geo,2000,1.0
+1100,Cambodia,khm,2000,1.0
+1101,"Korea, Republic of",eng,2000,1.0
+1102,Greece,fre,2000,1.0
+1103,Hong Kong,eng,2000,0.5
+1104,Latvia,pol,2000,1.0
+1105,Italy,ita,2011,114.5
+1106,Poland,pol,2011,286.5
+1107,Germany,ger,2011,331.6666666666666
+1108,Czech Republic,eng,2011,152.33333333333331
+1109,Spain,spa,2011,140.58333333333334
+1110,France,fre,2011,182.5
+1111,"Korea, Republic of",kor,2011,38.0
+1112,China,chi,2011,123.0
+1113,United States,eng,2011,123.41666666666667
+1114,United Kingdom,eng,2011,127.41666666666667
+1115,Hungary,hun,2011,82.0
+1116,Spain,cat,2011,23.0
+1117,Slovakia,slo,2011,37.0
+1118,Egypt,ara,2011,17.0
+1119,Bulgaria,bul,2011,78.0
+1120,Serbia,srp,2011,45.0
+1121,Netherlands,dut,2011,93.5
+1122,Austria,ger,2011,105.25000000000001
+1123,Slovenia,slv,2011,88.0
+1124,Ukraine,ukr,2011,29.0
+1125,Bosnia and Herzegovina,bos,2011,11.0
+1126,Australia,eng,2011,4.5
+1127,Russia,rus,2011,109.0
+1128,Spain,glg,2011,6.0
+1129,Denmark,dan,2011,32.0
+1130,Czech Republic,ger,2011,49.0
+1131,Norway,nor,2011,30.0
+1132,Israel,eng,2011,1.0
+1133,Czech Republic,rus,2011,13.0
+1134,Lebanon,ara,2011,11.0
+1135,Turkey,tur,2011,11.0
+1136,Czech Republic,fre,2011,20.0
+1137,Slovakia,hun,2011,7.0
+1138,Czech Republic,ara,2011,3.0
+1139,Romania,rum,2011,41.0
+1140,Japan,jpn,2011,71.0
+1141,Croatia,hrv,2011,42.0
+1142,Czech Republic,slo,2011,67.0
+1143,Macedonia,mac,2011,60.0
+1144,Sweden,swe,2011,34.0
+1145,Syria,ara,2011,10.0
+1146,Brazil,por,2011,4.0
+1147,Georgia,geo,2011,5.0
+1148,Czech Republic,ita,2011,18.5
+1149,Hungary,eng,2011,3.5
+1150,Estonia,est,2011,12.0
+1151,Switzerland,fre,2011,15.0
+1152,Switzerland,ger,2011,7.583333333333333
+1153,India,mal,2011,2.0
+1154,Canada,eng,2011,10.0
+1155,Taiwan,chi,2011,20.5
+1156,Czech Republic,pol,2011,8.5
+1157,Netherlands,alb,2011,1.0
+1158,Czech Republic,spa,2011,8.25
+1159,Bangladesh,ben,2011,3.0
+1160,Iran,per,2011,5.0
+1161,Mexico,spa,2011,18.25
+1162,Portugal,por,2011,7.0
+1163,Uzbekistan,uzb,2011,1.0
+1164,Morocco,ara,2011,6.0
+1165,Lithuania,lit,2011,5.0
+1166,Germany,eng,2011,11.333333333333332
+1167,Finland,fin,2011,1.0
+1168,Latvia,lav,2011,19.0
+1169,Israel,heb,2011,6.0
+1170,Czech Republic,chi,2011,4.5
+1171,Czech Republic,epo,2011,4.0
+1172,Austria,eng,2011,3.0
+1173,Belgium,dut,2011,5.5
+1174,Byelarus,bel,2011,6.0
+1175,Spain,eng,2011,5.0
+1176,India,ben,2011,1.0
+1177,Italy,eng,2011,2.0
+1178,Argentina,spa,2011,5.083333333333333
+1179,Serbia,alb,2011,1.0
+1180,Israel,ger,2011,1.0
+1181,Czech Republic,slv,2011,2.0
+1182,Germany,wen,2011,2.0
+1183,Vietnam,vie,2011,14.0
+1184,Iran,dak,2011,1.0
+1185,Venezuela,spa,2011,1.0
+1186,Slovakia,rom,2011,1.0
+1187,Czech Republic,hrv,2011,3.5
+1188,Greece,gre,2011,8.0
+1189,Ireland,eng,2011,1.0
+1190,Moldova,rum,2011,1.0
+1191,Denmark,swe,2011,1.0
+1192,Poland,epo,2011,2.0
+1193,Czech Republic,lat,2011,2.0
+1194,Colombia,spa,2011,1.3333333333333333
+1195,United Kingdom,pol,2011,1.0
+1196,Iraq,kur,2011,2.0
+1197,Philippines,eng,2011,2.0
+1198,Lithuania,bel,2011,3.0
+1199,Mongolia,mon,2011,3.0
+1200,Bosnia and Herzegovina,hrv,2011,0.5
+1201,Italy,ara,2011,1.0
+1202,Denmark,ger,2011,12.5
+1203,Thailand,tha,2011,3.0
+1204,Pakistan,urd,2011,2.0
+1205,United States,ita,2011,1.0
+1206,Slovenia,eng,2011,1.0
+1207,Serbia,eng,2011,1.0
+1208,Serbia,hrv,2011,1.0
+1209,India,hin,2011,3.0
+1210,Czech Republic,rum,2011,1.0
+1211,Portugal,eng,2011,1.0
+1212,Albania,alb,2011,9.0
+1213,Turkey,kur,2011,1.0
+1214,Philippines,fil,2011,1.0
+1215,France,eng,2011,1.0
+1216,Romania,eng,2011,1.0
+1217,Chile,spa,2011,1.0
+1218,India,tam,2011,1.0
+1219,Netherlands,ger,2011,1.0
+1220,Spain,baq,2011,3.0
+1221,Italy,spa,2011,0.5
+1222,Hungary,hrv,2011,1.0
+1223,Ireland,fre,2011,0.5
+1224,United States,fre,2011,2.0
+1225,United States,spa,2011,1.0
+1226,United Kingdom,slv,2011,5.0
+1227,Canada,fre,2011,1.0
+1228,United Kingdom,fre,2011,1.0
+1229,United Kingdom,ger,2011,1.0
+1230,United Arab Emirates,eng,2011,1.0
+1231,Ethiopia,amh,2011,8.0
+1232,Indonesia,ind,2011,1.0
+1233,Philippines,tgl,2011,1.0
+1234,Philippines,bik,2011,1.0
+1235,Serbia,slo,2011,1.0
+1236,Pakistan,eng,2011,0.5
+1237,Denmark,hrv,2011,1.0
+1238,Sri Lanka,sin,2011,3.0
+1239,Canada,ukr,2011,1.0
+1240,Jordan,ara,2011,2.0
+1241,Czech Republic,bos,2011,1.0
+1242,Vietnam,fre,2011,1.0
+1243,India,pan,2011,1.0
+1244,Czech Republic,hun,2011,1.0
+1245,France,ger,2011,1.0
+1246,Albania,eng,2011,1.0
+1247,Germany,chi,2011,1.0
+1248,Germany,spa,2011,1.0

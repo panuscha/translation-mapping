@@ -19,7 +19,7 @@ for i, row in geotagged_df.iterrows():
 
 #years = list(filter(lambda x: not math.isnan(x) ,geotagged_df['map_year'].unique()))
 #years = list(map(lambda x: str(int(x)),years))
-years = ['1920', '1930']
+years = ['1918', '1929', '1945', '1956', '1967', '1978', '1989', '2000', '2011']
 
 # Normalize the data for the colormap
 vmin = 1
@@ -27,10 +27,10 @@ vmax = 657.5 # from plot_two_maps
 norm = colors.Normalize(vmin=vmin, vmax=vmax)
 
 for idx,y in enumerate(years):
-    folder_path = "C:/Users/Panuskova/Nextcloud/translation-mapping/historical-basemaps/geojson"
+    folder_path = "C:/Users/Panuskova/Nextcloud/translation-mapping/historical-basemaps/years"
 
     # Load the GeoJSON map
-    geojson_path = folder_path + '/world_' + str(1930) + '.geojson' # str(y) - using 1930 map instead
+    geojson_path = folder_path + '/world_' + str(y) + '.geojson' # str(y) - using 1930 map instead
     gdf = gpd.read_file(geojson_path)
 
     # Create a DataFrame from the dictionary
@@ -58,20 +58,22 @@ for idx,y in enumerate(years):
     bbox =  [-10, 35, 60, 75] # [minx, miny, maxx, maxy] - minimal longitude, minimal latitude, maximal longitude, maximal latitude
 
     # Plotting the choropleth map
-    fig, ax = plt.subplots(1, 1,  figsize=(15, 10))
+    fig, ax = plt.subplots(1, 1,  figsize=(12, 8))
 
     gdf.clip(bbox).plot(facecolor=gdf.clip(bbox)['color'],edgecolor='black', linewidth=0.5,  ax=ax, legend=True) #
 
     # Write years in title 
-    if idx < len(years)-1:
-        ax.set_title('Europe Czech Translations {} - {}'.format(str(y), str(int(years[idx+1])-1)))
-    else:
+    if y  == 1929:
         ax.set_title('Europe Czech Translations {} - {}'.format(str(y), '1939'))
+    elif idx < len(years)-1:
+        ax.set_title('Europe Czech Translations {} - {}'.format(str(y), str(int(years[idx+1])-1))) 
+    else:
+        ax.set_title('Europe Czech Translations {} - {}'.format(str(y), '2021'))
     ax.set_axis_off()  # Turn off the axis to remove the axis frame
     
     cbar = plt.cm.ScalarMappable(norm=norm, cmap=cmap)
     fig.colorbar(cbar)
 
-    plt.savefig('plots/'+ax.get_title() + '.png')
-    plt.show()
+    plt.savefig('plots/normalized/'+ax.get_title() + '.png')
+    #plt.show()
     
