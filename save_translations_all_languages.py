@@ -3,6 +3,8 @@ import math
 
 def save_to_dict(map_year, df_dict, row):
     lang = row['language']
+    if lang == 'srp':
+        lang = 'hrv'
     country = row['historical_country_name']
     key = (country, lang, map_year) 
     if key in df_dict:
