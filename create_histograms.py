@@ -90,7 +90,7 @@ for plot_year in plot_years:
                 ax.bar(language, weights, label = language, color = colors)
                 ax.legend()
                 #hist = h[['language','weights']].plot(kind = 'bar', figsize=(8, 6), x = 'language', ylim = [0, y_max], color = colors).get_figure()
-                plt.savefig('C:\\Users\\Panuskova\\Nextcloud\\translation-mapping\\plots\\histograms only second major percentage\\{country}_{year}.png'.format(country = country, year = plot_year))
+                plt.savefig('C:\\Users\\Panuskova\\Nextcloud\\translation-mapping\\plots\\histograms minor percentage\\{country}_{year}.png'.format(country = country, year = plot_year))
                 plt.close()
                 #close(hist)
       
