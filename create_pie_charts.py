@@ -23,6 +23,8 @@ df = pd.read_excel("D:\\Panuskova\\Nextcloud\\translation-mapping\\translation-m
 countries =["Italy", "Belgium", "United Kingdom", "Czechoslovakia", "Denmark", "Sweden", "Slovakia", "Spain", "Switzerland", "USSR", "Germany (Soviet)", "East Germany",  "Germany", "Yugoslavia", "Poland", "Austria", "Italy", "Hungary"]
 languages = ["rus", "est", "arm", "glg", "ukr", "wen", "eng", "lit", "baq", "dut", "slv", "mac", "hrv", "epo", "hun", "ger", "cat", "fre", "slo", "other"]
 
+except_countries = {"Czechoslovakia" : ["slo"], "Belgium" : ["fre", "dut"],  "Switzerland": ["ger", "fre"], "Yugoslavia": ["hrv"]}
+
 
 my_color_palette = {}
 #all_colors = list(colors.CSS4_COLORS.keys())
@@ -52,15 +54,27 @@ for plot_year in plot_years:
             
             # size of the outer chart
             size = 0.1
-        
-            # major language
-            h_max = max(h.weights)
             
+            # if major language is an exception
+            if country in except_countries.keys():
+                
+                # find weight of that language or sum of languages
+                h_max = sum(h[h['language'].isin(except_countries[country])].weights)
+                
+                # Discard major language
+                h = h[~h['language'].isin(except_countries[country])]
+            else:
+                # major language
+                h_max = max(h.weights)
+            
+                # Discard the most common language (= should be the major language)
+                h = h.iloc[1:, :]
+           
             # outher colors, major will always be transparent, major is displayed as black
             outer_colors = [my_color_palette['eng'] , 'black' ]
 
             # list of outer weights 
-            weights_all = [h_max, sum(h.weights) - h_max ]
+            weights_all = [h_max, sum_weights - h_max ]
             
             # plot
             fig, ax = plt.subplots()
@@ -73,9 +87,6 @@ for plot_year in plot_years:
             
             # set major language transparent
             n[0][0].set_alpha(0.0)
-
-            # Discard the most common language (= should be the major language)
-            h = h.iloc[1:, :]
 
             # if there are minor languages translations
             if not(h.empty):
