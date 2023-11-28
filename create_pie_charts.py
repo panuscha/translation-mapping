@@ -36,13 +36,16 @@ for i, language in enumerate(languages):
 for plot_year in plot_years: 
 
     # Iterate through countries to plot the bar chart                
-    for country in countries:
+    for country in ['Belgium']: # countries
 
         # Select only non empty rows that are in the decade and for that country
         if not df[(df['map_year'] == int(plot_year)) &  (df['country'] == country)].empty:
 
             # All non-empty rows
             h = df[(df['map_year'] == int(plot_year)) &  (df['country'] == country)]
+            
+            # sort values by weights descending
+            h = h.sort_values(by = 'weights', ascending = 0)
             
             # if only weights, change to h.weights
             sum_weights = sum(h.weights)
@@ -75,7 +78,7 @@ for plot_year in plot_years:
             n[0][0].set_alpha(0.0)
 
             # Discard the most common language (= should be the major language)
-            h = h[h.weights != h_max]
+            h = h.iloc[1:, :]
 
             # if there are minor languages translations
             if not(h.empty):
