@@ -36,7 +36,7 @@ for i, language in enumerate(languages):
 for plot_year in plot_years: 
 
     # Iterate through countries to plot the bar chart                
-    for country in ['Belgium']: # countries
+    for country in countries: # 
 
         # Select only non empty rows that are in the decade and for that country
         if not df[(df['map_year'] == int(plot_year)) &  (df['country'] == country)].empty:
@@ -55,9 +55,6 @@ for plot_year in plot_years:
         
             # major language
             h_max = max(h.weights)
-            
-            # index of major language
-            id = h.index[h.weights == h_max]
             
             # outher colors, major will always be transparent, major is displayed as black
             outer_colors = [my_color_palette['eng'] , 'black' ]
