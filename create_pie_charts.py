@@ -44,34 +44,62 @@ for plot_year in plot_years:
             # if only weights, change to h.weights
             sum_weights = sum(h.weights)
             
+            # size of the outer chart
             size = 0.1
         
+            # major language
             h_max = max(h.weights)
             
+            # index of major language
             id = h.index[h.weights == h_max]
             
+            # outher colors, major will always be transparent, major is displayed as black
             outer_colors = [my_color_palette['eng'] , 'black' ]
 
+            # list of outer weights 
             weights_all = [h_max, sum(h.weights) - h_max ]
             
+            # plot
             fig, ax = plt.subplots()
+            
+            # outer pie
             n = ax.pie(weights_all, radius=1, colors=outer_colors,
+            
+            # white edges
             wedgeprops=dict(width=size, edgecolor='w'))
+            
+            # set major language transparent
             n[0][0].set_alpha(0.0)
 
             # Discard the most common language (= should be the major language)
             h = h[h.weights != h_max]
 
+            # if there are minor languages translations
             if not(h.empty):
                 
+                # if there are more then TOP languages translations or any of the languages has equal or less then MIN_TRANS translations
                 if len(h.weights) > TOP or any(i <= MIN_TRANS for i in h.weights):
+                    
+                    # sort values by weights descending
                     h = h.sort_values(by = 'weights', ascending = 0)
+                    
+                    # weights
                     weights_sorted = list(h.weights)
-                    ind = list(map(lambda i: i <= 4, weights_sorted)).index(True)
-                    ind = min([TOP, ind])
+                    
+                    # index of first weight that is equal or less then MIN_TRANS
+                    ind_min_trans = list(map(lambda i: i <= MIN_TRANS, weights_sorted)).index(True)
+                    
+                    # index of languages that wil  fall into "other" category
+                    ind = min([TOP, ind_min_trans])
+                    
+                    # "other" category languages
                     df2_dict = {'country': country, 'language': "other", 'map_year': plot_year, 'weights': sum(weights_sorted[ind:]) }
                     df2 = pd.DataFrame(data = df2_dict, index = ['0'])
+                    
+                    # only non-other languages
                     h = h.head(ind)
+                    
+                    # combine two DataFrames
                     h = pd.concat([h, df2], ignore_index = True)
                     
                 # get all colors for languages 
@@ -83,6 +111,7 @@ for plot_year in plot_years:
                 # if only weights, change to h.weights
                 weights = [w/sum_weights for w in h.weights] 
 
+                # inner pie chart
                 wedges, _ = ax.pie(weights, radius=1-size, colors=inner_colors,
                 wedgeprops=dict(edgecolor='w')) #width=size, 
                 ax.legend(wedges, language,
