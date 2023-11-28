@@ -1,10 +1,10 @@
 import pandas as pd
 import math
 import matplotlib.pyplot as plt
-import numpy as np
-from matplotlib import colors
-from matplotlib import colormaps
-from webcolors import rgb_to_name
+
+
+TOP = 3
+MIN_TRANS = 4 
 
 # all plot years
 plot_years = ['1918', '1929', '1945', '1956', '1967','1978', '1989', '2000', '2011' ] 
@@ -64,11 +64,11 @@ for plot_year in plot_years:
 
             if not(h.empty):
                 
-                if len(h.weights) > 3 or any(i <= 4 for i in h.weights):
+                if len(h.weights) > TOP or any(i <= MIN_TRANS for i in h.weights):
                     h = h.sort_values(by = 'weights', ascending = 0)
                     weights_sorted = list(h.weights)
                     ind = list(map(lambda i: i <= 4, weights_sorted)).index(True)
-                    ind = min([3, ind])
+                    ind = min([TOP, ind])
                     df2_dict = {'country': country, 'language': "other", 'map_year': plot_year, 'weights': sum(weights_sorted[ind:]) }
                     df2 = pd.DataFrame(data = df2_dict, index = ['0'])
                     h = h.head(ind)
