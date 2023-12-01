@@ -11,7 +11,7 @@ MIN_TRANS = 4
 plot_years = ['1918', '1929', '1945', '1956', '1967','1978', '1989', '2000', '2011' ] 
 
 # Table with number of translations for each country, language and decade
-df = pd.read_excel("D:\\Panuskova\\Nextcloud\\translation-mapping\\translation-mapping\\weights\\translations_language_countries.xlsx")
+df = pd.read_excel("weights\\translations_language_countries.xlsx")
 
 # all countries and languages
 #countries = df.country.unique()
@@ -153,7 +153,7 @@ for plot_year in plot_years:
                 
                 #plt.show()
                 #hist = h[['language','weights']].plot(kind = 'bar', figsize=(8, 6), x = 'language', ylim = [0, y_max], color = colors).get_figure()
-                plt.savefig('D:\\Panuskova\\Nextcloud\\translation-mapping\\translation-mapping\\plots\\pie charts minor top 19 languages\\{country}_{year}'.format(country = country, year = plot_year))
-                plt.close()
+                plt.savefig('plots\\pie charts minor top 19 languages\\{country}_{year}'.format(country = country, year = plot_year))
+            plt.close()
                 #close(hist)
       
