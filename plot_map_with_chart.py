@@ -3,8 +3,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import math
 import matplotlib.colors as colors
-from itertools import compress
+import os
+import matplotlib.patches as mpatches
 
+
+def getImage(path):
+   return plt.imread(path, format="png")
 
 # Function to convert latitude and longitude to x and y within a given figure size
 def convert_coordinates(latitude, longitude, figure_size):
@@ -48,6 +52,7 @@ MIN_TRANS = 4
 SIZE_OF_CHART = 0.2
 # size of the outer chart
 SIZE_OF_OUTER_CHART = 0.1 * SIZE_OF_CHART
+RADIUS = 1.7
 
 
 # Table with number of translations for each country, language and decade
@@ -62,22 +67,24 @@ except_countries = {"Czechoslovakia" : ["slo"], "Belgium" : ["fre", "dut"],  "Sw
 # Palette for languages
 my_color_palette = {}
 all_colors =[plt.cm.tab20(i) for i in range(20)]
+handles = []
 
 # Save color for each country
 for i, language in enumerate(languages):
     my_color_palette[language] = all_colors[i]
+    handles.append(mpatches.Patch(color=all_colors[i], label=language))
 
 
 
-for idx,y in enumerate(years):
+for idx,plot_year in enumerate(years):
     folder_path = "C:/Users/Panuskova/Nextcloud/translation-mapping/historical-basemaps/years"
 
     # Load the GeoJSON map
-    geojson_path = folder_path + '/world_' + str(y) + '.geojson' # str(y) - using 1930 map instead
+    geojson_path = folder_path + '/world_' + str(plot_year) + '.geojson' # str(y) - using 1930 map instead
     gdf = gpd.read_file(geojson_path)
 
     # Create a DataFrame from the dictionary
-    data_df = pd.DataFrame(list(plot_dict_dicts[y].items()), columns=['country', 'weight'])
+    data_df = pd.DataFrame(list(plot_dict_dicts[plot_year].items()), columns=['country', 'weight'])
     data_df.set_index('country', inplace=True)
     
     gdf['weight'] = 0
@@ -91,7 +98,7 @@ for idx,y in enumerate(years):
     gdf['color'] = '#ffffff'
 
     # Set the color for countries with available data
-    for country, weight in plot_dict_dicts[y].items():
+    for country, weight in plot_dict_dicts[plot_year].items():
         if weight > 0:
             color_rgb = cmap(norm(weight))[:3]  # Get RGB values from the colormap
             gdf.loc[gdf.index == country, 'color'] = '#%02x%02x%02x' % tuple(int(c * 255) for c in color_rgb)
@@ -101,51 +108,19 @@ for idx,y in enumerate(years):
     bbox =  [-10, 35, 60, 75] # [minx, miny, maxx, maxy] - minimal longitude, minimal latitude, maximal longitude, maximal latitude
 
     # Plotting the choropleth map
-    fig, ax = plt.subplots(figsize=(12, 8))
+    fig, ax = plt.subplots(figsize = (12,8))
 
-    gdf.clip(bbox).plot(facecolor=gdf.clip(bbox)['color'],edgecolor='black', linewidth=0.5,  ax=ax, legend=True) #
-
-    cbar = plt.cm.ScalarMappable(norm=norm, cmap=cmap)
-    fig.colorbar(cbar)
-
+    
     # Iterate through countries to plot the bar chart                
     for country in countries: # 
+        
+        piechart_path = 'plots\\pie charts minor top 19 languages plain\\{country}_{year}.png'.format(country = country, year = plot_year)
 
-        # Select only non empty rows that are in the decade and for that country
-        if (not df[(df['map_year'] == int(y)) &  (df['country'] == country)].empty) and (country in gdf.clip(bbox).index ):
+        if   os.path.isfile(piechart_path):  
 
-            # All non-empty rows
-            h = df[(df['map_year'] == int(y)) &  (df['country'] == country)]
-            
-            # sort values by weights descending
-            h = h.sort_values(by = 'weights', ascending = 0)
-            
-            # if only weights, change to h.weights
-            sum_weights = sum(h.weights)
-            
-            
-            
-            # if major language is an exception
-            if country in except_countries.keys():
-                
-                # find weight of that language or sum of languages
-                h_max = sum(h[h['language'].isin(except_countries[country])].weights)
-                
-                # Discard major language
-                h = h[~h['language'].isin(except_countries[country])]
-            else:
-                # major language
-                h_max = max(h.weights)
-            
-                # Discard the most common language (= should be the major language)
-                h = h.iloc[1:, :]
-           
-            # outher colors, major will always be transparent, major is displayed as black
-            outer_colors = [my_color_palette['eng'] , 'black' ]
+            # load image
+            image = getImage(piechart_path)
 
-            # list of outer weights 
-            weights_all = [h_max, sum_weights - h_max ]
-            
             # # plot
             # fig, ax = plt.subplots()
             country_geometry = gdf.clip(bbox)[gdf.clip(bbox).index == country]['geometry'].iloc[0]
@@ -161,90 +136,28 @@ for idx,y in enumerate(years):
             # Set the size of the pie chart within the map
             chart_size = 0.2  # Adjust this value as needed
 
-            lat, lon = convert_coordinates(lat, lon, (1, 1))
-            print("{country} centroid lat: {lat}, lon: {lon}".format(country = country, lat =  0.5*(1+lat/90), lon = 0.5*(1+lon/180)))
-            ### THIS NEEDS TO BE FIXED! ### 
-            ax_pie = fig.add_axes([ lat , lon , 0.05, 0.05], aspect='equal') #,[0.5*(1+lon/180) , 0.5*(1+lat/90)
-            
-            # outer pie
-            n = ax_pie.pie(weights_all, radius=SIZE_OF_CHART, colors=outer_colors,center=(lon, lat),
-            
-            # white edges
-            wedgeprops=dict(width=SIZE_OF_OUTER_CHART, edgecolor='w'))
-            
-            # set major language transparent
-            n[0][0].set_alpha(0.0)
+            im = ax.imshow(
+                image,
+                extent=(lon-2*RADIUS, lon+2*RADIUS, lat-RADIUS, lat+RADIUS),
+                zorder=1
+                )
 
-            # if there are minor languages translations
-            if not(h.empty):
-                
-                # if there are more then TOP languages translations or any of the language is not in languages list
-                if len(h.weights) > TOP or any(l not in languages for l in h.language):
-                    
-                    # sort values by weights descending
-                    h = h.sort_values(by = 'weights', ascending = 0)
-                    
-                    # weights
-                    weights_sorted = list(h.weights)
-                    
-                    h_lang = h.language.tolist()
-                    
-                    # index of languages that are in languages
-                    ind_top_lang_trans = list(map(lambda i: True if h_lang[i] in languages else False ,range(len(h.language)) ))
-                    
-                    if sum(ind_top_lang_trans) > TOP:
-                        res = [i for i, val in enumerate(ind_top_lang_trans) if val]
-                        
-                        #ind_under_top = ind_top_lang_trans[res[TOP]:]
-                        
-                        ind_top_lang_trans[res[TOP]:] = [False for i in range(len(ind_top_lang_trans) - res[TOP])]
-                        #ind_top_lang_trans = ind_top_lang_trans[0:TOP]
-                        # index of languages that are not in languages or under TOP threshold 
-                        ind_not_top_trans = list(map(lambda i: True if h_lang[i] not in languages or i in res[TOP:] else False, range(len(h.language)) ))
-                    else:
-                        
-                        # index of languages that are not in languages
-                        ind_not_top_trans = list(map(lambda i: True if h_lang[i] not in languages else False, range(len(h.language)) ))
-                    
-                    
-                    # "other" category languages
-                    sum_not_top_lang = sum(list(compress(h.weights.tolist(), ind_not_top_trans))) #map(lambda i: weights_sorted[i], ind_not_top_trans)
-                    df2_dict = {'country': country, 'language': "other", 'map_year': y, 'weights': sum_not_top_lang }
-                    df2 = pd.DataFrame(data = df2_dict, index = ['0'])
-                    
-                    #idx = pd.Series(ind_top_lang_trans)
-                    
-                    # only non-other languages
-                    h = h.iloc[ind_top_lang_trans, :]
-                    
-                    # combine two DataFrames
-                    h = pd.concat([h, df2], ignore_index = True)
-                    
-                # get all colors for languages 
-                inner_colors = [my_color_palette[l] for l in h.language  ]
+            #lat, lon = convert_coordinates(lat, lon, (1, 1))
+            #lat =  math.cos(lat) * math.cos(lon)
 
-                # get all languages 
-                language = h.language
-                
-                # if only weights, change to h.weights
-                weights = [w/sum_weights for w in h.weights] 
-
-
-                # inner pie chart
-                wedges, _ = ax_pie.pie(weights, radius=1-SIZE_OF_OUTER_CHART, colors=inner_colors,center=(lon, lat),
-                wedgeprops=dict(edgecolor='w')) #width=size, 
-
-
-
+    gdf.clip(bbox).plot(facecolor=gdf.clip(bbox)['color'],edgecolor='black', linewidth=0.5,  ax=ax, legend=True, zorder=0) #
+    cbar = plt.cm.ScalarMappable(norm=norm, cmap=cmap)
+    fig.colorbar(cbar)
+    plt.legend(handles=handles)        
 
 
     # Write years in the title 
-    if y  == 1929:
-        ax.set_title('Europe Czech Translations {} - {}'.format(str(y), '1939'))
+    if plot_year  == 1929:
+        ax.set_title('Europe Czech Translations {} - {}'.format(str(plot_year), '1939'))
     elif idx < len(years)-1:
-        ax.set_title('Europe Czech Translations {} - {}'.format(str(y), str(int(years[idx+1])-1))) 
+        ax.set_title('Europe Czech Translations {} - {}'.format(str(plot_year), str(int(years[idx+1])-1))) 
     else:
-        ax.set_title('Europe Czech Translations {} - {}'.format(str(y), '2021'))
+        ax.set_title('Europe Czech Translations {} - {}'.format(str(plot_year), '2021'))
     ax.set_axis_off()  # Turn off the axis to remove the axis frame
     
     plt.savefig('plots/normalized with charts/'+ax.get_title() + '.png')

@@ -1,5 +1,5 @@
 import pandas as pd
-import math
+import matplotlib.patches as mpatches
 import matplotlib.pyplot as plt
 from itertools import compress
 
@@ -29,6 +29,7 @@ except_countries = {"Czechoslovakia" : ["slo"], "Belgium" : ["fre", "dut"],  "Sw
 my_color_palette = {}
 #all_colors = list(colors.CSS4_COLORS.keys())
 all_colors =[plt.cm.tab20(i) for i in range(20)]
+handles = []
 
 # Save color for each country
 for i, language in enumerate(languages):
@@ -37,6 +38,7 @@ for i, language in enumerate(languages):
 # Iterate through all decades
 for plot_year in plot_years: 
 
+    
     # Iterate through countries to plot the bar chart                
     for country in countries: # 
 
@@ -77,7 +79,7 @@ for plot_year in plot_years:
             weights_all = [h_max, sum_weights - h_max ]
             
             # plot
-            fig, ax = plt.subplots()
+            fig, ax = plt.subplots(figsize = (10,10))
             
             # outer pie
             n = ax.pie(weights_all, radius=1, colors=outer_colors,
@@ -145,15 +147,15 @@ for plot_year in plot_years:
                 # inner pie chart
                 wedges, _ = ax.pie(weights, radius=1-size, colors=inner_colors,
                 wedgeprops=dict(edgecolor='w')) #width=size, 
-                ax.legend(wedges, language,
-                    title="languages",
-                    loc="center left",
-                    bbox_to_anchor=(1, 0, 0.5, 1))
-                plt.title("{country}_{year}".format(country = country, year = plot_year))
+                #ax.legend(wedges, language,
+                #    title="languages",
+                #    loc="center left",
+                #    bbox_to_anchor=(1, 0, 0.5, 1))
+                #plt.title("{country}_{year}".format(country = country, year = plot_year))
                 
                 #plt.show()
                 #hist = h[['language','weights']].plot(kind = 'bar', figsize=(8, 6), x = 'language', ylim = [0, y_max], color = colors).get_figure()
-                plt.savefig('plots\\pie charts minor top 19 languages\\{country}_{year}'.format(country = country, year = plot_year))
+                plt.savefig('plots\\pie charts minor top 19 languages plain\\{country}_{year}'.format(country = country, year = plot_year), transparent=True)
             plt.close()
                 #close(hist)
       
