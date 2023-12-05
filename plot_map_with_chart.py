@@ -12,7 +12,7 @@ import matplotlib.patches as mpatches
 folder_path = "C:/Users/Panuskova/Nextcloud/translation-mapping/historical-basemaps/years"
 
  # Bounding box of the map - Europe
-bbox =  [-10, 35, 60, 75] # [minx, miny, maxx, maxy] - minimal longitude, minimal latitude, maximal longitude, maximal latitude
+bbox =  [-10, 40, 40, 65] #[-10, 35, 60, 75] # [minx, miny, maxx, maxy] - minimal longitude, minimal latitude, maximal longitude, maximal latitude
 
 # Path to the infos about translations  
 geotagged_df = pd.read_excel("geotagged/geotagged_hist_country.xlsx")
@@ -56,7 +56,7 @@ norm = colors.Normalize(vmin=vmin, vmax=vmax)
 ############# FOR CHARTS ################
 
 # Radius of the charts
-RADIUS = 1.5
+RADIUS = 1.1
 
 # folder with charts
 piechart_folder = 'plots\\pie charts minor top 19 languages plain\\'
@@ -153,9 +153,6 @@ for idx,map_year in enumerate(years):
                 # Get the latitude and longitude of the centroid
                 lat = centroid.y
                 lon = centroid.x
-
-                if country == "Sweden":
-                    lon -=1.8 
 
             # show image at the latitude and longitude of the plot
             im = ax.imshow(
