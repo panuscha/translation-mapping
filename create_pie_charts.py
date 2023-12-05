@@ -7,6 +7,10 @@ from itertools import compress
 TOP = 3
 MIN_TRANS = 4 
 
+# size of the outer chart
+SIZE = 0.2
+            
+
 # all plot years
 plot_years = ['1918', '1929', '1945', '1956', '1967','1978', '1989', '2000', '2011' ] 
 
@@ -54,8 +58,6 @@ for plot_year in plot_years:
             # if only weights, change to h.weights
             sum_weights = sum(h.weights)
             
-            # size of the outer chart
-            size = 0.1
             
             # if major language is an exception
             if country in except_countries.keys():
@@ -85,7 +87,7 @@ for plot_year in plot_years:
             n = ax.pie(weights_all, radius=1, colors=outer_colors,
             
             # white edges
-            wedgeprops=dict(width=size, edgecolor='w'))
+            wedgeprops=dict(width=SIZE, edgecolor='w'))
             
             # set major language transparent
             n[0][0].set_alpha(0.0)
@@ -145,7 +147,7 @@ for plot_year in plot_years:
                 weights = [w/sum_weights for w in h.weights] 
 
                 # inner pie chart
-                wedges, _ = ax.pie(weights, radius=1-size, colors=inner_colors,
+                wedges, _ = ax.pie(weights, radius=1-SIZE, colors=inner_colors,
                 wedgeprops=dict(edgecolor='w')) #width=size, 
                 #ax.legend(wedges, language,
                 #    title="languages",
