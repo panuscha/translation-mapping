@@ -9,7 +9,7 @@ import matplotlib.patches as mpatches
 ############ FOR MAPS #############
 
 # folder with geopandas maps
-folder_path = "C:/Users/Panuskova/Nextcloud/translation-mapping/historical-basemaps/years"
+folder_path = "historical-basemaps/years"
 
  # Bounding box of the map - Europe
 bbox =  [-10, 40, 40, 65] #[-10, 35, 60, 75] # [minx, miny, maxx, maxy] - minimal longitude, minimal latitude, maximal longitude, maximal latitude
@@ -59,14 +59,34 @@ norm = colors.Normalize(vmin=vmin, vmax=vmax)
 RADIUS = 1.1
 
 # folder with charts
-piechart_folder = 'plots\\pie charts minor top 19 languages plain\\'
+piechart_folder = 'plots/pie charts minor top 19 languages plain/'
 
 # Table with number of translations for each country, language and decade
-df = pd.read_excel("weights\\translations_language_countries.xlsx")
+df = pd.read_excel("weights/translations_language_countries.xlsx")
 
 # countries and languages from number_of_colors.py  
 countries =["Italy", "Belgium", "United Kingdom", "Czechoslovakia", "Denmark", "Sweden", "Slovakia", "Spain", "Switzerland", "USSR", "Germany (Soviet)", "East Germany",  "Germany", "Yugoslavia", "Poland", "Austria", "Italy", "Hungary"]
-languages = ["rus", "est", "arm", "glg", "ukr", "wen", "eng", "lit", "baq", "dut", "slv", "mac", "hrv", "epo", "hun", "ger", "cat", "fre", "slo", "other"]
+#languages = ["rus", "est", "arm", "glg", "ukr", "wen", "eng", "lit", "baq", "dut", "slv", "mac", "hrv", "epo", "hun", "ger", "cat", "fre", "slo", "other"]
+languages = {"rus": "ruština",
+                   "est": "estonština",
+                   "arm": "arménština",
+                   "glg": "galicijština", 
+                   "ukr": "ukrajinština",
+                   "wen": "lužická srbština",
+                   "eng": "angličtina",
+                   "lit": "litevština",
+                   "baq": "baskičtina",
+                   "dut": "nizozemština",
+                   "slv": "slovinština",
+                   "mac": "makedonština",
+                   "hrv": "srbochorvatština",
+                   "epo": "esperanto",
+                   "hun": "maďarština",
+                   "ger": "němčina",
+                   "cat": "katalánština",
+                   "fre": "francouzština",
+                   "slo": "slovenština",
+                   "other": "ostatní jazyky"}
 
 # Palette for languages
 my_color_palette = {}
@@ -76,9 +96,9 @@ all_colors =[plt.cm.tab20(i) for i in range(20)]
 handles = []
 
 # Save color for each country
-for i, language in enumerate(languages):
-    my_color_palette[language] = all_colors[i]
-    handles.append(mpatches.Patch(color=all_colors[i], label=language))
+for i, (language_code, language_czech) in enumerate(languages.items()):
+    my_color_palette[language_code] = all_colors[i]
+    handles.append(mpatches.Patch(color=all_colors[i], label=language_czech))
 
 ### centroid of geometry
 # Load the GeoJSON map
@@ -165,19 +185,24 @@ for idx,map_year in enumerate(years):
     
     # colorbar 
     cbar = plt.cm.ScalarMappable(norm=norm, cmap=cmap)
-    fig.colorbar(cbar)
+    # set colormap
+    cb = fig.colorbar(cbar, ax = ax, shrink=0.9)
+    # set label to colormap scale
+    cb.set_label('Počet překladů za období v dané zemi', rotation=90)
+    
+    # add legend 
     plt.legend(handles=handles)        
 
 
     # Write years in the title 
     if map_year  == 1929:
-        ax.set_title('Europe Czech Translations {} - {}'.format(str(map_year), '1939'))
+        title = 'Europe Czech Translations {} - {}'.format(str(map_year), '1939')
     elif idx < len(years)-1:
-        ax.set_title('Europe Czech Translations {} - {}'.format(str(map_year), str(int(years[idx+1])-1))) 
+        title = 'Europe Czech Translations {} - {}'.format(str(map_year), str(int(years[idx+1])-1))
     else:
-        ax.set_title('Europe Czech Translations {} - {}'.format(str(map_year), '2021'))
+        title  = 'Europe Czech Translations {} - {}'.format(str(map_year), '2021')
     ax.set_axis_off()  # Turn off the axis to remove the axis frame
     
-    plt.savefig('plots/normalized with charts/'+ax.get_title() + '.png')
+    plt.savefig('plots/normalized with charts/'+title + '.png')
 
     
