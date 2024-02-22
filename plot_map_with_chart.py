@@ -191,7 +191,7 @@ for idx,map_year in enumerate(years):
     cb.set_label('Počet překladů za období v dané zemi', rotation=90)
     
     # add legend 
-    plt.legend(handles=handles, loc = "lower right", fontsize = "x-small", bbox_to_anchor=(0.961, 0.039))        
+    plt.legend(handles=handles, loc = "lower right", fontsize = "small", bbox_to_anchor=(0.961, 0.039))        
 
 
     # Write years in the title 
@@ -202,7 +202,11 @@ for idx,map_year in enumerate(years):
     else:
         title  = 'Europe Czech Translations {} - {}'.format(str(map_year), '2021')
     ax.set_axis_off()  # Turn off the axis to remove the axis frame
-    
+
+    plt.subplots_adjust(left=0,
+                    bottom=0,
+                    right=1,
+                    top=1)
     plt.savefig('plots/normalized with charts/'+title + '.svg')
 
     

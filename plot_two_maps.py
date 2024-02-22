@@ -84,6 +84,11 @@ for idx, map_year in enumerate(map_years):
     
     # set label to colormap scale
     cb.set_label('Počet překladů za období v dané zemi', rotation=90)
+    
+    plt.subplots_adjust(left=0,
+                    bottom=0,
+                    right=1,
+                    top=1)
 
     plt.savefig('plots/language normalized major only/'+title + '.svg')
 
