@@ -78,9 +78,9 @@ for idx, map_year in enumerate(map_years):
     ax.set_axis_off() 
 
     cbar = plt.cm.ScalarMappable(norm=norm, cmap=cmap)
-    fig.colorbar(cbar, ax = ax)
+    fig.colorbar(cbar, ax = ax, shrink=0.9)
 
-    plt.savefig('plots/language normalized major only/'+title + '.png')
+    plt.savefig('plots/language normalized major only/'+title + '.svg')
 
     # Show the plot
     #plt.show()
