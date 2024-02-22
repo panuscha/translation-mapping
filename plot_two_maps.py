@@ -5,8 +5,6 @@ import numpy as np
 
 import matplotlib.colors as colors
 
-folder_path = "C:/Users/Panuskova/Nextcloud/translation-mapping/"
-
 #geotagged_df = pd.read_excel("geotagged/geotagged_germany_country_update.xlsx")
 #weights_df = pd.read_csv("weights/weights_language_families.csv")
 weights_df = pd.read_csv('weights/weights_only_major_language_families.csv')
@@ -30,12 +28,12 @@ for idx, map_year in enumerate(map_years):
 
     # Load the GeoJSON map
     #historical_geojson_path = folder_path + 'historical-basemaps/geojson/world_' + str(map_year)+ '.geojson'
-    historical_geojson_path = folder_path + 'historical-basemaps/years/world_' + str(map_year)+ '.geojson'
+    historical_geojson_path = 'historical-basemaps/years/world_' + str(map_year)+ '.geojson'
 
     # Read historical borders GeoJSON using GeoPandas
     historical_borders = gpd.read_file(historical_geojson_path)
 
-    language_geojson_path = folder_path + 'language-basemaps/' + "combined.geojson"
+    language_geojson_path = 'language-basemaps/' + "combined.geojson"
 
     # Read basemap GeoJSON using GeoPandas
     coloring_data = gpd.read_file(language_geojson_path)
@@ -73,16 +71,16 @@ for idx, map_year in enumerate(map_years):
 
     # Customize plot appearance
     if idx < len(map_years) - 1:
-        ax.set_title('Europe Czech Translations {} - {}'.format(str(map_year), map_years[idx+1]-1) )
+        title = 'Europe Czech Translations {} - {}'.format(str(map_year), map_years[idx+1]-1)
     else:
-        ax.set_title('Europe Czech Translations {}'.format(str(map_year)) )        
+        title ='Europe Czech Translations {}'.format(str(map_year))      
     plt.grid(False)
     ax.set_axis_off() 
 
     cbar = plt.cm.ScalarMappable(norm=norm, cmap=cmap)
-    fig.colorbar(cbar)
+    fig.colorbar(cbar, ax = ax)
 
-    plt.savefig('plots/language normalized major only/'+ax.get_title() + '.png')
+    plt.savefig('plots/language normalized major only/'+title + '.png')
 
     # Show the plot
     #plt.show()

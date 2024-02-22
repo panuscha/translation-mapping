@@ -27,7 +27,7 @@ vmax = 657.5 # from plot_two_maps
 norm = colors.Normalize(vmin=vmin, vmax=vmax)
 
 for idx,y in enumerate(years):
-    folder_path = "C:/Users/Panuskova/Nextcloud/translation-mapping/historical-basemaps/years"
+    folder_path = "historical-basemaps/years"
 
     # Load the GeoJSON map
     geojson_path = folder_path + '/world_' + str(y) + '.geojson' # str(y) - using 1930 map instead
