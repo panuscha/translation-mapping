@@ -78,7 +78,12 @@ for idx, map_year in enumerate(map_years):
     ax.set_axis_off() 
 
     cbar = plt.cm.ScalarMappable(norm=norm, cmap=cmap)
-    fig.colorbar(cbar, ax = ax, shrink=0.9)
+    
+    # set colormap
+    cb = fig.colorbar(cbar, ax = ax, shrink=0.9)
+    
+    # set label to colormap scale
+    cb.set_label('Počet překladů za období v dané zemi', rotation=90)
 
     plt.savefig('plots/language normalized major only/'+title + '.svg')
 
