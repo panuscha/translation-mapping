@@ -13,6 +13,7 @@ def save_to_dict(countries, map_year, df_dict, row):
 geotagged_df = pd.read_excel("geotagged/geotagged_germany_country_update.xlsx")
 
 
+
 plot_years = [1945, 1956, 1967, 1978, 1989, 2000, 2011] 
 df_dict = {}
 
@@ -55,13 +56,13 @@ for plot_year in plot_years:
         english_countries = ['United Kingdom', 'Ireland']
 
         # HUNGARY
-        hungary_speaking = row['geonames_country'] == 'Slovakia' or row['geonames_country'] == 'Hungary'
+        hungary_speaking =  row['geonames_country'] == 'Hungary' #row['geonames_country'] == 'Slovakia' or
         hungary_language  = row['language'] == 'hun'
         hungary_cond = hungary_language and hungary_speaking
         hungary_countries = ['Hungary']
 
         # SPAIN AND CATALONIA
-        spanish_speaking =  row['geonames_country'] == 'Spain' or row['geonames_country'] == 'Catalonia'
+        spanish_speaking =  row['geonames_country'] == 'Spain' #or row['geonames_country'] == 'Catalonia'
         spanish_language = row['language'] == 'spa'
         spanish_cond = spanish_language and spanish_speaking
         spanish_countries = ['Spain', 'Catalonia']    
@@ -144,13 +145,14 @@ for plot_year in plot_years:
             germany_rest_cond = False
 
             # SOVIET
-            russian_speaking =  (row['geonames_country'] == 'Estonia' or row['geonames_country'] == 'Lithuania' or  row['geonames_country'] == 'Latvia' or  
-                                 row['geonames_country'] == 'Byelarus' or row['geonames_country'] == 'Ukraine' or row['geonames_country'] == 'Moldova' or
-                                 row['geonames_country'] == 'Russia' or row['geonames_country'] == 'Georgia' or row['geonames_country'] == 'Azerbaijan')
+            #russian_speaking =  (row['geonames_country'] == 'Estonia' or row['geonames_country'] == 'Lithuania' or  row['geonames_country'] == 'Latvia' or  
+            #                     row['geonames_country'] == 'Byelarus' or row['geonames_country'] == 'Ukraine' or row['geonames_country'] == 'Moldova' or
+            #                     row['geonames_country'] == 'Russia' or row['geonames_country'] == 'Georgia' or row['geonames_country'] == 'Azerbaijan')
             
+            russian_speaking = (row['geonames_country'] == 'Russia')
             soviet_cond = russian_language and russian_speaking
-            soviet_countries = ['Estonia', 'Lithuania', 'Latvia', 'Byelarus', 'Ukraine', 'Moldova', 'Russia', 'Georgia', 'Azerbaijan']
-
+            #soviet_countries = ['Estonia', 'Lithuania', 'Latvia', 'Byelarus', 'Ukraine', 'Moldova', 'Russia', 'Georgia', 'Azerbaijan']
+            soviet_countries = ['Russia']
             russian_cond = False
 
             slovak_speaking = row['geonames_country'] == 'Czechia' or row['geonames_country'] == 'Slovakia'
@@ -363,4 +365,4 @@ for plot_year in plot_years:
 df = pd.Series(df_dict).reset_index()   
 df.columns = ['country', 'map_year', 'weights'] 
 #df['weights'] = df['weights'].apply(lambda x: math.log2(x))
-df.to_csv('weights/weights_only_major_language_families.csv')            
+df.to_csv('weights/weights_only_major_language_families_new.csv')            

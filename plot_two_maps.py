@@ -6,8 +6,14 @@ import numpy as np
 import matplotlib.colors as colors
 
 #geotagged_df = pd.read_excel("geotagged/geotagged_germany_country_update.xlsx")
+
 #weights_df = pd.read_csv("weights/weights_language_families.csv")
+
+#!!! Plots to language normalized major only folder !!!
 weights_df = pd.read_csv('weights/weights_only_major_language_families.csv')
+
+#!!! Plots to current official language only folder !!!
+#weights_df = pd.read_csv('weights/weights_only_major_language_families_new.csv')
 
 map_years = np.unique(weights_df['map_year']) 
 
@@ -27,7 +33,6 @@ for idx, map_year in enumerate(map_years):
     weights_df_year = weights_df[weights_df['map_year'] == map_year]
 
     # Load the GeoJSON map
-    #historical_geojson_path = folder_path + 'historical-basemaps/geojson/world_' + str(map_year)+ '.geojson'
     historical_geojson_path = 'historical-basemaps/years/world_' + str(map_year)+ '.geojson'
 
     # Read historical borders GeoJSON using GeoPandas
@@ -90,7 +95,7 @@ for idx, map_year in enumerate(map_years):
                     right=1,
                     top=1)
 
-    plt.savefig('plots/language normalized major only/'+title + '.svg')
+    plt.savefig('plots/current official language only/'+title + '.svg')
 
     # Show the plot
     #plt.show()
