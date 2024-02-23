@@ -32,7 +32,7 @@ regions_bbox =  {'Middle East'    : [  25,   4,  70,  40],
                  'Asia'           : [  70, -10, 160,  62], 
                  'Europe'         : [ -10,  35,  60,  75] } 
 
-region = 'Asia'
+region = 'North America'
 
 # Bounding box of the map 
 bbox =  regions_bbox[region] 
@@ -126,7 +126,7 @@ for idx,y in enumerate(years):
                     right=1,
                     top=1)
 
-    plt.savefig('plots/normalized/'+title + '.png')
+    plt.savefig('plots/normalized/'+title + '.svg')
 
     # Print the countries that were not found in gdf 
     p = [country if country not in gdf.index else None for country in year_countries[y]]

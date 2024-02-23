@@ -30,7 +30,7 @@ combined_gdf = gpd.GeoDataFrame(pd.concat([ not_germany , east_and_west_germany]
 ##### BELGIUM #####
 
 # Load GeoJSON file with NUTS 1
-gdf1 = gpd.read_file('C:/Users/Panuskova/Nextcloud/translation-mapping/language-basemaps/NUTS_lvl_1.geojson')
+gdf1 = gpd.read_file('language-basemaps/NUTS_lvl_1.geojson')
 
 # Define area that is not Belgium 
 not_belgium = combined_gdf[combined_gdf.NAME != "Belgium"]
@@ -79,7 +79,7 @@ combined_gdf.loc[combined_gdf.NUTS_ID == 'ES5','NAME'] = 'Catalonia'
 
 ##### SWITZERLAND ####
 
-gdf1 = gpd.read_file('C:/Users/Panuskova/Nextcloud/translation-mapping/language-basemaps/NUTS_lvl_2.geojson')
+gdf1 = gpd.read_file('  language-basemaps/NUTS_lvl_2.geojson')
 
 #switzerland_nuts = gdf1[gdf1['NUTS_ID'].str.startswith('CH')]
 not_switzerland = combined_gdf[combined_gdf.NAME != "Switzerland"]
