@@ -5,6 +5,9 @@ import math
 import matplotlib.colors as colors
 import os
 import matplotlib.patches as mpatches
+import svglib
+from io import BytesIO
+
 
 ############ FOR MAPS #############
 
@@ -157,6 +160,9 @@ for idx,map_year in enumerate(years):
 
             # load image
             image = plt.imread(piechart_path, format="png")
+
+            # Use Matplotlib to display the PNG image
+            #image = plt.imread(BytesIO(png_image))
 
             # get geometry of the country
             country_geometry = gdf.clip(bbox)[gdf.clip(bbox).index == country]['geometry'].iloc[0]

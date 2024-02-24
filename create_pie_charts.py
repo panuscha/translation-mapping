@@ -15,7 +15,7 @@ SIZE = 0.2
 plot_years = ['1918', '1929', '1945', '1956', '1967','1978', '1989', '2000', '2011' ] 
 
 # Table with number of translations for each country, language and decade
-df = pd.read_excel("weights\\translations_language_countries.xlsx")
+df = pd.read_excel("weights/translations_language_countries.xlsx")
 
 # all countries and languages
 #countries = df.country.unique()
@@ -157,7 +157,7 @@ for plot_year in plot_years:
                 
                 #plt.show()
                 #hist = h[['language','weights']].plot(kind = 'bar', figsize=(8, 6), x = 'language', ylim = [0, y_max], color = colors).get_figure()
-                plt.savefig('plots\\pie charts minor top 19 languages plain\\{country}_{year}'.format(country = country, year = plot_year), transparent=True)
+                plt.savefig('plots/pie charts minor top 19 languages plain/{country}_{year}.png'.format(country = country, year = plot_year), transparent=True, dpi=600)
             plt.close()
                 #close(hist)
       

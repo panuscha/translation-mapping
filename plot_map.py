@@ -1,18 +1,18 @@
 import geopandas as gpd
 import pandas as pd
 import matplotlib.pyplot as plt
-import math
 import matplotlib.colors as colors
 
 geotagged_df = pd.read_excel("geotagged/geotagged_hist_country.xlsx")
 geotagged_df['geonames_lng'] = geotagged_df['geonames_lng'].apply(lambda x: float(str(x)) if isinstance(x, str) else -1000)
 geotagged_df['geonames_lat'] = geotagged_df['geonames_lat'].apply(lambda x: float(str(x)) if isinstance(x, str) else -1000)
-geotagged_df['map_year'] = geotagged_df['map_year'].apply(lambda x: str(int(x)))
+
+column_map_year = 'map_year_region'
+geotagged_df[column_map_year] = geotagged_df[column_map_year].apply(lambda x: str(int(x)))
 
 plot_dict_dicts = {}
 
 # [minx, miny, maxx, maxy] - minimal longitude, minimal latitude, maximal longitude, maximal latitude
-
 
 # pomocne vypocty xdddd
 me_lon = 60
@@ -27,19 +27,19 @@ a_lat = 72
 e_lon = 50
 e_lat = 40
 
-regions_bbox =  {'Middle East'    : [  25,   4,  70,  40],
+regions_bbox =  {'Middle East'    : [  20,   4,  70,  44],
                  'North America'  : [-145, -10, -55,  62],
                  'Asia'           : [  70, -10, 160,  62], 
                  'Europe'         : [ -10,  35,  60,  75] } 
 
-region = 'North America'
+region = 'Middle East'
 
 # Bounding box of the map 
 bbox =  regions_bbox[region] 
 
 for i, row in geotagged_df.iterrows():
-    if not pd.isnull(row['map_year']):
-        map_year = row['map_year']
+    if not pd.isnull(row[column_map_year]):
+        map_year = row[column_map_year]
         historic_name = row['historical_country_name']
         weight = row['weight']
         if map_year not in plot_dict_dicts:
@@ -62,8 +62,8 @@ vmax = 1
 year_countries = {year: [] for year in years}
 
 for year in years:
-    for hist_country in gdf_clip.loc[gdf_clip['map_year'] == year, 'historical_country_name' ].unique():
-        vmax = max(vmax, gdf_clip.loc[(gdf_clip['map_year'] == year) & (gdf_clip['historical_country_name'] == hist_country), 'weight'].sum())
+    for hist_country in gdf_clip.loc[gdf_clip[column_map_year] == year, 'historical_country_name' ].unique():
+        vmax = max(vmax, gdf_clip.loc[(gdf_clip[column_map_year] == year) & (gdf_clip['historical_country_name'] == hist_country), 'weight'].sum())
         year_countries[year].append(hist_country)
 print(vmax)
 
