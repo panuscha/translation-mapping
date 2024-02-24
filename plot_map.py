@@ -29,10 +29,10 @@ e_lat = 40
 
 regions_bbox =  {'Middle East'    : [  20,   4,  70,  44],
                  'North America'  : [-145, -10, -55,  62],
-                 'Asia'           : [  70, -10, 160,  62], 
+                 'Asia'           : [  70, -17, 160,  55], 
                  'Europe'         : [ -10,  35,  60,  75] } 
 
-region = 'Middle East'
+region = 'Asia' 
 
 # Bounding box of the map 
 bbox =  regions_bbox[region] 

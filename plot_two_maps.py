@@ -10,35 +10,56 @@ import matplotlib.colors as colors
 #weights_df = pd.read_csv("weights/weights_language_families.csv")
 
 #!!! Plots to language normalized major only folder !!!
-weights_df = pd.read_csv('weights/weights_only_major_language_families.csv')
+#weights_df = pd.read_csv('weights/weights_only_major_language_families.csv')
 
 #!!! Plots to current official language only folder !!!
 #weights_df = pd.read_csv('weights/weights_only_major_language_families_new.csv')
+weights_df = pd.read_csv('weights/weights_language_families_regions.csv')
 
-map_years = np.unique(weights_df['map_year']) 
+regions_bbox =  {'Middle East'    : [  20,   4,  70,  44],
+                 'North America'  : [-145, -10, -55,  62],
+                 'Asia'           : [  70, -17, 160,  55], 
+                 'Europe'         : [ -10,  35,  60,  75] } 
+
+region = 'Middle East'  
+
+# Bounding box of the map 
+bbox =  regions_bbox[region] 
+#column_map_year = 'map_year'if region == 'Europe' else 'map_year_region'
+column_map_year = 'map_year'
+
+map_years = [1918, 1945, 1989]
+
+language_geojson_path = 'language-basemaps/combined.geojson'
+
+# Read basemap GeoJSON using GeoPandas
+coloring_data = gpd.read_file(language_geojson_path)
+
+coloring_data = coloring_data.clip(bbox)
 
 # Normalize the data for the colormap
 vmin = 1
 vmax = 1
-for year in weights_df['map_year'].unique():
-    for hist_country in weights_df.loc[weights_df['map_year'] == year, 'country' ].unique():
-        vmax = max(vmax, weights_df.loc[(weights_df['map_year'] == year) & (weights_df['country'] == hist_country), 'weights'].sum())
+for year in weights_df[column_map_year].unique():
+    for country in weights_df.loc[weights_df[column_map_year] == year, 'country' ].unique():
+        if country in coloring_data['NAME'].tolist():
+            vmax = max(vmax, weights_df.loc[(weights_df[column_map_year] == year) & (weights_df['country'] == country), 'weights'].sum())
 print(vmax)
 
 norm = colors.Normalize(vmin=vmin, vmax=vmax)
 
 
+
+
 for idx, map_year in enumerate(map_years):
         
-    weights_df_year = weights_df[weights_df['map_year'] == map_year]
+    weights_df_year = weights_df[weights_df[column_map_year] == map_year]
 
     # Load the GeoJSON map
     historical_geojson_path = 'historical-basemaps/years/world_' + str(map_year)+ '.geojson'
 
     # Read historical borders GeoJSON using GeoPandas
     historical_borders = gpd.read_file(historical_geojson_path)
-
-    language_geojson_path = 'language-basemaps/' + "combined.geojson"
 
     # Read basemap GeoJSON using GeoPandas
     coloring_data = gpd.read_file(language_geojson_path)
@@ -55,15 +76,12 @@ for idx, map_year in enumerate(map_years):
     merged['color'] = '#ffffff'
 
     # Set the color for countries with available data
-    for _, row in weights_df[weights_df['map_year'] == map_year].iterrows():
+    for _, row in weights_df[weights_df[column_map_year] == map_year].iterrows():
         country = row['country']
         weight = row['weights']
         if weight > 0:
             color_rgb = cmap(norm(weight))[:3]  # Get RGB values from the colormap
             merged.loc[merged.index == country, 'color'] = '#%02x%02x%02x' % tuple(int(c * 255) for c in color_rgb)
-
-    # Bounding box of the map - Europe
-    bbox = [-10, 40, 40, 65] # [minx, miny, maxx, maxy] - minimal longitude, minimal latitude, maximal longitude, maximal latitude
 
     # Create a base plot
     fig, ax = plt.subplots(1, 1, figsize=(12, 8))
@@ -74,11 +92,11 @@ for idx, map_year in enumerate(map_years):
     #coloring_data.plot(ax=ax, color='red', edgecolor='none', linewidth=1)
     historical_borders.clip(bbox).plot(ax=ax, color='none', edgecolor='black', linewidth=0.5)
 
-    # Customize plot appearance
-    if idx < len(map_years) - 1:
-        title = 'Europe Czech Translations {} - {}'.format(str(map_year), map_years[idx+1]-1)
+    # Write years in title 
+    if idx < len(map_years)-1:
+        title = '{} Czech Translations {} - {}'.format(region, str(map_year), str(int(map_years[idx+1])-1))
     else:
-        title ='Europe Czech Translations {}'.format(str(map_year))      
+        title = '{} Czech Translations {} - {}'.format(region, str(map_year), '2019') 
     plt.grid(False)
     ax.set_axis_off() 
 

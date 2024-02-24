@@ -60,7 +60,7 @@ combined_gdf.iloc[240]['NAME'] = 'Belgium dut'
 # Define area that is not Spain 
 not_spain = combined_gdf[combined_gdf.NAME != "Spain"]
 
-# Get spanish speaking part of the world
+# Get spanish speaking part of Spain
 spain_esp = gdf1[gdf1['NUTS_ID'].isin(['ES1', 'ES2', 'ES3', 'ES4', 'ES6', 'ES7'])]
 # Combine into one geometry
 spain_esp_geometry = spain_esp.unary_union
@@ -79,7 +79,7 @@ combined_gdf.loc[combined_gdf.NUTS_ID == 'ES5','NAME'] = 'Catalonia'
 
 ##### SWITZERLAND ####
 
-gdf1 = gpd.read_file('  language-basemaps/NUTS_lvl_2.geojson')
+gdf1 = gpd.read_file('language-basemaps/NUTS_lvl_2.geojson')
 
 #switzerland_nuts = gdf1[gdf1['NUTS_ID'].str.startswith('CH')]
 not_switzerland = combined_gdf[combined_gdf.NAME != "Switzerland"]
@@ -106,6 +106,23 @@ combined_gdf.loc[combined_gdf.NUTS_ID == 'CH07','NAME'] = 'Switzerland ita'
 combined_gdf = combined_gdf[combined_gdf['NAME'].notna()]
 
 
+##### CANADA ####
+
+gdf1 = gpd.read_file('language-basemaps/US CANADA NUTS.geojson')
+
+not_canada = combined_gdf[combined_gdf.NAME != "Canada"]
+
+## English Canada
+canada_eng = gdf1[(gdf1["CNTRY"] == "Canada") & (gdf1["name"] != "Quebec")]
+canada_eng_geometry = canada_eng.unary_union
+canada_eng_gdf = gpd.GeoDataFrame(geometry=[canada_eng_geometry])
+canada_eng_gdf['NAME'] = 'Canada eng'
+
+## French Canada
+canada_fre = gdf1[gdf1["name"] == "Quebec"]
+combined_gdf = gpd.GeoDataFrame(pd.concat([ not_canada, canada_eng_gdf, canada_fre ], ignore_index=True))
+combined_gdf.loc[combined_gdf.name == "Quebec",'NAME'] = 'Canada fre'
+
 # Add more GeoDataFrames as needed
 combined_gdf.to_file('language-basemaps/combined.geojson', driver='GeoJSON')
 
@@ -114,3 +131,5 @@ combined_gdf.plot(ax=ax, color = None, edgecolor = 'black', linewidth=1)
 
 # Show the plot
 plt.show()
+
+['Luxembourg', 'Korea, Republic of', 'Cyprus', 'Japan', 'Bhutan', 'Western Sahara', 'Qatar', 'United Arab Emirates', 'Taiwan', 'Mali', 'Oman', 'Niger', 'Chad', 'Vietnam', 'Cuba', 'Laos', 'United States', 'China', 'Haiti', 'Dominican Republic', 'Philippines', 'Puerto Rico', 'Jamaica', 'Burkina Faso', 'Nicaragua', 'Cambodia', 'Costa Rica', 'Central African Republic', 'Sierra Leone', 'Sri Lanka', 'Panama', 'Guyana', 'Liberia', 'Zaire', 'Tanzania, United Republic of', 'Rwanda', 'Burundi', 'Angola', 'Zambia', 'Malawi', 'Bolivia', 'Mozambique', 'Madagascar', 'Zimbabwe', 'Namibia', 'Chile', 'Botswana', 'Paraguay', 'South Africa', 'Swaziland', 'Lesotho', 'New Zealand', 'Argentina', 'Iceland', 'Estonia', 'Latvia', 'Lithuania', 'Byelarus', 'United Kingdom', 'Kazakhstan', 'Ireland', 'Ukraine', 'Mongolia', 'Slovakia', 'Hungary', 'Moldova', 'Romania', 'Slovenia', 'Croatia', 'Serbia', 'Uzbekistan', 'Bosnia and Herzegovina', 'Bulgaria', 'Georgia', 'Montenegro', 'Kyrgyzstan', "Korea, Democratic People's Republic of", 'Turkmenistan', 'Albania', 'Macedonia', 'Portugal', 'Turkey', 'Azerbaijan', 'Greece', 'Armenia', 'Tajikistan', 'Iran', 'Afghanistan', 'Iraq', 'Syria', 'Tunisia', 'Algeria', 'Morocco', 'Lebanon', 'Mexico', 'Kuwait', 'Burma', 'Bangladesh', 'Thailand', 'Belize', 'Guatemala', 'Honduras', 'El Salvador', 'Colombia', 'Benin', 'Ghana', 'Togo', 'Ivory Coast', 'Malaysia', 'Suriname', 'French Guiana', 'Congo', 'Gabon', 'Equatorial Guinea', 'Ecuador', 'Peru', 'Brazil', 'Papua New Guinea', 'Australia', 'Uruguay', 'Denmark', 'Poland', 'Netherlands', 'Czech Republic', 'Nigeria', 'Cameroon', 'Pakistan', 'India', 'Jordan', 'Libya', 'Israel', 'Saudi Arabia', 'Egypt', 'Nepal', 'Mauritania', 'Sudan', 'Yemen', 'Eritrea', 'Senegal', 'Ethiopia', 'Gambia, The', 'Djibouti', 'Guinea-Bissau', 'Guinea', 'Venezuela', 'Somalia', 'Trinidad', 'Brunei', 'Kenya', 'Uganda', 'Indonesia', 'Greenland', 'Russia', 'Norway', 'Finland', 'Sweden', 'Turkish Cypriot-administered area', 'Russia', 'Antigua and Barbuda', 'Barbados', 'Dominica', 'Grenada', 'Martinique', 'Montserrat', 'Anguilla', 'Saint Kitts and Nevis', 'Saint Lucia', 'Saint Vincent and the Grenadines', 'United States Virgin Islands', 'Guadeloupe', 'Netherlands Antilles', 'Saint Martin', 'Saint Barthelemy', 'Turks and Caicos Islands', 'Bahamas', 'United States', 'United States', 'Austria', 'Liechtenstein', 'Italy', 'Malta', 'Italy', 'France', 'Italy', 'American Samoa', 'Fiji', 'Niue', 'Tonga', 'Wallis and Futuna Islands', 'Samoa', 'Rapa Nui', 'East Germany', 'West Germany', 'Belgium dut', 'Belgium fre', 'Spain', 'Catalonia', 'Switzerland fre', 'Switzerland ger', 'Switzerland ita', 'Canada eng', 'Canada fre']
