@@ -21,15 +21,34 @@ regions_bbox =  {'Middle East'    : [  20,   4,  70,  44],
                  'Asia'           : [  70, -17, 160,  55], 
                  'Europe'         : [ -10,  35,  60,  75] } 
 
+region_czech = {'Middle East'    : 'Střední východ',
+                 'North America'  : 'Severní Amerika',
+                 'Asia'           : 'Asie', 
+                 'Europe'         : 'Evropa'}
+
 region = 'Europe'  
+write_title = True
+combine_languages = True
+if combine_languages:
+    if region == 'Europe':
+        plot_folder = "language normalized major only"
+    else:
+        plot_folder = 'normalized'    
+else:
+    if region == 'Europe':
+        plot_folder = "current official language only Europe"
+    else:
+        plot_folder = 'current official language only'    
 
 # Bounding box of the map 
 bbox =  regions_bbox[region] 
 #column_map_year = 'map_year'if region == 'Europe' else 'map_year_region'
 column_map_year = 'map_year'
 
-map_years = list(map(lambda x: int(x),np.unique(weights_df['map_year'])))
-#map_years = [1918, 1945, 1989]
+if region == 'Europe':
+    map_years = list(map(lambda x: int(x),np.unique(weights_df['map_year'])))
+else:    
+    map_years = [1918, 1945, 1989]
 
 language_geojson_path = 'language-basemaps/combined.geojson'
 
@@ -95,18 +114,20 @@ for idx, map_year in enumerate(map_years):
 
     # Write years in title 
     if idx < len(map_years)-1:
-        title = '{} Czech Translations {} - {}'.format(region, str(map_year), str(int(map_years[idx+1])-1))
+        title_plot = '{} Czech Translations {} - {}'.format(region, str(map_year), str(int(map_years[idx+1])-1))
+        title = '{} české překlady {} - {}'.format(region_czech[region], str(map_year), str(int(map_years[idx+1])-1))
     else:
         #title = '{} Czech Translations {} - {}'.format(region, str(map_year), '2019') 
-        title = '{} Czech Translations {}'.format(region, str(map_year)) 
+        title_plot = '{} Czech Translations {}'.format(region, str(map_year)) 
+        title = '{} české překlady {}'.format(region_czech[region], str(map_year)) 
+          
     plt.grid(False)
     ax.set_axis_off() 
-
+    
     cbar = plt.cm.ScalarMappable(norm=norm, cmap=cmap)
     
     # set colormap
     cb = fig.colorbar(cbar, ax = ax, shrink=0.9)
-    
     # set label to colormap scale
     cb.set_label('Počet překladů za období', rotation=90)
     
@@ -114,8 +135,12 @@ for idx, map_year in enumerate(map_years):
                     bottom=0,
                     right=1,
                     top=1)
-
-    plt.savefig('plots/without title/language normalized major only/'+title + '.svg')
+    
+    if write_title:
+        fig.suptitle(title, fontsize=16)
+        plt.savefig('plots/with title/{}/{}.svg'.format(plot_folder, title_plot))
+    else:
+        plt.savefig('plots/without title/{}/{}.svg'.format(plot_folder, title_plot))    
 
     # Show the plot
     #plt.show()
