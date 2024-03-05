@@ -10,25 +10,26 @@ import matplotlib.colors as colors
 #weights_df = pd.read_csv("weights/weights_language_families.csv")
 
 #!!! Plots to language normalized major only folder !!!
-#weights_df = pd.read_csv('weights/weights_only_major_language_families.csv')
+weights_df = pd.read_csv('weights/weights_only_major_language_families_new.csv')
 
 #!!! Plots to current official language only folder !!!
 #weights_df = pd.read_csv('weights/weights_only_major_language_families_new.csv')
-weights_df = pd.read_csv('weights/weights_language_families_regions.csv')
+#weights_df = pd.read_csv('weights/weights_language_families_regions.csv')
 
 regions_bbox =  {'Middle East'    : [  20,   4,  70,  44],
                  'North America'  : [-145, -10, -55,  62],
                  'Asia'           : [  70, -17, 160,  55], 
                  'Europe'         : [ -10,  35,  60,  75] } 
 
-region = 'Middle East'  
+region = 'Europe'  
 
 # Bounding box of the map 
 bbox =  regions_bbox[region] 
 #column_map_year = 'map_year'if region == 'Europe' else 'map_year_region'
 column_map_year = 'map_year'
 
-map_years = [1918, 1945, 1989]
+map_years = list(map(lambda x: int(x),weights_df['map_year']))
+#map_years = [1918, 1945, 1989]
 
 language_geojson_path = 'language-basemaps/combined.geojson'
 
@@ -96,7 +97,8 @@ for idx, map_year in enumerate(map_years):
     if idx < len(map_years)-1:
         title = '{} Czech Translations {} - {}'.format(region, str(map_year), str(int(map_years[idx+1])-1))
     else:
-        title = '{} Czech Translations {} - {}'.format(region, str(map_year), '2019') 
+        #title = '{} Czech Translations {} - {}'.format(region, str(map_year), '2019') 
+        title = '{} Czech Translations {}'.format(region, str(map_year)) 
     plt.grid(False)
     ax.set_axis_off() 
 
@@ -106,14 +108,14 @@ for idx, map_year in enumerate(map_years):
     cb = fig.colorbar(cbar, ax = ax, shrink=0.9)
     
     # set label to colormap scale
-    cb.set_label('Počet překladů za období v dané zemi', rotation=90)
+    cb.set_label('Počet překladů za období', rotation=90)
     
     plt.subplots_adjust(left=0,
                     bottom=0,
                     right=1,
                     top=1)
 
-    plt.savefig('plots/current official language only/'+title + '.svg')
+    plt.savefig('plots/without title/current official language only Europe/'+title + '.svg')
 
     # Show the plot
     #plt.show()

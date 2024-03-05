@@ -65,7 +65,7 @@ for plot_year in plot_years:
         spanish_speaking =  row['geonames_country'] == 'Spain' #or row['geonames_country'] == 'Catalonia'
         spanish_language = row['language'] == 'spa'
         spanish_cond = spanish_language and spanish_speaking
-        spanish_countries = ['Spain', 'Catalonia']    
+        spanish_countries = ['Spain'] #, 'Catalonia'   
 
         # ROMANIA AND MOLDOVA
         romanian_speaking = row['geonames_country'] == 'Romania' or row['geonames_country'] == 'Moldova'

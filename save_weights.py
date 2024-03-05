@@ -89,6 +89,9 @@ for plot_year in plot_years:
             soviet_cond = russian_language and russian_speaking
             soviet_countries = ['Estonia', 'Lithuania', 'Latvia', 'Byelarus', 'Ukraine', 'Moldova', 'Russia', 'Georgia', 'Azerbaijan']
 
+            # YUGOSLAVIA 
+            serbo_croatian_countries.extend(['Slovenia', 'North Macedonia'])            
+
         else:
             german_cond = german_language and (row['geonames_country'] == 'Germany' or german_speaking)
             german_countries = ['West Germany', 'East Germany', 'Austria', 'Switzerland ger',  'Liechtenstein'] 
