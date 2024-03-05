@@ -2,6 +2,7 @@ import geopandas as gpd
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
+import sys
 
 import matplotlib.colors as colors
 
@@ -10,11 +11,11 @@ import matplotlib.colors as colors
 #weights_df = pd.read_csv("weights/weights_language_families.csv")
 
 #!!! Plots to language normalized major only folder !!!
-weights_df = pd.read_csv('weights/weights_language_families.csv')
+
 
 #!!! Plots to current official language only folder !!!
 #weights_df = pd.read_csv('weights/weights_only_major_language_families_new.csv')
-#weights_df = pd.read_csv('weights/weights_language_families_regions.csv')
+#
 
 regions_bbox =  {'Middle East'    : [  20,   4,  70,  44],
                  'North America'  : [-145, -10, -55,  62],
@@ -26,19 +27,27 @@ region_czech = {'Middle East'    : 'Střední východ',
                  'Asia'           : 'Asie', 
                  'Europe'         : 'Evropa'}
 
-region = 'Europe'  
+region = 'Asia' 
 write_title = True
-combine_languages = True
+combine_languages = False
 if combine_languages:
     if region == 'Europe':
         plot_folder = "language normalized major only"
+        weights_df = pd.read_csv('weights/weights_language_families.csv')
+        title_middle = 'české překlady do úředních a minoritních jazyků'
     else:
-        plot_folder = 'normalized'    
+        print("This combination is available in plot_map.py only")
+        sys.exit(0)    
+ 
 else:
     if region == 'Europe':
         plot_folder = "current official language only Europe"
+        title_middle = 'české překlady do současných úředních jazyků'
+        weights_df = pd.read_csv('weights/weights_only_major_language_families_new.csv')
     else:
-        plot_folder = 'current official language only'    
+        plot_folder = 'current official language only'   
+        weights_df = pd.read_csv('weights/weights_language_families_regions.csv') 
+        title_middle = 'české překlady do úředních jazyků'
 
 # Bounding box of the map 
 bbox =  regions_bbox[region] 
@@ -115,11 +124,11 @@ for idx, map_year in enumerate(map_years):
     # Write years in title 
     if idx < len(map_years)-1:
         title_plot = '{} Czech Translations {} - {}'.format(region, str(map_year), str(int(map_years[idx+1])-1))
-        title = '{} české překlady {} - {}'.format(region_czech[region], str(map_year), str(int(map_years[idx+1])-1))
+        title = '{} {} {} - {}'.format(region_czech[region],title_middle, str(map_year), str(int(map_years[idx+1])-1))
     else:
-        #title = '{} Czech Translations {} - {}'.format(region, str(map_year), '2019') 
-        title_plot = '{} Czech Translations {}'.format(region, str(map_year)) 
-        title = '{} české překlady {}'.format(region_czech[region], str(map_year)) 
+        title_plot = '{} Czech Translations {} - {}'.format(region, str(map_year), '2019') 
+        #title_plot = '{} Czech Translations {}'.format(region, str(map_year)) 
+        title = '{} {} {} - {}'.format(region_czech[region], title_middle, str(map_year), '2019') 
           
     plt.grid(False)
     ax.set_axis_off() 

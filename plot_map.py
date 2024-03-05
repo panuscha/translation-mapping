@@ -32,7 +32,14 @@ regions_bbox =  {'Middle East'    : [  20,   4,  70,  44],
                  'Asia'           : [  70, -17, 160,  55], 
                  'Europe'         : [ -10,  35,  60,  75] } 
 
-region = 'Asia' 
+region_czech = {'Middle East'    : 'Střední východ',
+                 'North America'  : 'Severní Amerika',
+                 'Asia'           : 'Asie', 
+                 'Europe'         : 'Evropa'}
+
+
+region = 'Middle East' 
+write_title = True  
 
 # Bounding box of the map 
 bbox =  regions_bbox[region] 
@@ -105,9 +112,11 @@ for idx,y in enumerate(years):
 
     # Write years in title 
     if idx < len(years)-1:
-        title = '{} Czech Translations {} - {}'.format(region, str(y), str(int(years[idx+1])-1))
+        title_plot = '{} Czech Translations {} - {}'.format(region, str(y), str(int(years[idx+1])-1))
+        title = '{} české překlady v daných zemích {} - {}'.format(region_czech[region], str(y), str(int(years[idx+1])-1))
     else:
-        title = '{} Czech Translations {} - {}'.format(region, str(y), '2019')
+        title_plot = '{} Czech Translations {} - {}'.format(region, str(y), '2019')
+        title = '{} české překlady v daných zemích {} - {}'.format(region_czech[region], str(y), '2019')
     ax.set_axis_off()  # Turn off the axis to remove the axis frame
     
     # cbar = plt.cm.ScalarMappable(norm=norm, cmap=cmap)
@@ -119,14 +128,17 @@ for idx,y in enumerate(years):
     cb = fig.colorbar(cbar, ax = ax, shrink=0.9)
     
     # set label to colormap scale
-    cb.set_label('Počet překladů za období v dané zemi', rotation=90)
+    cb.set_label('Počet překladů za období', rotation=90)
     
     plt.subplots_adjust(left=0,
                     bottom=0,
                     right=1,
                     top=1)
-
-    plt.savefig('plots/normalized/'+title + '.svg')
+    if write_title:
+        fig.suptitle(title, fontsize=16)
+        plt.savefig('plots/with title/normalized/'+title_plot + '.svg')
+    else:    
+        plt.savefig('plots/without title/normalized/'+title_plot + '.svg')
 
     # Print the countries that were not found in gdf 
     p = [country if country not in gdf.index else None for country in year_countries[y]]
