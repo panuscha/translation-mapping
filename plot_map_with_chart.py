@@ -48,6 +48,8 @@ for i, row in geotagged_df.iterrows():
         # add a weight to a  combination of historical country and map year
         plot_dict_dicts[map_year][historic_name] = plot_dict_dicts[map_year].get(historic_name, 0) + weight
 
+with_title = True
+
 # all years of the map
 years = ['1918', '1929', '1945', '1956', '1967', '1978', '1989', '2000', '2011']
 
@@ -62,7 +64,7 @@ norm = colors.Normalize(vmin=vmin, vmax=vmax)
 RADIUS = 1.1
 
 # folder with charts
-piechart_folder = 'plots/pie charts minor top 19 languages plain/'
+piechart_folder = 'plots/without title/pie charts minor top 19 languages plain/'
 
 # Table with number of translations for each country, language and decade
 df = pd.read_excel("weights/translations_language_countries.xlsx")
@@ -194,25 +196,34 @@ for idx,map_year in enumerate(years):
     # set colormap
     cb = fig.colorbar(cbar, ax = ax, shrink=0.9)
     # set label to colormap scale
-    cb.set_label('Počet překladů za období v dané zemi', rotation=90)
+    cb.set_label('Počet překladů za období', rotation=90)
     
     # add legend 
     plt.legend(handles=handles, loc = "lower right", fontsize = "small", bbox_to_anchor=(0.961, 0.039))        
 
 
+
+
     # Write years in the title 
     if map_year  == 1929:
-        title = 'Europe Czech Translations {} - {}'.format(str(map_year), '1939')
+        title_plot = 'Europe Czech Translations {} - {}'.format(str(map_year), '1939')
+        title = 'Evropa české překlady do majoritního jazyka. Překlady do ostatních jazyků v koláčovém grafu {} - {}'.format(str(map_year), '1939')
     elif idx < len(years)-1:
-        title = 'Europe Czech Translations {} - {}'.format(str(map_year), str(int(years[idx+1])-1))
+        title_plot = 'Europe Czech Translations {} - {}'.format(str(map_year), str(int(years[idx+1])-1))
+        title = 'Evropa české překlady do majoritního jazyka. Překlady do ostatních jazyků v koláčovém grafu {} - {}'.format(str(map_year), str(int(years[idx+1])-1))
     else:
-        title  = 'Europe Czech Translations {} - {}'.format(str(map_year), '2021')
+        title_plot  = 'Europe Czech Translations {}'.format(str(map_year))
+        title = 'Evropa české překlady do majoritního jazyka. Překlady do ostatních jazyků v koláčovém grafu {}'.format(str(map_year))
     ax.set_axis_off()  # Turn off the axis to remove the axis frame
 
     plt.subplots_adjust(left=0,
                     bottom=0,
                     right=1,
                     top=1)
-    plt.savefig('plots/normalized with charts/'+title + '.svg')
+    if with_title:
+        fig.suptitle(title, fontsize=16)
+        plt.savefig('plots/with title/normalized with charts/'+title_plot + '.svg')
+    else: 
+        plt.savefig('plots/without title/normalized with charts/'+title_plot + '.svg')    
 
     
