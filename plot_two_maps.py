@@ -10,7 +10,7 @@ import matplotlib.colors as colors
 #weights_df = pd.read_csv("weights/weights_language_families.csv")
 
 #!!! Plots to language normalized major only folder !!!
-weights_df = pd.read_csv('weights/weights_only_major_language_families_new.csv')
+weights_df = pd.read_csv('weights/weights_language_families.csv')
 
 #!!! Plots to current official language only folder !!!
 #weights_df = pd.read_csv('weights/weights_only_major_language_families_new.csv')
@@ -28,7 +28,7 @@ bbox =  regions_bbox[region]
 #column_map_year = 'map_year'if region == 'Europe' else 'map_year_region'
 column_map_year = 'map_year'
 
-map_years = list(map(lambda x: int(x),weights_df['map_year']))
+map_years = list(map(lambda x: int(x),np.unique(weights_df['map_year'])))
 #map_years = [1918, 1945, 1989]
 
 language_geojson_path = 'language-basemaps/combined.geojson'
@@ -115,7 +115,7 @@ for idx, map_year in enumerate(map_years):
                     right=1,
                     top=1)
 
-    plt.savefig('plots/without title/current official language only Europe/'+title + '.svg')
+    plt.savefig('plots/without title/language normalized major only/'+title + '.svg')
 
     # Show the plot
     #plt.show()

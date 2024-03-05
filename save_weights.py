@@ -84,13 +84,15 @@ for plot_year in plot_years:
             # SOVIET
             russian_speaking =  (row['geonames_country'] == 'Estonia' or row['geonames_country'] == 'Lithuania' or  row['geonames_country'] == 'Latvia' or  
                                  row['geonames_country'] == 'Byelarus' or row['geonames_country'] == 'Ukraine' or row['geonames_country'] == 'Moldova' or
-                                 row['geonames_country'] == 'Russia' or row['geonames_country'] == 'Georgia' or row['geonames_country'] == 'Azerbaijan')
+                                 row['geonames_country'] == 'Russia' or row['geonames_country'] == 'Georgia' or row['geonames_country'] == 'Azerbaijan' or 
+                                 row['geonames_country'] == 'Armenia' or row['geonames_country'] == 'Kazakhstan' or row['geonames_country'] == 'Turkmenistan' or
+                                 row['geonames_country']  == 'Uzbekistan')
             russian_language = row['language'] == 'rus'
             soviet_cond = russian_language and russian_speaking
-            soviet_countries = ['Estonia', 'Lithuania', 'Latvia', 'Byelarus', 'Ukraine', 'Moldova', 'Russia', 'Georgia', 'Azerbaijan']
+            soviet_countries = ['Estonia', 'Lithuania', 'Latvia', 'Byelarus', 'Ukraine', 'Moldova', 'Russia', 'Georgia', 'Azerbaijan', 'Armenia', 'Kazakhstan', 'Turkmenistan', 'Uzbekistan'   ]
 
             # YUGOSLAVIA 
-            serbo_croatian_countries.extend(['Slovenia', 'North Macedonia'])            
+            serbo_croatian_countries.extend(['Slovenia', 'Macedonia'])            
 
         else:
             german_cond = german_language and (row['geonames_country'] == 'Germany' or german_speaking)
