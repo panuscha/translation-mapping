@@ -219,7 +219,10 @@ if not df[(df['map_year'] == int(plot_year)) &  (df['country'] == country)].empt
         #plt.show()
         #hist = h[['language','weights']].plot(kind = 'bar', figsize=(8, 6), x = 'language', ylim = [0, y_max], color = colors).get_figure()
         #plt.savefig('plots/without title/pie charts minor top 19 languages plain/{country}_{year}.png'.format(country = country, year = plot_year), transparent=True, dpi=600)
-        plt.savefig('plots/with title/dummy charts/dummy_chart.pdf', transparent=True, dpi=600)
+        plt.savefig('plots/with title/dummy charts/dummy_chart.svg', transparent=True, dpi=600)
     plt.close()
         #close(hist)
+    
+
+
 
