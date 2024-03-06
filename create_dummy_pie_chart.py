@@ -202,7 +202,7 @@ if not df[(df['map_year'] == int(plot_year)) &  (df['country'] == country)].empt
             pb4 = Patch(facecolor=my_color_palette['other'], edgecolor='black')
 
             ax.legend(handles=[pa1, pb1, pa2, pb2, pa3, pb3, pa4, pb4],
-                    labels=['', '', '', '', '', '', '                                       ', '                                    '], #'poměr zastoupení dalších jazyků', 'podíl překladů do dalších jazyků'
+                    labels=['', '', '', '', '', '', '                                                    ', '                                                   '], #'poměr zastoupení dalších jazyků', 'podíl překladů do dalších jazyků'
                     ncol=4, handletextpad=0.6, handlelength=1.1, columnspacing=-0.6,
                     loc='best', fontsize=16)
 
