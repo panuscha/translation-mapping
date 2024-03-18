@@ -23,17 +23,54 @@ df_language_countries = {language : [] for language in language_codes['alpha3-b'
 for c,l in df_countries_language.items(): 
     if l is not None:
         df_language_countries[l].append(c)
+
+# German 
+df_language_countries['ger'].append('West Germany') 
+df_language_countries['ger'].append('East Germany') 
+df_language_countries['ger'].append('Switzerland ger') 
+
+# French 
 df_language_countries['fre'].append('Canada fre')
+df_language_countries['fre'].append('Switzerland fre')
+df_language_countries['fre'].append('Belgium fre')
+
+# Dutch 
+df_language_countries['dut'].append('Belgium dut')
+df_language_countries['dut'].append('Netherlands')
+
+# Catalan 
+df_language_countries['cat'].append('Catalonia')
+
+# Macedonia
+df_language_countries['mac'].append('Macedonia')
+
+
+#English
 df_language_countries['eng'].append('Canada eng')
+df_language_countries['eng'].append('South Africa')
+
+# Russian
+df_language_countries['rus'].append('Kazakhstan')
+df_language_countries['rus'].append('Kyrgyzstan')
+df_language_countries['bel'].append('Byelarus')
+
+
+# Asia
 df_language_countries['kor'].append('Korea, Republic of')
+df_language_countries['aze'].append('Azerbaijan')
+df_language_countries['tgk'].append('Tajikistan')
+
+# Africa
+df_language_countries['afr'].append('South Africa')
+
 
 # Europe or Other
-region = 'Other'
+region = 'Europe'
 
 column_map_year = 'map_year_region' if region == 'Other' else 'map_year'
 
-#plot_years = [1945, 1956, 1967, 1978, 1989, 2000, 2011] 
-plot_years = geotagged_df[column_map_year].unique()
+plot_years = [1945, 1956, 1967, 1978, 1989, 2000, 2011] 
+#plot_years = geotagged_df[column_map_year].unique()
 df_dict = {}
 
 for plot_year in plot_years:     
@@ -48,4 +85,4 @@ for plot_year in plot_years:
 df = pd.Series(df_dict).reset_index()   
 df.columns = ['country', 'map_year', 'weights'] 
 #df['weights'] = df['weights'].apply(lambda x: math.log2(x))
-df.to_csv('weights/weights_language_families_regions.csv')                     
+df.to_csv('weights/weights_language_families_regions_11_years.csv')                     

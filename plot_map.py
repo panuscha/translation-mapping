@@ -2,12 +2,13 @@ import geopandas as gpd
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.colors as colors
+from shapely.geometry import Polygon
 
 geotagged_df = pd.read_excel("geotagged/geotagged_hist_country.xlsx")
 geotagged_df['geonames_lng'] = geotagged_df['geonames_lng'].apply(lambda x: float(str(x)) if isinstance(x, str) else -1000)
 geotagged_df['geonames_lat'] = geotagged_df['geonames_lat'].apply(lambda x: float(str(x)) if isinstance(x, str) else -1000)
 
-column_map_year = 'map_year_region'
+column_map_year = 'map_year'
 geotagged_df[column_map_year] = geotagged_df[column_map_year].apply(lambda x: str(int(x)))
 
 plot_dict_dicts = {}
@@ -30,15 +31,19 @@ e_lat = 40
 regions_bbox =  {'Middle East'    : [  20,   4,  70,  44],
                  'North America'  : [-145, -10, -55,  62],
                  'Asia'           : [  70, -17, 160,  55], 
-                 'Europe'         : [ -10,  35,  60,  75] } 
+                 'Europe'         : [ -10,  35,  60,  75], 
+                'World'           : [-130, -60, 165,  80] } 
 
-region_czech = {'Middle East'    : 'Střední východ',
+region_czech = {'Middle East'     : 'Střední východ',
                  'North America'  : 'Severní Amerika',
                  'Asia'           : 'Asie', 
-                 'Europe'         : 'Evropa'}
+                 'Europe'         : 'Evropa', 
+                 'World'          : 'Svět'}
+
+title_middle = 'Překlady'
 
 
-region = 'Middle East' 
+region = 'World' 
 write_title = True  
 
 # Bounding box of the map 
@@ -55,7 +60,8 @@ for i, row in geotagged_df.iterrows():
 
 #years = list(filter(lambda x: not math.isnan(x) ,geotagged_df['map_year'].unique()))
 #years = list(map(lambda x: str(int(x)),years))
-years = ['1918', '1945', '1989']
+#years = ['1918', '1945', '1989']
+years = ['1945', '1956', '1967', '1978', '1989', '2000', '2011'] 
 
 # Find cities that falls within the bbox of region 
 bbox_lon = (geotagged_df['geonames_lng'] >= bbox[0]) & (geotagged_df['geonames_lng'] <= bbox[2])
@@ -71,6 +77,7 @@ year_countries = {year: [] for year in years}
 for year in years:
     for hist_country in gdf_clip.loc[gdf_clip[column_map_year] == year, 'historical_country_name' ].unique():
         vmax = max(vmax, gdf_clip.loc[(gdf_clip[column_map_year] == year) & (gdf_clip['historical_country_name'] == hist_country), 'weight'].sum())
+        print(str(hist_country) + ' ' + str(year) + ' : ' + str(vmax))
         year_countries[year].append(hist_country)
 print(vmax)
 
@@ -78,6 +85,9 @@ norm = colors.Normalize(vmin=vmin, vmax=vmax)
 
 for idx,y in enumerate(years):
     folder_path = "historical-basemaps/years"
+
+    # Create a GeoDataFrame with a single polygon covering the world
+    world_polygon = gpd.GeoDataFrame(geometry=[Polygon([(-180, -90), (180, -90), (180, 90), (-180, 90)])])
 
     # Load the GeoJSON map
     geojson_path = folder_path + '/world_' + str(y) + '.geojson' # str(y) - using 1930 map instead
@@ -95,8 +105,8 @@ for idx,y in enumerate(years):
     cmap = plt.cm.OrRd
 
     # Create a new 'color' column in the GeoDataFrame and set it to white (neutral) for all countries
-    gdf['color'] = '#ffffff'
-
+    #gdf['color'] = '#ffffff' 
+    gdf['color'] = '#d3d3d3'
     # Set the color for countries with available data
     for country, weight in plot_dict_dicts[y].items():
         if weight > 0:
@@ -105,18 +115,26 @@ for idx,y in enumerate(years):
 
 
    
-    # Plotting the choropleth map
-    fig, ax = plt.subplots(1, 1,  figsize=(12, 8))
+    height = 11
+    bbox_width = bbox[2] - bbox[0]
+    bbox_height = bbox[3] - bbox[1]
+    aspect_ratio = bbox_width / bbox_height
+    calculated_width = height* aspect_ratio
 
-    gdf.clip(bbox).plot(facecolor=gdf.clip(bbox)['color'],edgecolor='black', linewidth=0.5,  ax=ax, legend=True) #
+    # Create a base plot
+    fig, ax = plt.subplots( figsize=(calculated_width, height))
+
+    world_polygon.clip(bbox).plot(ax = ax, facecolor = 'lightblue', edgecolor='black')
+
+    gdf.clip(bbox).plot(facecolor=gdf.clip(bbox)['color'], edgecolor='gray', linewidth=1.0,  ax=ax, legend=True) #
 
     # Write years in title 
     if idx < len(years)-1:
         title_plot = '{} Czech Translations {} - {}'.format(region, str(y), str(int(years[idx+1])-1))
-        title = '{} české překlady v daných zemích {} - {}'.format(region_czech[region], str(y), str(int(years[idx+1])-1))
+        title = '{} ({} {} - {})'.format(title_middle, region_czech[region], str(int(years[idx])), str(int(years[idx+1])-1))
     else:
-        title_plot = '{} Czech Translations {} - {}'.format(region, str(y), '2019')
-        title = '{} české překlady v daných zemích {} - {}'.format(region_czech[region], str(y), '2019')
+        title_plot = '{} Czech Translations {} - {}'.format(region, str(y), '2021')
+        title = '{} ({} {} - {})'.format(title_middle, region_czech[region], str(int(years[idx])), '2021')
     ax.set_axis_off()  # Turn off the axis to remove the axis frame
     
     # cbar = plt.cm.ScalarMappable(norm=norm, cmap=cmap)
@@ -125,17 +143,16 @@ for idx,y in enumerate(years):
     cbar = plt.cm.ScalarMappable(norm=norm, cmap=cmap)
     
     # set colormap
-    cb = fig.colorbar(cbar, ax = ax, shrink=0.9)
+    cb = fig.colorbar(cbar, ax = ax, shrink=0.865, pad = 0.01)
+
+    ax.set_xlim([bbox[0], bbox[2]])
+    ax.set_ylim([bbox[1], bbox[3]])
     
     # set label to colormap scale
     cb.set_label('Počet překladů za období', rotation=90)
     
-    plt.subplots_adjust(left=0,
-                    bottom=0,
-                    right=1,
-                    top=1)
     if write_title:
-        fig.suptitle(title, fontsize=16)
+        ax.set_title(title, fontsize=12)
         plt.savefig('plots/with title/normalized/'+title_plot + '.svg')
     else:    
         plt.savefig('plots/without title/normalized/'+title_plot + '.svg')
