@@ -40,7 +40,7 @@ region_czech = {'Middle East'     : 'Střední východ',
                  'Europe'         : 'Evropa', 
                  'World'          : 'Svět'}
 
-title_middle = 'Překlady vydané na území státu'
+title_middle = 'Překlady ve světě dle místa vydání'
 
 
 region = 'World' 
@@ -131,10 +131,10 @@ for idx,y in enumerate(years):
     # Write years in title 
     if idx < len(years)-1:
         title_plot = '{} Czech Translations {} - {}'.format(region, str(y), str(int(years[idx+1])-1))
-        title = '{} ({} {} - {})'.format(title_middle, region_czech[region], str(int(years[idx])), str(int(years[idx+1])-1))
+        title = '{} ({} - {})'.format(title_middle, str(int(years[idx])), str(int(years[idx+1])-1))
     else:
         title_plot = '{} Czech Translations {} - {}'.format(region, str(y), '2021')
-        title = '{} ({} {} - {})'.format(title_middle, region_czech[region], str(int(years[idx])), '2021')
+        title = '{} ({} - {})'.format(title_middle, str(int(years[idx])), '2021')
     ax.set_axis_off()  # Turn off the axis to remove the axis frame
     
     # cbar = plt.cm.ScalarMappable(norm=norm, cmap=cmap)

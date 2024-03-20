@@ -43,7 +43,7 @@ region_czech =  {'East'           : 'Východ',
                  'Europe'         : 'Evropa'}
 
 region = 'World'   
-write_title = False
+write_title = True
 combine_languages = False
 if combine_languages:
     if region == 'Europe':
@@ -62,7 +62,7 @@ else:
     else:
         plot_folder = 'current official language only'   
         weights_df = pd.read_csv('weights/weights_language_families_regions_11_years.csv') 
-        title_middle = 'Překlady do hlavního jazyka'
+        title_middle = 'Potenciál dosahu překladů ve světě'
 
 # Bounding box of the map 
 bbox =  regions_bbox[region] 
@@ -155,11 +155,11 @@ for idx, map_year in enumerate(map_years):
     # Write years in title 
     if idx < len(map_years)-1:
         title_plot = '{} Czech Translations {} - {}'.format(region, str(map_year), str(int(map_years[idx+1])-1))
-        title = '{} ({} {} - {})'.format(title_middle, region_czech[region], str(map_year), str(int(map_years[idx+1])-1))
+        title = '{} ({} - {})'.format(title_middle,  str(map_year), str(int(map_years[idx+1])-1)) #region_czech[region],
     else:
         title_plot = '{} Czech Translations {} - {}'.format(region, str(map_year), '2021') 
         #title_plot = '{} Czech Translations {}'.format(region, str(map_year)) 
-        title = '{} ({} {} - {})'.format(title_middle, region_czech[region], str(map_year), '2021') 
+        title = '{} ({} - {})'.format(title_middle,  str(map_year), '2021')# region_czech[region],
           
     plt.grid(False)
     ax.set_axis_off() 
