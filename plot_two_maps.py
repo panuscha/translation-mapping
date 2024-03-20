@@ -43,13 +43,13 @@ region_czech =  {'East'           : 'Východ',
                  'Europe'         : 'Evropa'}
 
 region = 'World'   
-write_title = True
+write_title = False
 combine_languages = False
 if combine_languages:
     if region == 'Europe':
         plot_folder = "language normalized major only"
         weights_df = pd.read_csv('weights/weights_language_families.csv')
-        title_middle = 'Překlady do úředních a minoritních jazyků'
+        title_middle = 'Překlady do hlavního a menšinového jazyka '
     else:
         print("This combination is available in plot_map.py only")
         sys.exit(0)    
@@ -57,7 +57,7 @@ if combine_languages:
 else:
     if region == 'Europe':
         plot_folder = "current official language only Europe"
-        title_middle = 'Překlady do současných úředních jazyků'
+        title_middle = 'Překlady do hlavního jazyka'
         weights_df = pd.read_csv('weights/weights_only_major_language_families_new.csv')
     else:
         plot_folder = 'current official language only'   
@@ -157,9 +157,9 @@ for idx, map_year in enumerate(map_years):
         title_plot = '{} Czech Translations {} - {}'.format(region, str(map_year), str(int(map_years[idx+1])-1))
         title = '{} ({} {} - {})'.format(title_middle, region_czech[region], str(map_year), str(int(map_years[idx+1])-1))
     else:
-        title_plot = '{} Czech Translations {} - {}'.format(region, str(map_year), '2019') 
+        title_plot = '{} Czech Translations {} - {}'.format(region, str(map_year), '2021') 
         #title_plot = '{} Czech Translations {}'.format(region, str(map_year)) 
-        title = '{} ({} {} - {})'.format(title_middle, region_czech[region], str(map_year), '2019') 
+        title = '{} ({} {} - {})'.format(title_middle, region_czech[region], str(map_year), '2021') 
           
     plt.grid(False)
     ax.set_axis_off() 
@@ -167,7 +167,7 @@ for idx, map_year in enumerate(map_years):
     cbar = plt.cm.ScalarMappable(norm=norm, cmap=cmap)
     
     # set colormap
-    cb = fig.colorbar(cbar, ax = ax, shrink=0.865, pad = 0.01) # 
+    cb = fig.colorbar(cbar, ax = ax,shrink=0.865, pad = 0.01) #  
     # set label to colormap scale
     cb.set_label('Počet překladů za období', rotation=90)
     

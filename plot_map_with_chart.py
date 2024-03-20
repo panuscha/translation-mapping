@@ -7,6 +7,7 @@ import os
 import matplotlib.patches as mpatches
 import svglib
 from io import BytesIO
+from shapely.geometry import Polygon
 
 
 ############ FOR MAPS #############
@@ -15,7 +16,7 @@ from io import BytesIO
 folder_path = "historical-basemaps/years"
 
  # Bounding box of the map - Europe
-bbox =  [-10, 40, 40, 65] #[-10, 35, 60, 75] # [minx, miny, maxx, maxy] - minimal longitude, minimal latitude, maximal longitude, maximal latitude
+bbox = [ -11,  36,  40,  64]# [-10, 40, 40, 65] #[-10, 35, 60, 75] # [minx, miny, maxx, maxy] - minimal longitude, minimal latitude, maximal longitude, maximal latitude
 
 # Path to the infos about translations  
 geotagged_df = pd.read_excel("geotagged/geotagged_hist_country.xlsx")
@@ -126,6 +127,9 @@ for idx,map_year in enumerate(years):
     geojson_path = folder_path + '/world_' + str(map_year) + '.geojson' # str(y) - using 1930 map instead
     gdf = gpd.read_file(geojson_path)
 
+    # Create a GeoDataFrame with a single polygon covering the world
+    world_polygon = gpd.GeoDataFrame(geometry=[Polygon([(-180, -90), (180, -90), (180, 90), (-180, 90)])])
+
     # Create a DataFrame from the dictionary
     data_df = pd.DataFrame(list(plot_dict_dicts[map_year].items()), columns=['country', 'weight'])
     data_df.set_index('country', inplace=True)
@@ -139,7 +143,7 @@ for idx,map_year in enumerate(years):
     cmap = plt.cm.OrRd
 
     # Create a new 'color' column in the GeoDataFrame and set it to white (neutral) for all countries
-    gdf['color'] = '#ffffff'
+    gdf['color'] =  '#d3d3d3'#'#ffffff'
 
     # Set the color for countries with available data
     for country, weight in plot_dict_dicts[map_year].items():
@@ -147,8 +151,19 @@ for idx,map_year in enumerate(years):
             color_rgb = cmap(norm(weight))[:3]  # Get RGB values from the colormap
             gdf.loc[gdf.index == country, 'color'] = '#%02x%02x%02x' % tuple(int(c * 255) for c in color_rgb)
 
-    # Plotting the choropleth map
-    fig, ax = plt.subplots(figsize = (12,8))
+    height = 11
+    bbox_width = bbox[2] - bbox[0]
+    bbox_height = bbox[3] - bbox[1]
+    aspect_ratio = bbox_width / bbox_height
+    calculated_width = height* aspect_ratio
+
+    # Create a base plot
+    fig, ax = plt.subplots( figsize=(calculated_width, height))
+
+    ax.set_xlim([bbox[0], bbox[2]])
+    ax.set_ylim([bbox[1], bbox[3]])
+
+    
 
     
     # Iterate through countries to plot the bar chart                
@@ -188,18 +203,22 @@ for idx,map_year in enumerate(years):
                 extent=(lon-2*RADIUS, lon+2*RADIUS, lat-RADIUS, lat+RADIUS),
                 zorder=1 # show it in the front
                 )
+            
+    world_polygon.clip(bbox).plot(ax = ax, facecolor = 'lightblue', edgecolor='black', zorder=0 )
+    gdf.clip(bbox).plot(ax=ax, facecolor=gdf.clip(bbox)['color'],edgecolor='gray', linewidth=1.0,  legend=True, zorder=0) #
+    
     # plot the map
-    gdf.clip(bbox).plot(facecolor=gdf.clip(bbox)['color'],edgecolor='black', linewidth=0.5,  ax=ax, legend=True, zorder=0) #
+    
     
     # colorbar 
     cbar = plt.cm.ScalarMappable(norm=norm, cmap=cmap)
     # set colormap
-    cb = fig.colorbar(cbar, ax = ax, shrink=0.9)
+    cb = fig.colorbar(cbar, ax = ax, pad = 0.01) #shrink=0.9
     # set label to colormap scale
     cb.set_label('Počet překladů za období', rotation=90)
     
     # add legend 
-    plt.legend(handles=handles, loc = "lower right", fontsize = "small", bbox_to_anchor=(0.961, 0.039))        
+    plt.legend(handles=handles, loc = "lower right", fontsize = "small", bbox_to_anchor=(1, 0)) #(0.961, 0.039)       
 
 
 
@@ -207,21 +226,21 @@ for idx,map_year in enumerate(years):
     # Write years in the title 
     if map_year  == 1929:
         title_plot = 'Europe Czech Translations {} - {}'.format(str(map_year), '1939')
-        title = 'Evropa české překlady do majoritního jazyka. Překlady do ostatních jazyků v koláčovém grafu {} - {}'.format(str(map_year), '1939')
+        title = 'Překlady do hlavního jazyka a ostatních jazyků (Evropa {} - {})'.format(str(map_year), '1939')
     elif idx < len(years)-1:
         title_plot = 'Europe Czech Translations {} - {}'.format(str(map_year), str(int(years[idx+1])-1))
-        title = 'Evropa české překlady do majoritního jazyka. Překlady do ostatních jazyků v koláčovém grafu {} - {}'.format(str(map_year), str(int(years[idx+1])-1))
+        title = 'Překlady do hlavního jazyka a ostatních jazyků (Evropa {} - {})'.format(str(map_year), str(int(years[idx+1])-1))
     else:
         title_plot  = 'Europe Czech Translations {}'.format(str(map_year))
-        title = 'Evropa české překlady do majoritního jazyka. Překlady do ostatních jazyků v koláčovém grafu {}'.format(str(map_year))
+        title = 'Překlady do hlavního jazyka a ostatních jazyků (Evropa {} - {})'.format(str(map_year), '2021')
     ax.set_axis_off()  # Turn off the axis to remove the axis frame
 
-    plt.subplots_adjust(left=0,
-                    bottom=0,
-                    right=1,
-                    top=1)
+    # plt.subplots_adjust(left=0,
+    #                 bottom=0,
+    #                 right=1,
+    #                 top=1)
     if with_title:
-        fig.suptitle(title, fontsize=16)
+        ax.set_title(title, fontsize=12)
         plt.savefig('plots/with title/normalized with charts/'+title_plot + '.svg')
     else: 
         plt.savefig('plots/without title/normalized with charts/'+title_plot + '.svg')    
