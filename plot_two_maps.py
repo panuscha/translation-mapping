@@ -20,6 +20,7 @@ language_geojson_path = 'language-basemaps/combined.geojson'
 
 coast_geojson_path = "historical-basemaps/ne_50m_coastline"
 
+
 regions_bbox =  {'Middle East'    : [  20,   4,  70,  44],
                  'North America'  : [-126, 7, -67, 60],#[-145, -10, -55,  62]
                  'Asia'           : [  70, -17, 160,  55], 

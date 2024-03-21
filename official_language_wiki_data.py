@@ -17,26 +17,30 @@ def extract_words(s):
     words = re.findall('[A-Z][^A-Z]*', s)    
     return words
 
-def get_official_languages(country):
+def get_official_languages(country_wiki):
     try: 
-        page = 'https://en.wikipedia.org/wiki/{country}'.format(country = country)
-        infoboxes = read_html(page, index_col=0)[0]
+        page = 'https://en.wikipedia.org/wiki/{country}'.format(country = country_wiki)
+        infoboxes = read_html(page, index_col=0)
+        found = False
+        for i in range(len(infoboxes)):
+            infobox = infoboxes[i]
+            infobox = [i for _, i in infobox.iterrows()]
 
-        infoboxes = [i for _, i in infoboxes.iterrows()]
+            infobox_dict = {}
 
-        infobox_dict = {}
+            for s in infobox :
+                if isinstance(s.name, str) and "official" in s.name.lower() and 'language' in s.name.lower():
+                    words = s.values
+                    languages = [extract_language(word) for word in words] 
+                    languages_list = []
+                    for combined_word in languages:
+                        languages_list.extend(extract_words(combined_word))
+                    infobox_dict['Official language'] = languages_list#[].extend([extract_words(s.values[i]) for i in range(len(s.values)) ])
+                    found = True
+                    break
+            if found:
+                break    
 
-        for s in infoboxes :
-            if isinstance(s.name, str) and "official" in s.name.lower() and 'language' in s.name.lower():
-                words = s.values
-                languages = [extract_language(word) for word in words] 
-                languages_list = []
-                for combined_word in languages:
-                    languages_list.extend(extract_words(combined_word))
-                infobox_dict['Official language'] = languages_list#[].extend([extract_words(s.values[i]) for i in range(len(s.values)) ])
-                break
-
-        print(country)
         if 'Official language' in infobox_dict.keys():
             #print(infobox_dict['Official language'])     
         
@@ -48,24 +52,37 @@ def get_official_languages(country):
         return []       
     
 
-geotagged_df = pd.read_excel("geotagged/geotagged_germany_country_update.xlsx")
+
+countries_info = pd.read_excel('geotagged/countries_codes.xlsx')
+countries_info.index = countries_info['Country']
 
 
 language_codes = pd.read_excel("geotagged/language_codes.xlsx")
 language_codes.index = language_codes.name
 
 df_dict = {}
+countries_info['Official_language']  = [() for i in range(len(countries_info))]
 
-for country in geotagged_df['geonames_country'].unique():
-    country = country.replace(' ', '_')
-    official_languages = get_official_languages(country)
+for country in countries_info['Country'].unique():
+    country_wiki = country.replace(' ', '_')
+    print(country_wiki)
+    official_languages = get_official_languages(country_wiki)
     df_dict[country] = []
     for lang in official_languages:
         lang_code = language_codes[language_codes.index == lang.strip()]['alpha3-b'].squeeze()
         if len(lang_code) > 0 : 
             df_dict[country].append(lang_code)
+        else:
+            lang_code = language_codes[language_codes.index == lang.strip()[:-1]]['alpha3-b'].squeeze() 
+            if len(lang_code) > 0 : 
+                df_dict[country].append(lang_code)   
+
+    countries_info.at[country, 'Official_language'] = ",".join(df_dict[country])
     print(df_dict[country])        
     #official_languages
+   
+
+countries_info.to_excel("geotagged/countries_info_new.xlsx")
     
 # Find the maximum length among all lists
 max_length = max(len(lst) for lst in df_dict.values())

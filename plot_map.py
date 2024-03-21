@@ -3,6 +3,17 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.colors as colors
 from shapely.geometry import Polygon
+from collections import defaultdict 
+import pickle
+
+def countries_into_languages(df):
+    languages_countries = defaultdict(list)
+    for _, row in df.iterrows():
+        if isinstance(row['Official_language'], str):
+            languages = list(row['Official_language'].split(","))
+            for language in languages:
+                languages_countries[language].append(row['Country'])
+    return languages_countries                
 
 geotagged_df = pd.read_excel("geotagged/geotagged_hist_country.xlsx")
 geotagged_df['geonames_lng'] = geotagged_df['geonames_lng'].apply(lambda x: float(str(x)) if isinstance(x, str) else -1000)
@@ -12,6 +23,10 @@ column_map_year = 'map_year'
 geotagged_df[column_map_year] = geotagged_df[column_map_year].apply(lambda x: str(int(x)))
 
 plot_dict_dicts = {}
+
+countries_info = pd.read_excel("geotagged/countries_info_new.xlsx")
+languages_countries = countries_into_languages(countries_info)
+
 
 # [minx, miny, maxx, maxy] - minimal longitude, minimal latitude, maximal longitude, maximal latitude
 
@@ -48,20 +63,33 @@ write_title = True
 
 # Bounding box of the map 
 bbox =  regions_bbox[region] 
+years = ['1945', '1956', '1967', '1978', '1989', '2000', '2011'] 
 
-for i, row in geotagged_df.iterrows():
-    if not pd.isnull(row[column_map_year]):
-        map_year = row[column_map_year]
-        historic_name = row['historical_country_name']
-        weight = row['weight']
-        if map_year not in plot_dict_dicts:
-            plot_dict_dicts[map_year] = {}
-        plot_dict_dicts[map_year][historic_name] = plot_dict_dicts[map_year].get(historic_name, 0) + weight
+# for i, row in geotagged_df.iterrows():
+#     if not pd.isnull(row[column_map_year]) and row[column_map_year] in years:
+#         map_year = row[column_map_year]
+#         historic_name = row['historical_country_name']
+#         weight = row['weight']
+#         language = row['language']
+#         if map_year not in plot_dict_dicts:
+#             plot_dict_dicts[map_year] = {}
+#         plot_dict_dicts[map_year][historic_name] = plot_dict_dicts[map_year].get(historic_name, 0) + weight
+#         for country in languages_countries[language]:
+#             historical_country_name = geotagged_df[(geotagged_df['geonames_country'] == country) & (geotagged_df[column_map_year] == map_year)]['historical_country_name']
+#             if not historical_country_name.empty:
+#                 historic_name = historical_country_name.iloc[0]
+#                 plot_dict_dicts[map_year][historic_name] = plot_dict_dicts[map_year].get(historic_name, 0) + weight
+#             else:
+#                 plot_dict_dicts[map_year][country] = plot_dict_dicts[map_year].get(country, 0) + weight    
+
+with open('weights/weights_potetial.obj', 'rb') as f:
+    plot_dict_dicts = pickle.load(f)
+
 
 #years = list(filter(lambda x: not math.isnan(x) ,geotagged_df['map_year'].unique()))
 #years = list(map(lambda x: str(int(x)),years))
 #years = ['1918', '1945', '1989']
-years = ['1945', '1956', '1967', '1978', '1989', '2000', '2011'] 
+
 
 # Find cities that falls within the bbox of region 
 bbox_lon = (geotagged_df['geonames_lng'] >= bbox[0]) & (geotagged_df['geonames_lng'] <= bbox[2])
@@ -153,9 +181,9 @@ for idx,y in enumerate(years):
     
     if write_title:
         ax.set_title(title, fontsize=12)
-        plt.savefig('plots/with title/normalized/'+title_plot + '.svg')
+        plt.savefig('plots/with title/potential/'+title_plot + '.svg')
     else:    
-        plt.savefig('plots/without title/normalized/'+title_plot + '.svg')
+        plt.savefig('plots/without title/potential/'+title_plot + '.svg')
 
     # Print the countries that were not found in gdf 
     p = [country if country not in gdf.index else None for country in year_countries[y]]
