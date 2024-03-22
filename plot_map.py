@@ -55,7 +55,7 @@ region_czech = {'Middle East'     : 'Střední východ',
                  'Europe'         : 'Evropa', 
                  'World'          : 'Svět'}
 
-title_middle = 'Překlady ve světě dle místa vydání'
+title_middle = 'Potenciál dosahu překladů ve světě'
 
 
 region = 'World' 
