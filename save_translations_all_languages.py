@@ -6,11 +6,12 @@ def save_to_dict(map_year, df_dict, row):
     if lang == 'srp' or lang == 'bos' :
         lang = 'hrv'
     country = row['historical_country_name']
-    key = (country, lang, map_year) 
-    if key in df_dict:
-        df_dict[key] += row['weight']   
-    else:
-        df_dict[key] =  row['weight']
+    if country != 'Czech Republic':
+        key = (country, lang, map_year) 
+        if key in df_dict:
+            df_dict[key] += row['weight']   
+        else:
+            df_dict[key] =  row['weight']
 
 #geotagged_df = pd.read_csv("geotagged/geotagged_germany_country_update.csv")
 geotagged_df = pd.read_excel("geotagged/geotagged_hist_country.xlsx")

@@ -40,14 +40,17 @@ for i, row in geotagged_df.iterrows():
         # weight
         weight = row['weight']
 
-        # if the year is yet not in the dictionary
-        if map_year not in plot_dict_dicts:
+        # plot Czech republic gray 
+        if historic_name != 'Czech Republic':
 
-            # create a key where the map year is the key a value is a dictionary
-            plot_dict_dicts[map_year] = {}
+            # if the year is yet not in the dictionary
+            if map_year not in plot_dict_dicts:
 
-        # add a weight to a  combination of historical country and map year
-        plot_dict_dicts[map_year][historic_name] = plot_dict_dicts[map_year].get(historic_name, 0) + weight
+                # create a key where the map year is the key a value is a dictionary
+                plot_dict_dicts[map_year] = {}
+
+            # add a weight to a  combination of historical country and map year
+            plot_dict_dicts[map_year][historic_name] = plot_dict_dicts[map_year].get(historic_name, 0) + weight
 
 with_title = True
 
@@ -65,13 +68,14 @@ norm = colors.Normalize(vmin=vmin, vmax=vmax)
 RADIUS = 1.1
 
 # folder with charts
-piechart_folder = 'plots/without title/pie charts minor top 19 languages plain/'
+piechart_folder = 'plots/without title/pie charts minor top 19 languages plain new/'
 
 # Table with number of translations for each country, language and decade
 df = pd.read_excel("weights/translations_language_countries.xlsx")
 
 # countries and languages from number_of_colors.py  
-countries =["Italy", "Belgium", "United Kingdom", "Czechoslovakia", "Denmark", "Sweden", "Slovakia", "Spain", "Switzerland", "USSR", "Germany (Soviet)", "East Germany",  "Germany", "Yugoslavia", "Poland", "Austria", "Italy", "Hungary"]
+#countries =["Italy", "Belgium", "United Kingdom", "Czechoslovakia", "Denmark", "Sweden", "Slovakia", "Spain", "Switzerland", "USSR", "Germany (Soviet)", "East Germany",  "Germany", "Yugoslavia", "Poland", "Austria", "Italy", "Hungary"]
+countries = df.country.unique()
 #languages = ["rus", "est", "arm", "glg", "ukr", "wen", "eng", "lit", "baq", "dut", "slv", "mac", "hrv", "epo", "hun", "ger", "cat", "fre", "slo", "other"]
 languages = {"rus": "ruština",
                    "est": "estonština",
@@ -173,7 +177,7 @@ for idx,map_year in enumerate(years):
         piechart_path = piechart_folder + '{country}_{year}.png'.format(country = country, year = map_year)
 
         # if chart exists
-        if   os.path.isfile(piechart_path):  
+        if   os.path.isfile(piechart_path) and country in gdf.clip(bbox).index:  
 
             # load image
             image = plt.imread(piechart_path, format="png")
@@ -200,7 +204,7 @@ for idx,map_year in enumerate(years):
             # show image at the latitude and longitude of the plot
             im = ax.imshow(
                 image,
-                extent=(lon-2*RADIUS, lon+2*RADIUS, lat-RADIUS, lat+RADIUS),
+                extent=(lon-1.9*RADIUS, lon+1.9*RADIUS, lat-RADIUS, lat+RADIUS),
                 zorder=1 # show it in the front
                 )
             
@@ -232,7 +236,7 @@ for idx,map_year in enumerate(years):
         title = 'Překlady do hlavního jazyka a ostatních jazyků (Evropa {} - {})'.format(str(map_year), str(int(years[idx+1])-1))
     else:
         title_plot  = 'Europe Czech Translations {}'.format(str(map_year))
-        title = 'Překlady do hlavního jazyka a ostatních jazyků (Evropa {} - {})'.format(str(map_year), '2021')
+        title = 'Překlady do hlavního jazyka a ostatních jazyků (Evropa {} - {})'.format(str(map_year), '2019')
     ax.set_axis_off()  # Turn off the axis to remove the axis frame
 
     # plt.subplots_adjust(left=0,
@@ -241,8 +245,8 @@ for idx,map_year in enumerate(years):
     #                 top=1)
     if with_title:
         ax.set_title(title, fontsize=12)
-        plt.savefig('plots/with title/normalized with charts/'+title_plot + '.svg')
+        plt.savefig('plots/with title/normalized with charts new/'+title_plot + '.svg')
     else: 
-        plt.savefig('plots/without title/normalized with charts/'+title_plot + '.svg')    
+        plt.savefig('plots/without title/normalized with charts new/'+title_plot + '.svg')    
 
     

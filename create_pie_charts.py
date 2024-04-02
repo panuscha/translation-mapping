@@ -5,7 +5,7 @@ from itertools import compress
 
 
 TOP = 3
-MIN_TRANS = 4 
+MIN_TRANS = 2.75 
 
 # size of the outer chart
 SIZE = 0.2
@@ -24,7 +24,8 @@ df = pd.read_excel("weights/translations_language_countries.xlsx")
 #countries = ["USSR", "Switzerland", "Slovakia", "Italy", "Germany", "Spain", "United Kingdom", "Sweden", "Denmark", "Poland",  "Austria", "Czechoslovakia", "Yugoslavia", "Belgium", "Hungary"]
 
 # countries and languages from number_of_colors.py  
-countries =["Italy", "Belgium", "United Kingdom", "Czechoslovakia", "Denmark", "Sweden", "Slovakia", "Spain", "Switzerland", "USSR", "Germany (Soviet)", "East Germany",  "Germany", "Yugoslavia", "Poland", "Austria", "Italy", "Hungary"]
+#countries =["Italy", "Belgium", "United Kingdom", "Czechoslovakia", "Denmark", "Sweden", "Slovakia", "Spain", "Switzerland", "USSR", "Germany (Soviet)", "East Germany",  "Germany", "Yugoslavia", "Poland", "Austria", "Italy", "Hungary"]
+countries = df.country.unique()
 languages = ["rus", "est", "arm", "glg", "ukr", "wen", "eng", "lit", "baq", "dut", "slv", "mac", "hrv", "epo", "hun", "ger", "cat", "fre", "slo", "other"]
 
 except_countries = {"Czechoslovakia" : ["slo"], "Belgium" : ["fre", "dut"],  "Switzerland": ["ger", "fre"], "Yugoslavia": ["hrv"]}
@@ -75,7 +76,7 @@ for plot_year in plot_years:
                 h = h.iloc[1:, :]
            
             # outher colors, major will always be transparent, major is displayed as black
-            outer_colors = [my_color_palette['eng'] , 'black' ]
+            outer_colors = ['white' , 'black' ]
 
             # list of outer weights 
             weights_all = [h_max, sum_weights - h_max ]
@@ -90,16 +91,16 @@ for plot_year in plot_years:
             wedgeprops=dict(width=SIZE, edgecolor='w'))
             
             # set major language transparent
-            n[0][0].set_alpha(0.0)
+            n[0][0].set_alpha(0.5)
+            
+            # sort values by weights descending
+            h = h.sort_values(by = 'weights', ascending = 0)
 
             # if there are minor languages translations
-            if not(h.empty):
+            if not(h.empty) and sum(list(h.weights))>MIN_TRANS: #list(h.weights)[0]>2
                 
                 # if there are more then TOP languages translations or any of the language is not in languages list
-                if len(h.weights) > TOP or any(l not in languages for l in h.language):
-                    
-                    # sort values by weights descending
-                    h = h.sort_values(by = 'weights', ascending = 0)
+                if any(l not in languages for l in h.language): #len(h.weights) > TOP or 
                     
                     # weights
                     weights_sorted = list(h.weights)
@@ -109,19 +110,19 @@ for plot_year in plot_years:
                     # index of languages that are in languages
                     ind_top_lang_trans = list(map(lambda i: True if h_lang[i] in languages else False ,range(len(h.language)) ))
                     
-                    if sum(ind_top_lang_trans) > TOP:
-                        res = [i for i, val in enumerate(ind_top_lang_trans) if val]
+                    # if sum(ind_top_lang_trans) > TOP:
+                    #     res = [i for i, val in enumerate(ind_top_lang_trans) if val]
                         
-                        #ind_under_top = ind_top_lang_trans[res[TOP]:]
+                    #     #ind_under_top = ind_top_lang_trans[res[TOP]:]
                         
-                        ind_top_lang_trans[res[TOP]:] = [False for i in range(len(ind_top_lang_trans) - res[TOP])]
-                        #ind_top_lang_trans = ind_top_lang_trans[0:TOP]
-                        # index of languages that are not in languages or under TOP threshold 
-                        ind_not_top_trans = list(map(lambda i: True if h_lang[i] not in languages or i in res[TOP:] else False, range(len(h.language)) ))
-                    else:
+                    #     ind_top_lang_trans[res[TOP]:] = [False for i in range(len(ind_top_lang_trans) - res[TOP])]
+                    #     #ind_top_lang_trans = ind_top_lang_trans[0:TOP]
+                    #     # index of languages that are not in languages or under TOP threshold 
+                    #     ind_not_top_trans = list(map(lambda i: True if h_lang[i] not in languages or i in res[TOP:] else False, range(len(h.language)) ))
+                    # else:
                         
-                        # index of languages that are not in languages
-                        ind_not_top_trans = list(map(lambda i: True if h_lang[i] not in languages else False, range(len(h.language)) ))
+                    # index of languages that are not in languages
+                    ind_not_top_trans = list(map(lambda i: True if h_lang[i] not in languages else False, range(len(h.language)) ))
                     
                     
                     # "other" category languages
@@ -157,7 +158,7 @@ for plot_year in plot_years:
                 
                 #plt.show()
                 #hist = h[['language','weights']].plot(kind = 'bar', figsize=(8, 6), x = 'language', ylim = [0, y_max], color = colors).get_figure()
-                plt.savefig('plots/pie charts minor top 19 languages plain/{country}_{year}.png'.format(country = country, year = plot_year), transparent=True, dpi=600)
+                plt.savefig('plots/without title/pie charts minor top 19 languages plain new/{country}_{year}.png'.format(country = country, year = plot_year), transparent=True, dpi=600)
             plt.close()
                 #close(hist)
       
