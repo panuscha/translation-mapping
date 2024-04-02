@@ -88,7 +88,7 @@ for plot_year in plot_years:
             n = ax.pie(weights_all, radius=1, colors=outer_colors,
             
             # white edges
-            wedgeprops=dict(width=SIZE, edgecolor='w'))
+            wedgeprops=dict(width=SIZE))#, edgecolor='w'
             
             # set major language transparent
             n[0][0].set_alpha(0.5)
@@ -148,8 +148,8 @@ for plot_year in plot_years:
                 weights = [w/sum_weights for w in h.weights] 
 
                 # inner pie chart
-                wedges, _ = ax.pie(weights, radius=1-SIZE, colors=inner_colors,
-                wedgeprops=dict(edgecolor='w')) #width=size, 
+                wedges, _ = ax.pie(weights, radius=1-SIZE, colors=inner_colors) #,
+                #wedgeprops=dict(edgecolor='w') width=size, 
                 #ax.legend(wedges, language,
                 #    title="languages",
                 #    loc="center left",
