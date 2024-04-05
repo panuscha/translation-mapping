@@ -82,7 +82,7 @@ years = ['1945', '1956', '1967', '1978', '1989', '2000', '2011']
 #             else:
 #                 plot_dict_dicts[map_year][country] = plot_dict_dicts[map_year].get(country, 0) + weight    
 
-with open('weights/weights_potetial.obj', 'rb') as f:
+with open('weights/weights_potential.obj', 'rb') as f:
     plot_dict_dicts = pickle.load(f)
 
 

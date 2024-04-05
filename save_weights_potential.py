@@ -37,18 +37,19 @@ for i, row in geotagged_df.iterrows():
             plot_dict_dicts[map_year] = {}
         plot_dict_dicts[map_year][historic_name] = plot_dict_dicts[map_year].get(historic_name, 0) + weight
         for country in languages_countries[language]:
-            historical_country_name = geotagged_df[(geotagged_df['geonames_country'] == country) & (geotagged_df[column_map_year] == map_year)]['historical_country_name']
-            if not historical_country_name.empty:
-                historic_names = historical_country_name.unique()
-                for historic_name in historic_names:
-                    plot_dict_dicts[map_year][historic_name] = plot_dict_dicts[map_year].get(historic_name, 0) + weight
-            else:
-                plot_dict_dicts[map_year][country] = plot_dict_dicts[map_year].get(country, 0) + weight 
+            # historical_country_name = geotagged_df[(geotagged_df['geonames_country'] == country) & (geotagged_df[column_map_year] == map_year)]['historical_country_name']
+            # if not historical_country_name.empty:
+            #     historic_names = historical_country_name.unique()
+            #     for historic_name in historic_names:
+            #         plot_dict_dicts[map_year][historic_name] = plot_dict_dicts[map_year].get(historic_name, 0) + weight
+            # else:
+                if country != historic_name:
+                    plot_dict_dicts[map_year][country] = plot_dict_dicts[map_year].get(country, 0) + weight 
 
    
 
 
-with open('weights/weights_potetial.obj', 'wb') as f:
+with open('weights/weights_potential.obj', 'wb') as f:
     pickle.dump(plot_dict_dicts, f,  protocol=pickle.HIGHEST_PROTOCOL)
 
 # Use dumps() to make it serialized 

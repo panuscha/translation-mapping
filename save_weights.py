@@ -72,7 +72,11 @@ for plot_year in plot_years:
         spanish_speaking =  row['geonames_country'] == 'Spain' or row['geonames_country'] == 'Catalonia'
         spanish_language = row['language'] == 'spa'
         spanish_cond = spanish_language and spanish_speaking
-        spanish_countries = ['Spain', 'Catalonia']        
+        spanish_countries = ['Spain', 'Catalonia']     
+        
+        # ROMANIA AND MOLDOVA
+        romanian_speaking = row['geonames_country'] == 'Romania' or row['geonames_country'] == 'Moldova'
+        romanian_language = row['language'] == 'rum'   
 
 
         if plot_year < 1989:
@@ -92,7 +96,9 @@ for plot_year in plot_years:
             soviet_countries = ['Estonia', 'Lithuania', 'Latvia', 'Byelarus', 'Ukraine', 'Moldova', 'Russia', 'Georgia', 'Azerbaijan', 'Armenia', 'Kazakhstan', 'Turkmenistan', 'Uzbekistan'   ]
 
             # YUGOSLAVIA 
-            serbo_croatian_countries.extend(['Slovenia', 'Macedonia'])            
+            serbo_croatian_countries.extend(['Slovenia', 'Macedonia'])    
+            
+            romanian_cond = False        
 
         else:
             german_cond = german_language and (row['geonames_country'] == 'Germany' or german_speaking)
@@ -100,6 +106,11 @@ for plot_year in plot_years:
 
             germany_rest_cond = row['geonames_country'] == 'Germany'
             soviet_cond = False   
+            
+            romanian_cond = romanian_language and romanian_speaking
+            romanian_countries = ['Romania', 'Moldova']
+            
+            
         
         ##### GERMAN SPEAKING ##### 
 
@@ -169,6 +180,12 @@ for plot_year in plot_years:
 
         if soviet_cond:
             save_to_dict(soviet_countries, plot_year, df_dict, row)    
+            continue
+        
+        #### ROMANIA ####
+
+        if romanian_cond:
+            save_to_dict(romanian_countries, plot_year, df_dict, row)    
             continue
 
         ##### REST #### 
