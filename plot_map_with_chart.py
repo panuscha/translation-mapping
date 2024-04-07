@@ -192,14 +192,31 @@ for idx,map_year in enumerate(years):
             if int(map_year) < 1989 and country == 'Italy':
                 
                 lat = lat_Italy
-                lon = lon_Italy
+                lon = lon_Italy + 0.3
+
+            elif int(map_year) < 1989 and country == 'West Germany':
+                
+                # Compute the centroid of the country
+                centroid = country_geometry.centroid
+                
+                lat = centroid.y - 1
+                lon = centroid.x   
+
+            elif country == 'United Kingdom': 
+
+                # Compute the centroid of the country
+                centroid = country_geometry.centroid
+
+                lat = centroid.y - 1
+                lon = centroid.x + 1      
+            
             else:
                 # Compute the centroid of the country
                 centroid = country_geometry.centroid
 
                 # Get the latitude and longitude of the centroid
                 lat = centroid.y
-                lon = centroid.x
+                lon = centroid.x 
 
             # show image at the latitude and longitude of the plot
             im = ax.imshow(

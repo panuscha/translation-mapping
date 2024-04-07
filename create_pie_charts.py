@@ -91,7 +91,7 @@ for plot_year in plot_years:
             wedgeprops=dict(width=SIZE))#, edgecolor='w'
             
             # set major language transparent
-            n[0][0].set_alpha(0.5)
+            n[0][0].set_alpha(0.7)
             
             # sort values by weights descending
             h = h.sort_values(by = 'weights', ascending = 0)
