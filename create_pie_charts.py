@@ -76,7 +76,7 @@ for plot_year in plot_years:
                 h = h.iloc[1:, :]
            
             # outher colors, major will always be transparent, major is displayed as black
-            outer_colors = ['white' , 'black' ]
+            outer_colors = ['black' , 'black' ]
 
             # list of outer weights 
             weights_all = [h_max, sum_weights - h_max ]
@@ -91,7 +91,7 @@ for plot_year in plot_years:
             wedgeprops=dict(width=SIZE))#, edgecolor='w'
             
             # set major language transparent
-            n[0][0].set_alpha(0.7)
+            n[0][0].set_alpha(0.1)
             
             # sort values by weights descending
             h = h.sort_values(by = 'weights', ascending = 0)

@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2024-03-06T14:23:02.579528</dc:date>
+    <dc:date>2024-04-08T16:19:25.267557</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -65,9 +65,8 @@ C 438.940777 199.471673 455.99308 207.837283 471.405111 218.731813
 C 486.817142 229.626342 500.392349 242.910852 511.617891 258.083482 
 C 522.843433 273.256112 531.576147 290.123362 537.486132 308.048026 
 C 543.396117 325.97269 546.408 344.726169 546.408 363.6 
-L 590.76 363.6 
 z
-" style="fill: none; opacity: 0"/>
+" style="opacity: 0.1; stroke: #ffffff; stroke-linejoin: miter"/>
    </g>
    <g id="patch_3">
     <path d="M 451.959681 569.257942 
@@ -91,7 +90,7 @@ C 189.309427 357.602105 190.762583 387.181769 199.231129 415.098824
 C 207.699675 443.015879 222.925001 468.417801 243.5536 489.0464 
 L 369 363.6 
 z
-" style="fill: #2ca02c; stroke: #ffffff; stroke-linejoin: miter"/>
+" style="fill: #2ca02c"/>
    </g>
    <g id="patch_5">
     <path d="M 243.5536 489.0464 
@@ -99,7 +98,7 @@ C 260.027069 505.519869 279.585269 518.588241 301.108894 527.503619
 C 322.632518 536.418996 345.702988 541.007999 368.999992 541.008 
 L 369 363.6 
 z
-" style="fill: #ff7f0e; stroke: #ffffff; stroke-linejoin: miter"/>
+" style="fill: #ff7f0e"/>
    </g>
    <g id="patch_6">
     <path d="M 368.999992 541.008 
@@ -107,7 +106,7 @@ C 384.503832 541.008001 399.940998 538.97566 414.916558 534.962972
 C 429.892119 530.950284 444.277268 524.991761 457.703988 517.239842 
 L 369 363.6 
 z
-" style="fill: #ff9896; stroke: #ffffff; stroke-linejoin: miter"/>
+" style="fill: #ff9896"/>
    </g>
    <g id="patch_7">
     <path d="M 457.703988 517.239842 
@@ -115,7 +114,7 @@ C 484.671404 501.6702 507.070178 479.27143 522.639825 452.304017
 C 538.209472 425.336604 546.407996 394.739313 546.408 363.600025 
 L 369 363.6 
 z
-" style="fill: #9edae5; stroke: #ffffff; stroke-linejoin: miter"/>
+" style="fill: #9edae5"/>
    </g>
    <g id="matplotlib.axis_1"/>
    <g id="matplotlib.axis_2"/>
@@ -139,7 +138,7 @@ L 304.98 112.9575
 L 304.98 101.7575 
 L 287.38 101.7575 
 z
-" style="stroke: #000000; stroke-linejoin: miter"/>
+"/>
     </g>
     <g id="patch_10">
      <path d="M 287.38 136.4425 
@@ -147,7 +146,7 @@ L 304.98 136.4425
 L 304.98 125.2425 
 L 287.38 125.2425 
 z
-" style="fill: #2ca02c; stroke: #000000; stroke-linejoin: miter"/>
+" style="fill: #2ca02c"/>
     </g>
     <g id="patch_11">
      <path d="M 304.98 112.9575 
@@ -155,7 +154,7 @@ L 322.58 112.9575
 L 322.58 101.7575 
 L 304.98 101.7575 
 z
-" style="stroke: #000000; stroke-linejoin: miter"/>
+"/>
     </g>
     <g id="patch_12">
      <path d="M 304.98 136.4425 
@@ -163,7 +162,7 @@ L 322.58 136.4425
 L 322.58 125.2425 
 L 304.98 125.2425 
 z
-" style="fill: #ff7f0e; stroke: #000000; stroke-linejoin: miter"/>
+" style="fill: #ff7f0e"/>
     </g>
     <g id="patch_13">
      <path d="M 322.58 112.9575 
@@ -171,7 +170,7 @@ L 340.18 112.9575
 L 340.18 101.7575 
 L 322.58 101.7575 
 z
-" style="stroke: #000000; stroke-linejoin: miter"/>
+" style="opacity: 0.1"/>
     </g>
     <g id="patch_14">
      <path d="M 322.58 136.4425 
@@ -179,7 +178,7 @@ L 340.18 136.4425
 L 340.18 125.2425 
 L 322.58 125.2425 
 z
-" style="fill: #ff9896; stroke: #000000; stroke-linejoin: miter"/>
+" style="fill: #ff9896"/>
     </g>
     <g id="patch_15">
      <path d="M 340.18 112.9575 
@@ -187,7 +186,7 @@ L 357.78 112.9575
 L 357.78 101.7575 
 L 340.18 101.7575 
 z
-" style="stroke: #000000; stroke-linejoin: miter"/>
+" style="opacity: 0.1"/>
     </g>
     <g id="text_1">
      <!--                                                      -->
@@ -255,7 +254,7 @@ L 357.78 136.4425
 L 357.78 125.2425 
 L 340.18 125.2425 
 z
-" style="fill: #9edae5; stroke: #000000; stroke-linejoin: miter"/>
+" style="fill: #9edae5"/>
     </g>
     <g id="text_2">
      <!--                                                     -->

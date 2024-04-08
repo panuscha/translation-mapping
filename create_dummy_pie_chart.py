@@ -97,7 +97,7 @@ if not df[(df['map_year'] == int(plot_year)) &  (df['country'] == country)].empt
         h = h.iloc[1:, :]
     
     # outher colors, major will always be transparent, minor is displayed as black
-    outer_colors = [my_color_palette['eng'] , 'black' ]
+    outer_colors = ['black' , 'black' ]
 
     # list of outer weights 
     weights_all = [h_max, sum_weights - h_max ]
@@ -112,7 +112,7 @@ if not df[(df['map_year'] == int(plot_year)) &  (df['country'] == country)].empt
     wedgeprops=dict(width=SIZE, edgecolor='w'))
     
     # set major language transparent
-    n[0][0].set_alpha(0.0)
+    n[0][0].set_alpha(0.1)
 
 
     # if there are minor languages translations
@@ -190,26 +190,41 @@ if not df[(df['map_year'] == int(plot_year)) &  (df['country'] == country)].empt
             #            bbox_to_anchor=(1.1, 1), 
             #             handler_map = {list: HandlerTuple(None)})
 
+            trans_color = 'black'
 
-            pa1 = Patch(facecolor='black', edgecolor='black')
-            pa2 = Patch(facecolor='black', edgecolor='black')
-            pa3 = Patch(facecolor='black', edgecolor='black')
-            pa4 = Patch(facecolor='black', edgecolor='black')
+            # pa1 = Patch(facecolor='black', edgecolor='black')
+            # pa2 = Patch(facecolor='black', edgecolor='black')
+            # pa3 = Patch(facecolor='black', alpha = 0.1)
+            # pa3.set_edgecolor('black')
+            # pa4 = Patch(facecolor='black', alpha = 0.1, edgecolor='black')
+            # pa4.set_edgecolor('black')
+            # #
+            # pb1 = Patch(facecolor=my_color_palette['ukr'], edgecolor='black')
+            # pb2 = Patch(facecolor=my_color_palette['arm'], edgecolor='black')
+            # pb3 = Patch(facecolor=my_color_palette['lit'], edgecolor='black')
+            # pb4 = Patch(facecolor=my_color_palette['other'], edgecolor='black')
+
+            pa1 = Patch(facecolor='black')
+            pa2 = Patch(facecolor='black')
+            pa3 = Patch(facecolor='black', alpha = 0.1)
+            pa4 = Patch(facecolor='black', alpha = 0.1)
             #
-            pb1 = Patch(facecolor=my_color_palette['ukr'], edgecolor='black')
-            pb2 = Patch(facecolor=my_color_palette['arm'], edgecolor='black')
-            pb3 = Patch(facecolor=my_color_palette['lit'], edgecolor='black')
-            pb4 = Patch(facecolor=my_color_palette['other'], edgecolor='black')
+            pb1 = Patch(facecolor=my_color_palette['ukr'])
+            pb2 = Patch(facecolor=my_color_palette['arm'])
+            pb3 = Patch(facecolor=my_color_palette['lit'])
+            pb4 = Patch(facecolor=my_color_palette['other'])
 
             ax.legend(handles=[pa1, pb1, pa2, pb2, pa3, pb3, pa4, pb4],
                     labels=['', '', '', '', '', '', '                                                    ', '                                                   '], #'poměr zastoupení dalších jazyků', 'podíl překladů do dalších jazyků'
                     ncol=4, handletextpad=0.6, handlelength=1.1, columnspacing=-0.6,
                     loc='best', fontsize=16)
+            
+            
 
             
             # #wedges, _ = ax.pie(weights, radius=1-SIZE, colors=inner_colors,
-            wedges, _ = ax.pie(weights, radius=1-SIZE, colors=inner_colors, ## for legend
-            wedgeprops=dict(edgecolor='w')) #width=size, 
+            wedges, _ = ax.pie(weights, radius=1-SIZE, colors=inner_colors)#, ## for legend
+            #wedgeprops=dict(edgecolor='w')) #width=size, 
             # ax.legend(wedges, language,
             # title='poměrné zastoupení dalších jazyků',
             # loc="lower left",
