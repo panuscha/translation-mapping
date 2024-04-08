@@ -161,8 +161,8 @@ for idx,y in enumerate(years):
         title_plot = '{} Czech Translations {} - {}'.format(region, str(y), str(int(years[idx+1])-1))
         title = '{} ({} - {})'.format(title_middle, str(int(years[idx])), str(int(years[idx+1])-1))
     else:
-        title_plot = '{} Czech Translations {} - {}'.format(region, str(y), '2021')
-        title = '{} ({} - {})'.format(title_middle, str(int(years[idx])), '2021')
+        title_plot = '{} Czech Translations {} - {}'.format(region, str(y), '2019')
+        title = '{} ({} - {})'.format(title_middle, str(int(years[idx])), '2019')
     ax.set_axis_off()  # Turn off the axis to remove the axis frame
     
     # cbar = plt.cm.ScalarMappable(norm=norm, cmap=cmap)
