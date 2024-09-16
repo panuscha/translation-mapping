@@ -33,6 +33,8 @@ df_language_countries['ger'].append('Switzerland ger')
 df_language_countries['fre'].append('Canada fre')
 df_language_countries['fre'].append('Switzerland fre')
 df_language_countries['fre'].append('Belgium fre')
+df_language_countries['fre'].append('Zaire')
+df_language_countries['fre'].append('Congo')
 
 # Dutch 
 df_language_countries['dut'].append('Belgium dut')
@@ -44,16 +46,15 @@ df_language_countries['cat'].append('Catalonia')
 # Macedonia
 df_language_countries['mac'].append('Macedonia')
 
-
 #English
 df_language_countries['eng'].append('Canada eng')
-df_language_countries['eng'].append('South Africa')
+df_language_countries['eng'].append('South Africa') 
+df_language_countries['eng'].append('Cameroon') 
 
 # Russian
 df_language_countries['rus'].append('Kazakhstan')
 df_language_countries['rus'].append('Kyrgyzstan')
 df_language_countries['bel'].append('Byelarus')
-
 
 # Asia
 df_language_countries['kor'].append('Korea, Republic of')
@@ -62,6 +63,10 @@ df_language_countries['tgk'].append('Tajikistan')
 
 # Africa
 df_language_countries['afr'].append('South Africa')
+
+# Serbo-Croatia
+df_language_countries['srp'].extend(['Bosnia and Herzegovina', 'Coatia', 'Serbia', 'Montenegro'])
+df_language_countries['bos'].extend(['Bosnia and Herzegovina', 'Coatia', 'Serbia', 'Montenegro'])
 
 
 # Europe or Other

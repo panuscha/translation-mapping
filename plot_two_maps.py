@@ -16,7 +16,7 @@ import matplotlib.colors as colors
 #!!! Plots to current official language only folder !!!
 #weights_df = pd.read_csv('weights/weights_only_major_language_families_new.csv')
 #
-language_geojson_path = 'language-basemaps/combined.geojson'
+language_geojson_path =  "historical-basemaps/temp/language_map_combined.geojson"#'language-basemaps/combined.geojson'
 
 coast_geojson_path = "historical-basemaps/ne_50m_coastline"
 
@@ -43,9 +43,9 @@ region_czech =  {'East'           : 'Východ',
                  'World'          : 'Svět', 
                  'Europe'         : 'Evropa'}
 
-region = 'Europe'   
+region = 'World'   
 write_title = True
-combine_languages = True
+combine_languages = False
 if combine_languages:
     if region == 'Europe':
         plot_folder = "language normalized major only"
@@ -63,7 +63,7 @@ else:
     else:
         plot_folder = 'current official language only'   
         weights_df = pd.read_csv('weights/weights_language_families_regions_11_years.csv') 
-        title_middle = 'Potenciál dosahu překladů ve světě'
+        title_middle = 'Překlady do hlavního jazyka ve světě'
 
 # Bounding box of the map 
 bbox =  regions_bbox[region] 
@@ -100,7 +100,7 @@ for idx, map_year in enumerate(map_years):
     weights_df_year = weights_df[weights_df[column_map_year] == map_year]
 
     # Load the GeoJSON map
-    historical_geojson_path = 'historical-basemaps/years/world_' + str(map_year)+ '.geojson'
+    historical_geojson_path = 'historical-basemaps/temp/world_' + str(map_year)+ '.geojson' ### CHANGED TO TEMP FOLDER
 
     # Create a GeoDataFrame with a single polygon covering the world
     world_polygon = gpd.GeoDataFrame(geometry=[Polygon([(-180, -90), (180, -90), (180, 90), (-180, 90)])])

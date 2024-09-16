@@ -112,7 +112,7 @@ print(vmax)
 norm = colors.Normalize(vmin=vmin, vmax=vmax)
 
 for idx,y in enumerate(years):
-    folder_path = "historical-basemaps/years"
+    folder_path = "historical-basemaps/temp" #"historical-basemaps/years"
 
     # Create a GeoDataFrame with a single polygon covering the world
     world_polygon = gpd.GeoDataFrame(geometry=[Polygon([(-180, -90), (180, -90), (180, 90), (-180, 90)])])
