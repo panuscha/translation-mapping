@@ -34,6 +34,8 @@ for year in [1918, 1929, 1945, 1956, 1967, 1978, 1989, 2000, 2011]: #
     # Load the first GeoJSON file (source file with the two polygons to select)
     source_gdf = gpd.read_file(f'historical-basemaps/temp/world_{year}.geojson')
 
+    source_gdf = source_gdf[~source_gdf.NAME.isin(['Ottoman Sultanate'])]
+
     ###### GB ######
 
     not_gb = source_gdf[~source_gdf.NAME.isin(['United Kingdom'])] 

@@ -13,7 +13,7 @@ from shapely.geometry import Polygon
 ############ FOR MAPS #############
 
 # folder with geopandas maps
-folder_path = "historical-basemaps/years"
+folder_path = "historical-basemaps/temp"
 
  # Bounding box of the map - Europe
 bbox = [ -11,  36,  40,  64]# [-10, 40, 40, 65] #[-10, 35, 60, 75] # [minx, miny, maxx, maxy] - minimal longitude, minimal latitude, maximal longitude, maximal latitude
@@ -54,12 +54,21 @@ for i, row in geotagged_df.iterrows():
 
 with_title = True
 
+# Table with number of translations for each country, language and decade
+df = pd.read_excel("weights/translations_language_countries.xlsx")
+
 # all years of the map
 years = ['1918', '1929', '1945', '1956', '1967', '1978', '1989', '2000', '2011']
+column_map_year = 'map_year'
 
 # Normalize the data for the colormap
 vmin = 1
-vmax = 657.5 # from plot_two_maps
+
+vmax = 1
+for year in df[column_map_year].unique():
+    for country in df.loc[df[column_map_year] == year, 'country' ].unique():
+        vmax = max(vmax, df.loc[(df[column_map_year] == year) & (df['country'] == country), 'weights'].sum())
+#vmax = 657.5 # from plot_two_maps - TODO: Change this number 
 norm = colors.Normalize(vmin=vmin, vmax=vmax)
 
 ############# FOR CHARTS ################
@@ -70,8 +79,7 @@ RADIUS = 1.1
 # folder with charts
 piechart_folder = 'plots/without title/pie charts minor top 19 languages plain new/'
 
-# Table with number of translations for each country, language and decade
-df = pd.read_excel("weights/translations_language_countries.xlsx")
+
 
 # countries and languages from number_of_colors.py  
 #countries =["Italy", "Belgium", "United Kingdom", "Czechoslovakia", "Denmark", "Sweden", "Slovakia", "Spain", "Switzerland", "USSR", "Germany (Soviet)", "East Germany",  "Germany", "Yugoslavia", "Poland", "Austria", "Italy", "Hungary"]
@@ -114,6 +122,8 @@ for i, (language_code, language_czech) in enumerate(languages.items()):
 # Load the GeoJSON map
 geojson_path = folder_path + '/world_' + str('2011') + '.geojson' # str(y) - using 1930 map instead
 gdf = gpd.read_file(geojson_path)
+
+
 country_geometry = gdf.clip(bbox)[gdf.clip(bbox).NAME == "Italy"]['geometry'].iloc[0]
 
 # Compute the centroid of the country
@@ -121,7 +131,7 @@ centroid = country_geometry.centroid
 
 # Get the latitude and longitude of the centroid
 lat_Italy = centroid.y
-lon_Italy = centroid.x
+lon_Italy = centroid.x + 0.3
 
 
 # iterate through the years of map
@@ -129,8 +139,27 @@ for idx,map_year in enumerate(years):
 
     # Load the GeoJSON map
     geojson_path = folder_path + '/world_' + str(map_year) + '.geojson' # str(y) - using 1930 map instead
-    gdf = gpd.read_file(geojson_path)
+    gdf = gpd.read_file(geojson_path) 
 
+    gdf = gdf.dropna(subset=['NAME'])
+    
+    
+    height = 11
+    bbox_width = bbox[2] - bbox[0]
+    bbox_height = bbox[3] - bbox[1]
+    aspect_ratio = bbox_width / bbox_height
+    calculated_width = height* aspect_ratio
+
+    # Create a base plot
+    fig, ax = plt.subplots( figsize=(calculated_width, height))
+
+    ax.set_xlim([bbox[0], bbox[2]])
+    ax.set_ylim([bbox[1], bbox[3]])
+
+    
+
+    
+    
     # Create a GeoDataFrame with a single polygon covering the world
     world_polygon = gpd.GeoDataFrame(geometry=[Polygon([(-180, -90), (180, -90), (180, 90), (-180, 90)])])
 
@@ -154,20 +183,9 @@ for idx,map_year in enumerate(years):
         if weight > 0:
             color_rgb = cmap(norm(weight))[:3]  # Get RGB values from the colormap
             gdf.loc[gdf.index == country, 'color'] = '#%02x%02x%02x' % tuple(int(c * 255) for c in color_rgb)
+        #else: gdf.loc[gdf.index == country, 'color'] = '#d3d3d3'
 
-    height = 11
-    bbox_width = bbox[2] - bbox[0]
-    bbox_height = bbox[3] - bbox[1]
-    aspect_ratio = bbox_width / bbox_height
-    calculated_width = height* aspect_ratio
-
-    # Create a base plot
-    fig, ax = plt.subplots( figsize=(calculated_width, height))
-
-    ax.set_xlim([bbox[0], bbox[2]])
-    ax.set_ylim([bbox[1], bbox[3]])
-
-    
+   
 
     
     # Iterate through countries to plot the bar chart                
@@ -189,10 +207,10 @@ for idx,map_year in enumerate(years):
             country_geometry = gdf.clip(bbox)[gdf.clip(bbox).index == country]['geometry'].iloc[0]
 
 
-            if int(map_year) < 1989 and country == 'Italy':
+            if  country == 'Italy': #int(map_year) < 1989 and
                 
                 lat = lat_Italy
-                lon = lon_Italy + 0.3
+                lon = lon_Italy 
 
             elif int(map_year) < 1989 and country == 'West Germany':
                 
@@ -245,7 +263,7 @@ for idx,map_year in enumerate(years):
 
 
     # Write years in the title 
-    if map_year  == 1929:
+    if map_year  == str(1929):
         title_plot = 'Europe Czech Translations {} - {}'.format(str(map_year), '1939')
         title = 'Překlady do hlavního jazyka a ostatních jazyků (Evropa {} - {})'.format(str(map_year), '1939')
     elif idx < len(years)-1:
