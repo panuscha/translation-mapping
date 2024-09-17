@@ -49,20 +49,21 @@ df_language_countries['mac'].append('Macedonia')
 #English
 df_language_countries['eng'].append('Canada eng')
 df_language_countries['eng'].append('South Africa') 
-df_language_countries['eng'].append('Cameroon') 
+#df_language_countries['eng'].append('Cameroon') 
 
 # Russian
-df_language_countries['rus'].append('Kazakhstan')
+df_language_countries['rus'].append('Kazakhstan') # MORE PEOPLE SPEAK RUSSIAN THAN KAZAKH
 df_language_countries['rus'].append('Kyrgyzstan')
 df_language_countries['bel'].append('Byelarus')
 
 # Asia
 df_language_countries['kor'].append('Korea, Republic of')
+df_language_countries['kor'].append('Korea, Democratic People\'s Republic of')
 df_language_countries['aze'].append('Azerbaijan')
 df_language_countries['tgk'].append('Tajikistan')
 
 # Africa
-df_language_countries['afr'].append('South Africa')
+#df_language_countries['afr'].append('South Africa')
 
 # Serbo-Croatia
 df_language_countries['srp'].extend(['Bosnia and Herzegovina', 'Coatia', 'Serbia', 'Montenegro'])

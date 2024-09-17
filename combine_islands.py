@@ -36,6 +36,8 @@ for year in [1918, 1929, 1945, 1956, 1967, 1978, 1989, 2000, 2011]: #
 
     source_gdf = source_gdf[~source_gdf.NAME.isin(['Ottoman Sultanate'])]
 
+    source_gdf = source_gdf.dropna(subset=['NAME'])
+
     ###### GB ######
 
     not_gb = source_gdf[~source_gdf.NAME.isin(['United Kingdom'])] 
@@ -162,7 +164,7 @@ for year in [1918, 1929, 1945, 1956, 1967, 1978, 1989, 2000, 2011]: #
 
     denmark_gdf = gpd.read_file(f'historical-basemaps/temp/world_Denmark.geojson')
 
-    not_denmark = combined_gdf[~combined_gdf.NAME.isin(['Denmark'])] 
+    not_denmark = combined_gdf[~combined_gdf.NAME.isin(['Denmark', 'Greenland'])] 
     denmark = denmark_gdf[denmark_gdf.NAME.isin(['Denmark'])]
     faroe = gdf[gdf.index.isin(DK)]
 

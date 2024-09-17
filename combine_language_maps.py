@@ -24,7 +24,7 @@ DK = [210]
 
 denmark_gdf = gpd.read_file(f'historical-basemaps/temp/world_Denmark.geojson')
 
-not_denmark = source_gdf[~source_gdf.NAME.isin(['Denmark'])] 
+not_denmark = source_gdf[~source_gdf.NAME.isin(['Denmark', 'Greenland'])] 
 denmark = denmark_gdf[denmark_gdf.NAME.isin(['Denmark'])]
 faroe = gdf[gdf.index.isin(DK)]
 
