@@ -135,6 +135,9 @@ for plot_year in plot_years:
         catalan_language = row['language'] == 'cat'
         catalan_cond = catalan_language and catalan_speaking
 
+        # ARABIC 
+        arabic_language = row['language'] == 'ara'
+
 
         if plot_year < 1989:
             german_cond = german_language and (row['region_country_name'] == 'West Germany' or german_speaking) 
@@ -359,6 +362,13 @@ for plot_year in plot_years:
         if albanian_language:
             save_to_dict(['Albania'], plot_year, df_dict, row)    
             continue  
+
+        #### ARABIC ####
+
+        if arabic_language:
+            save_to_dict(['Algeria', 'Tunisia', 'Syria'], plot_year, df_dict, row)     # 
+            continue
+
 
 #df = pd.DataFrame.from_dict(list(df_dict), columns=['country','map_year']).assign(weights=df_dict.values())
 

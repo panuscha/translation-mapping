@@ -78,6 +78,9 @@ for plot_year in plot_years:
         romanian_speaking = row['geonames_country'] == 'Romania' or row['geonames_country'] == 'Moldova'
         romanian_language = row['language'] == 'rum'   
 
+        # ARABIC
+        arabic_speaking = row['language'] == 'ara'   
+
 
         if plot_year < 1989:
             german_cond = german_language and (row['region_country_name'] == 'West Germany' or german_speaking) 
@@ -187,6 +190,15 @@ for plot_year in plot_years:
         if romanian_cond:
             save_to_dict(romanian_countries, plot_year, df_dict, row)    
             continue
+
+
+        ##### ARABIC ####
+
+        if arabic_speaking:
+            save_to_dict(['Algeria', 'Tunisia', 'Syria'], plot_year, df_dict, row)
+            continue
+
+
 
         ##### REST #### 
 
