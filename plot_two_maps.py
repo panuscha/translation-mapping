@@ -43,9 +43,9 @@ region_czech =  {'East'           : 'Východ',
                  'World'          : 'Svět', 
                  'Europe'         : 'Evropa'}
 
-region = 'Europe'#'World'   
+region = 'World'#'World'   
 write_title = True
-combine_languages = True
+combine_languages = False
 if combine_languages:
     if region == 'Europe':
         plot_folder = "language normalized major only"

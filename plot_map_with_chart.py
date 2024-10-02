@@ -52,7 +52,7 @@ for i, row in geotagged_df.iterrows():
             # add a weight to a  combination of historical country and map year
             plot_dict_dicts[map_year][historic_name] = plot_dict_dicts[map_year].get(historic_name, 0) + weight
 
-with_title = True
+with_title = False
 
 # Table with number of translations for each country, language and decade
 df = pd.read_excel("weights/translations_language_countries.xlsx")

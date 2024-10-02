@@ -59,7 +59,7 @@ title_middle = 'Potenciál dosahu překladů ve světě'
 
 
 region = 'World' 
-write_title = True  
+write_title = False  
 
 # Bounding box of the map 
 bbox =  regions_bbox[region] 
