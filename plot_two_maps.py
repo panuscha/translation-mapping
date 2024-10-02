@@ -43,8 +43,8 @@ region_czech =  {'East'           : 'Východ',
                  'World'          : 'Svět', 
                  'Europe'         : 'Evropa'}
 
-region = 'World'#'World'   
-write_title = True
+region = 'Europe'#'World'   
+write_title = False
 combine_languages = False
 if combine_languages:
     if region == 'Europe':

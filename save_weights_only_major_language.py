@@ -176,6 +176,7 @@ for plot_year in plot_years:
 
             slovak_speaking = row['geonames_country'] == 'Slovakia'
             slovak_cond = slovak_language and slovak_speaking
+
             
         #### SLOVAK ###
 
@@ -324,7 +325,7 @@ for plot_year in plot_years:
         #### NORTH MACEDONIA ####
 
         if macedonian_language:
-            save_to_dict(['North Macedonia'], plot_year, df_dict, row)    
+            save_to_dict(['Macedonia'], plot_year, df_dict, row)    
             continue
 
         #### GREECE ####
