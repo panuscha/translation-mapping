@@ -74,61 +74,62 @@ for plot_year in plot_years:
         romanian_countries = ['Romania', 'Moldova']    
 
         # SLOVENIAN
-        slovenian_language = row['language'] == 'slv' 
+        slovenian_language = row['language'] == 'slv' and row['geonames_country'] == 'Slovenia'
     
         # POLISH
-        polish_language = row['language'] == 'pol' 
+        polish_language = row['language'] == 'pol' and row['geonames_country'] == 'Poland'
 
         # DANISH
-        danish_language = row['language'] == 'dan'
+        danish_language = row['language'] == 'dan' and row['geonames_country'] == 'Denmark'
 
         # SWEDISH
-        swedish_language = row['language'] == 'swe'
+        swedish_language = row['language'] == 'swe' and row['geonames_country'] == 'Sweden'
 
         # NORWEGIAN
-        norwegian_language = row['language'] == 'nor'
+        norwegian_language = row['language'] == 'nor' and row['geonames_country'] == 'Norway'
 
         # FINNISH
-        finnish_language = row['language'] == 'fin'
+        finnish_language = row['language'] == 'fin' and row['geonames_country'] == 'Finland'
 
         # ESTONIAN
-        estonian_language = row['language'] == 'est'
+        estonian_language = row['language'] == 'est' and row['geonames_country'] == 'Estonia'
 
         # LATVIAN
-        latvian_language = row['language'] == 'lav'
+        latvian_language = row['language'] == 'lav' and row['geonames_country'] == 'Latvia'
 
         # LITHUANIAN
-        lithuanian_language = row['language'] == 'lit'
+        lithuanian_language = row['language'] == 'lit' and row['geonames_country'] == 'Lithuania'
 
         # BULGARIAN
-        bulgarian_language = row['language'] == 'bul' 
+        bulgarian_language = row['language'] == 'bul' and row['geonames_country'] == 'Bulgaria'
 
         # MACEDONIAN
-        macedonian_language = row['language'] == 'mac' 
+        macedonian_language = row['language'] == 'mac' and (serbo_croatian_speaking or row['geonames_country'] == 'North Macedonia')
 
         # GREEK
-        greek_language = row['language'] == 'gre' 
+        greek_language = row['language'] == 'gre' and row['geonames_country'] == 'Greece'
 
         # UKRAINIAN
-        ukrainian_language = row['language'] == 'ukr' 
+        ukrainian_language = row['language'] == 'ukr' and (row['geonames_country'] == 'Ukraine' or row['geonames_country'] == 'Russia')
 
         # BELARUSIAN
-        belarusian_language = row['language'] == 'bel' 
+        belarusian_language = row['language'] == 'bel' and  (row['geonames_country'] == 'Belarus' or row['geonames_country'] == 'Russia')
 
         # TURKISH
-        turkish_language = row['language'] == 'tur'
+        turkish_language = row['language'] == 'tur' and row['geonames_country'] == 'Turkey'
 
         # PORTUGUESE
-        portuguese_language = row['language'] == 'por'
+        portuguese_language = row['language'] == 'por' and row['geonames_country'] == 'Portugal'
 
         # ALBANIAN
-        albanian_language = row['language'] == 'alb' 
+        albanian_language = row['language'] == 'alb' and row['geonames_country'] == 'Albania'
 
         # RUSSIAN
-        russian_language = row['language'] == 'rus'
+        russian_language = row['language'] == 'rus' and (row['geonames_country'] == 'Russia' or row['geonames_country'] == 'Belarus' or row['geonames_country'] == 'Ukraine' or 
+                                                         row['geonames_country'] == 'Kazakhstan' or row['geonames_country'] == 'Moldova' or row['geonames_country'] == 'Uzbekistan')
 
         # SLOVAK
-        slovak_language = row['language'] == 'slo'
+        slovak_language = row['language'] == 'slo' 
 
         # CATALAN
         catalan_speaking = row['region_country_name'] == 'Catalonia'

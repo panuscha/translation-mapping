@@ -43,9 +43,10 @@ region_czech =  {'East'           : 'Východ',
                  'World'          : 'Svět', 
                  'Europe'         : 'Evropa'}
 
-region = 'Europe'#'World'   
-write_title = False
+region = 'Europe'#'Europe'   
+write_title = True
 combine_languages = False
+
 if combine_languages:
     if region == 'Europe':
         plot_folder = "language normalized major only"
@@ -158,9 +159,9 @@ for idx, map_year in enumerate(map_years):
         title_plot = '{} Czech Translations {} - {}'.format(region, str(map_year), str(int(map_years[idx+1])-1))
         title = '{} ({} - {})'.format(title_middle,  str(map_year), str(int(map_years[idx+1])-1)) #region_czech[region],
     else:
-        title_plot = '{} Czech Translations {} - {}'.format(region, str(map_year), '2021') 
+        title_plot = '{} Czech Translations {} - {}'.format(region, str(map_year), '2019') 
         #title_plot = '{} Czech Translations {}'.format(region, str(map_year)) 
-        title = '{} ({} - {})'.format(title_middle,  str(map_year), '2021')# region_czech[region],
+        title = '{} ({} - {})'.format(title_middle,  str(map_year), '2019')# region_czech[region],
           
     plt.grid(False)
     ax.set_axis_off() 

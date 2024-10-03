@@ -101,7 +101,11 @@ for plot_year in plot_years:
             # YUGOSLAVIA 
             serbo_croatian_countries.extend(['Slovenia', 'Macedonia'])    
             
-            romanian_cond = False        
+            romanian_cond = False   
+
+
+            # CZECHOSLOVAKIA
+                 
 
         else:
             german_cond = german_language and (row['geonames_country'] == 'Germany' or german_speaking)
@@ -198,9 +202,15 @@ for plot_year in plot_years:
             save_to_dict(['Algeria', 'Tunisia', 'Syria'], plot_year, df_dict, row)
             continue
 
+        ##### ALBANIA ####
+
+        if row['language'] == 'alb':
+            save_to_dict(['Albania'], plot_year, df_dict, row)    
+            continue  
 
 
-        ##### REST #### 
+
+        ##### REST ####  means + everything written in the country !
 
         key = (row['region_country_name'], plot_year) 
         if key in df_dict:
