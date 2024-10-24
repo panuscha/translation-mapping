@@ -2,6 +2,7 @@ import pandas as pd
 import matplotlib.patches as mpatches
 import matplotlib.pyplot as plt
 from itertools import compress
+import matplotlib
 from matplotlib.patches import Patch
 import pandas as pd
 import matplotlib.patches as mpatches
@@ -13,6 +14,9 @@ from matplotlib.collections import PatchCollection
 
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+
+matplotlib.rcParams['svg.fonttype'] = 'none'
+
 
 TOP = 3
 MIN_TRANS = 4 

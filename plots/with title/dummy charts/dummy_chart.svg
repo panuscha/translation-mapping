@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2024-04-08T16:19:25.267557</dc:date>
+    <dc:date>2024-10-24T17:44:49.048664</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -189,64 +189,7 @@ z
 " style="opacity: 0.1"/>
     </g>
     <g id="text_1">
-     <!--                                                      -->
-     <g transform="translate(367.38 112.9575) scale(0.16 -0.16)">
-      <defs>
-       <path id="DejaVuSans-20" transform="scale(0.015625)"/>
-      </defs>
-      <use xlink:href="#DejaVuSans-20"/>
-      <use xlink:href="#DejaVuSans-20" x="31.787109"/>
-      <use xlink:href="#DejaVuSans-20" x="63.574219"/>
-      <use xlink:href="#DejaVuSans-20" x="95.361328"/>
-      <use xlink:href="#DejaVuSans-20" x="127.148438"/>
-      <use xlink:href="#DejaVuSans-20" x="158.935547"/>
-      <use xlink:href="#DejaVuSans-20" x="190.722656"/>
-      <use xlink:href="#DejaVuSans-20" x="222.509766"/>
-      <use xlink:href="#DejaVuSans-20" x="254.296875"/>
-      <use xlink:href="#DejaVuSans-20" x="286.083984"/>
-      <use xlink:href="#DejaVuSans-20" x="317.871094"/>
-      <use xlink:href="#DejaVuSans-20" x="349.658203"/>
-      <use xlink:href="#DejaVuSans-20" x="381.445312"/>
-      <use xlink:href="#DejaVuSans-20" x="413.232422"/>
-      <use xlink:href="#DejaVuSans-20" x="445.019531"/>
-      <use xlink:href="#DejaVuSans-20" x="476.806641"/>
-      <use xlink:href="#DejaVuSans-20" x="508.59375"/>
-      <use xlink:href="#DejaVuSans-20" x="540.380859"/>
-      <use xlink:href="#DejaVuSans-20" x="572.167969"/>
-      <use xlink:href="#DejaVuSans-20" x="603.955078"/>
-      <use xlink:href="#DejaVuSans-20" x="635.742188"/>
-      <use xlink:href="#DejaVuSans-20" x="667.529297"/>
-      <use xlink:href="#DejaVuSans-20" x="699.316406"/>
-      <use xlink:href="#DejaVuSans-20" x="731.103516"/>
-      <use xlink:href="#DejaVuSans-20" x="762.890625"/>
-      <use xlink:href="#DejaVuSans-20" x="794.677734"/>
-      <use xlink:href="#DejaVuSans-20" x="826.464844"/>
-      <use xlink:href="#DejaVuSans-20" x="858.251953"/>
-      <use xlink:href="#DejaVuSans-20" x="890.039062"/>
-      <use xlink:href="#DejaVuSans-20" x="921.826172"/>
-      <use xlink:href="#DejaVuSans-20" x="953.613281"/>
-      <use xlink:href="#DejaVuSans-20" x="985.400391"/>
-      <use xlink:href="#DejaVuSans-20" x="1017.1875"/>
-      <use xlink:href="#DejaVuSans-20" x="1048.974609"/>
-      <use xlink:href="#DejaVuSans-20" x="1080.761719"/>
-      <use xlink:href="#DejaVuSans-20" x="1112.548828"/>
-      <use xlink:href="#DejaVuSans-20" x="1144.335938"/>
-      <use xlink:href="#DejaVuSans-20" x="1176.123047"/>
-      <use xlink:href="#DejaVuSans-20" x="1207.910156"/>
-      <use xlink:href="#DejaVuSans-20" x="1239.697266"/>
-      <use xlink:href="#DejaVuSans-20" x="1271.484375"/>
-      <use xlink:href="#DejaVuSans-20" x="1303.271484"/>
-      <use xlink:href="#DejaVuSans-20" x="1335.058594"/>
-      <use xlink:href="#DejaVuSans-20" x="1366.845703"/>
-      <use xlink:href="#DejaVuSans-20" x="1398.632812"/>
-      <use xlink:href="#DejaVuSans-20" x="1430.419922"/>
-      <use xlink:href="#DejaVuSans-20" x="1462.207031"/>
-      <use xlink:href="#DejaVuSans-20" x="1493.994141"/>
-      <use xlink:href="#DejaVuSans-20" x="1525.78125"/>
-      <use xlink:href="#DejaVuSans-20" x="1557.568359"/>
-      <use xlink:href="#DejaVuSans-20" x="1589.355469"/>
-      <use xlink:href="#DejaVuSans-20" x="1621.142578"/>
-     </g>
+     <text style="font: 16px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="367.38" y="112.9575" transform="rotate(-0 367.38 112.9575)">                                                    </text>
     </g>
     <g id="patch_16">
      <path d="M 340.18 136.4425 
@@ -257,60 +200,7 @@ z
 " style="fill: #9edae5"/>
     </g>
     <g id="text_2">
-     <!--                                                     -->
-     <g transform="translate(367.38 136.4425) scale(0.16 -0.16)">
-      <use xlink:href="#DejaVuSans-20"/>
-      <use xlink:href="#DejaVuSans-20" x="31.787109"/>
-      <use xlink:href="#DejaVuSans-20" x="63.574219"/>
-      <use xlink:href="#DejaVuSans-20" x="95.361328"/>
-      <use xlink:href="#DejaVuSans-20" x="127.148438"/>
-      <use xlink:href="#DejaVuSans-20" x="158.935547"/>
-      <use xlink:href="#DejaVuSans-20" x="190.722656"/>
-      <use xlink:href="#DejaVuSans-20" x="222.509766"/>
-      <use xlink:href="#DejaVuSans-20" x="254.296875"/>
-      <use xlink:href="#DejaVuSans-20" x="286.083984"/>
-      <use xlink:href="#DejaVuSans-20" x="317.871094"/>
-      <use xlink:href="#DejaVuSans-20" x="349.658203"/>
-      <use xlink:href="#DejaVuSans-20" x="381.445312"/>
-      <use xlink:href="#DejaVuSans-20" x="413.232422"/>
-      <use xlink:href="#DejaVuSans-20" x="445.019531"/>
-      <use xlink:href="#DejaVuSans-20" x="476.806641"/>
-      <use xlink:href="#DejaVuSans-20" x="508.59375"/>
-      <use xlink:href="#DejaVuSans-20" x="540.380859"/>
-      <use xlink:href="#DejaVuSans-20" x="572.167969"/>
-      <use xlink:href="#DejaVuSans-20" x="603.955078"/>
-      <use xlink:href="#DejaVuSans-20" x="635.742188"/>
-      <use xlink:href="#DejaVuSans-20" x="667.529297"/>
-      <use xlink:href="#DejaVuSans-20" x="699.316406"/>
-      <use xlink:href="#DejaVuSans-20" x="731.103516"/>
-      <use xlink:href="#DejaVuSans-20" x="762.890625"/>
-      <use xlink:href="#DejaVuSans-20" x="794.677734"/>
-      <use xlink:href="#DejaVuSans-20" x="826.464844"/>
-      <use xlink:href="#DejaVuSans-20" x="858.251953"/>
-      <use xlink:href="#DejaVuSans-20" x="890.039062"/>
-      <use xlink:href="#DejaVuSans-20" x="921.826172"/>
-      <use xlink:href="#DejaVuSans-20" x="953.613281"/>
-      <use xlink:href="#DejaVuSans-20" x="985.400391"/>
-      <use xlink:href="#DejaVuSans-20" x="1017.1875"/>
-      <use xlink:href="#DejaVuSans-20" x="1048.974609"/>
-      <use xlink:href="#DejaVuSans-20" x="1080.761719"/>
-      <use xlink:href="#DejaVuSans-20" x="1112.548828"/>
-      <use xlink:href="#DejaVuSans-20" x="1144.335938"/>
-      <use xlink:href="#DejaVuSans-20" x="1176.123047"/>
-      <use xlink:href="#DejaVuSans-20" x="1207.910156"/>
-      <use xlink:href="#DejaVuSans-20" x="1239.697266"/>
-      <use xlink:href="#DejaVuSans-20" x="1271.484375"/>
-      <use xlink:href="#DejaVuSans-20" x="1303.271484"/>
-      <use xlink:href="#DejaVuSans-20" x="1335.058594"/>
-      <use xlink:href="#DejaVuSans-20" x="1366.845703"/>
-      <use xlink:href="#DejaVuSans-20" x="1398.632812"/>
-      <use xlink:href="#DejaVuSans-20" x="1430.419922"/>
-      <use xlink:href="#DejaVuSans-20" x="1462.207031"/>
-      <use xlink:href="#DejaVuSans-20" x="1493.994141"/>
-      <use xlink:href="#DejaVuSans-20" x="1525.78125"/>
-      <use xlink:href="#DejaVuSans-20" x="1557.568359"/>
-      <use xlink:href="#DejaVuSans-20" x="1589.355469"/>
-     </g>
+     <text style="font: 16px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="367.38" y="136.4425" transform="rotate(-0 367.38 136.4425)">                                                   </text>
     </g>
    </g>
   </g>
