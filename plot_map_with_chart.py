@@ -203,7 +203,7 @@ for idx,map_year in enumerate(years):
         if   os.path.isfile(piechart_path) and country in gdf.clip(bbox).index:  
 
             # Define the destination folder (the folder where you want to move the file)
-            destination_folder = 'plots/without title/svg pie charts/' 
+            destination_folder = f'plots/without title/svg pie charts/{map_year}/' 
 
             # Create the full path for the destination
             destination_file = os.path.join(destination_folder, os.path.basename(piechart_path))
