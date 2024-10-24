@@ -1,10 +1,13 @@
 import geopandas as gpd
+import matplotlib
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 import sys
 from shapely.geometry import Polygon
 import matplotlib.colors as colors
+
+matplotlib.rcParams['svg.fonttype'] = 'none'
 
 geotagged_df = pd.read_excel("geotagged/geotagged_hist_country.xlsx")
 geotagged_df['geonames_lng'] = geotagged_df['geonames_lng'].apply(lambda x: float(str(x)) if isinstance(x, str) else -1000)
@@ -21,7 +24,7 @@ region_czech = {'World': 'Svět'}
 title_middle = 'Překlady ve světě dle země vydání'
 
 region = 'World' 
-write_title = True
+write_title = False
 
 # Bounding box of the map 
 bbox =  regions_bbox[region] 

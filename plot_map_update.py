@@ -1,11 +1,14 @@
 import geopandas as gpd
 import pandas as pd
+import matplotlib
 import matplotlib.pyplot as plt
 import math
 import matplotlib.colors as colors
 from geopandas import GeoDataFrame
 from shapely.geometry import Point
 import numpy as np
+
+matplotlib.rcParams['svg.fonttype'] = 'none'
 
 def get_closest_lower_year(my_list, year):
     left, right = 0, len(my_list) - 1

@@ -1,10 +1,13 @@
 import geopandas as gpd
+import matplotlib
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 import sys
 from shapely.geometry import Polygon
 import matplotlib.colors as colors
+
+matplotlib.rcParams['svg.fonttype'] = 'none'
 
 #geotagged_df = pd.read_excel("geotagged/geotagged_germany_country_update.xlsx")
 
@@ -43,8 +46,8 @@ region_czech =  {'East'           : 'Východ',
                  'World'          : 'Svět', 
                  'Europe'         : 'Evropa'}
 
-region = 'Europe'#'Europe'   
-write_title = True
+region = 'World'#'Europe'   
+write_title = False
 combine_languages = False
 
 if combine_languages:

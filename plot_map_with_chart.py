@@ -1,5 +1,6 @@
 import geopandas as gpd
 import pandas as pd
+import matplotlib
 import matplotlib.pyplot as plt
 import math
 import matplotlib.colors as colors
@@ -8,7 +9,10 @@ import matplotlib.patches as mpatches
 import svglib
 from io import BytesIO
 from shapely.geometry import Polygon
+import shutil
 
+
+matplotlib.rcParams['svg.fonttype'] = 'none'
 
 ############ FOR MAPS #############
 
@@ -52,7 +56,7 @@ for i, row in geotagged_df.iterrows():
             # add a weight to a  combination of historical country and map year
             plot_dict_dicts[map_year][historic_name] = plot_dict_dicts[map_year].get(historic_name, 0) + weight
 
-with_title = False
+with_title = True
 
 # Table with number of translations for each country, language and decade
 df = pd.read_excel("weights/translations_language_countries.xlsx")
@@ -192,56 +196,73 @@ for idx,map_year in enumerate(years):
     for country in countries: # 
         
         # get the path to the image
-        piechart_path = piechart_folder + '{country}_{year}.png'.format(country = country, year = map_year)
+        piechart_path = piechart_folder + '{country}_{year}.svg'.format(country = country, year = map_year)
+
 
         # if chart exists
         if   os.path.isfile(piechart_path) and country in gdf.clip(bbox).index:  
 
-            # load image
-            image = plt.imread(piechart_path, format="png")
+            # Define the destination folder (the folder where you want to move the file)
+            destination_folder = 'plots/without title/svg pie charts/' 
 
-            # Use Matplotlib to display the PNG image
-            #image = plt.imread(BytesIO(png_image))
+            # Create the full path for the destination
+            destination_file = os.path.join(destination_folder, os.path.basename(piechart_path))
 
-            # get geometry of the country
-            country_geometry = gdf.clip(bbox)[gdf.clip(bbox).index == country]['geometry'].iloc[0]
+            # Ensure the destination folder exists, create it if it doesn't
+            if not os.path.exists(destination_folder):
+                os.makedirs(destination_folder)
 
+            # Move the file
+            shutil.copy(piechart_path, destination_file)
 
-            if  country == 'Italy': #int(map_year) < 1989 and
-                
-                lat = lat_Italy
-                lon = lon_Italy 
+            ### PLOT MAP WITHOUT CHART
 
-            elif int(map_year) < 1989 and country == 'West Germany':
-                
-                # Compute the centroid of the country
-                centroid = country_geometry.centroid
-                
-                lat = centroid.y - 1
-                lon = centroid.x   
-
-            elif country == 'United Kingdom': 
-
-                # Compute the centroid of the country
-                centroid = country_geometry.centroid
-
-                lat = centroid.y - 1
-                lon = centroid.x + 1      
+            # # load image
+            #image = plt.imread(piechart_path, format="png")
             
-            else:
-                # Compute the centroid of the country
-                centroid = country_geometry.centroid
 
-                # Get the latitude and longitude of the centroid
-                lat = centroid.y
-                lon = centroid.x 
+            # # Use Matplotlib to display the PNG image
+            # #image = plt.imread(BytesIO(png_image))
 
-            # show image at the latitude and longitude of the plot
-            im = ax.imshow(
-                image,
-                extent=(lon-1.9*RADIUS, lon+1.9*RADIUS, lat-RADIUS, lat+RADIUS),
-                zorder=1 # show it in the front
-                )
+            # # get geometry of the country
+            # country_geometry = gdf.clip(bbox)[gdf.clip(bbox).index == country]['geometry'].iloc[0]
+
+
+            # if  country == 'Italy': #int(map_year) < 1989 and
+                
+            #     lat = lat_Italy
+            #     lon = lon_Italy 
+
+            # elif int(map_year) < 1989 and country == 'West Germany':
+                
+            #     # Compute the centroid of the country
+            #     centroid = country_geometry.centroid
+                
+            #     lat = centroid.y - 1
+            #     lon = centroid.x   
+
+            # elif country == 'United Kingdom': 
+
+            #     # Compute the centroid of the country
+            #     centroid = country_geometry.centroid
+
+            #     lat = centroid.y - 1
+            #     lon = centroid.x + 1      
+            
+            # else:
+            #     # Compute the centroid of the country
+            #     centroid = country_geometry.centroid
+
+            #     # Get the latitude and longitude of the centroid
+            #     lat = centroid.y
+            #     lon = centroid.x 
+
+            # # show image at the latitude and longitude of the plot
+            # im = ax.imshow(
+            #     image,
+            #     extent=(lon-1.9*RADIUS, lon+1.9*RADIUS, lat-RADIUS, lat+RADIUS),
+            #     zorder=1 # show it in the front
+            #     )
             
     world_polygon.clip(bbox).plot(ax = ax, facecolor = 'lightblue', edgecolor='black', zorder=0 )
     gdf.clip(bbox).plot(ax=ax, facecolor=gdf.clip(bbox)['color'],edgecolor='gray', linewidth=1.0,  legend=True, zorder=0) #
@@ -280,8 +301,9 @@ for idx,map_year in enumerate(years):
     #                 top=1)
     if with_title:
         ax.set_title(title, fontsize=12)
-        plt.savefig('plots/with title/normalized with charts new/'+title_plot + '.svg')
+        plt.savefig('plots/with title/maps without charts/'+title_plot + '.svg')
+        #plt.savefig('plots/with title/normalized with charts new/'+title_plot + '.svg')
     else: 
-        plt.savefig('plots/without title/normalized with charts new/'+title_plot + '.svg')    
-
+        #plt.savefig('plots/without title/normalized with charts new/'+title_plot + '.svg')    
+        plt.savefig('plots/without title/maps without charts/'+title_plot + '.svg')
     

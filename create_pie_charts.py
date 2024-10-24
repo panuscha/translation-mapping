@@ -158,7 +158,7 @@ for plot_year in plot_years:
                 
                 #plt.show()
                 #hist = h[['language','weights']].plot(kind = 'bar', figsize=(8, 6), x = 'language', ylim = [0, y_max], color = colors).get_figure()
-                plt.savefig('plots/without title/pie charts minor top 19 languages plain new/{country}_{year}.png'.format(country = country, year = plot_year), transparent=True, dpi=600)
+                plt.savefig('plots/without title/pie charts minor top 19 languages plain new/{country}_{year}.svg'.format(country = country, year = plot_year), transparent=True, dpi=600)
             plt.close()
                 #close(hist)
       

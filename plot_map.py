@@ -1,10 +1,13 @@
 import geopandas as gpd
 import pandas as pd
+import matplotlib
 import matplotlib.pyplot as plt
 import matplotlib.colors as colors
 from shapely.geometry import Polygon
 from collections import defaultdict 
 import pickle
+
+matplotlib.rcParams['svg.fonttype'] = 'none'
 
 def countries_into_languages(df):
     languages_countries = defaultdict(list)
@@ -59,7 +62,7 @@ title_middle = 'Potenciál dosahu překladů ve světě'
 
 
 region = 'World' 
-write_title = False  
+write_title = True  
 
 # Bounding box of the map 
 bbox =  regions_bbox[region] 
